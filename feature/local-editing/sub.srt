@@ -1,0 +1,80 @@
+1
+00:00:00,000 --> 00:00:09,360
+OurBigBook.com editing can be done fully on the browser
+
+2
+00:00:09,360 --> 00:00:12,000
+But you can also edit markup files locally and then upload
+
+3
+00:00:12,000 --> 00:00:19,800
+We have a Visual Studio Code extension for it
+
+4
+00:00:19,800 --> 00:00:30,240
+Locally you can have multiple articles per file
+
+5
+00:00:30,240 --> 00:00:38,000
+and the article tree across files is done with \Include macros
+
+6
+00:00:38,000 --> 00:00:41,440
+There are two ways to publish from the command line: --web and --publish
+
+7
+00:00:41,440 --> 00:00:47,920
+ourbigbook --web publishes to ourbigbook.com or another OurBigBook Web instance
+
+8
+00:00:50,400 --> 00:00:56,000
+ourbigbook.com is a dynamic website, and has multi-user features
+
+9
+00:00:56,000 --> 00:00:59,800
+such as likes, topics, and discussions
+
+10
+00:00:59,800 --> 00:01:08,560
+ourbigbook --publish publishes a static website to wherever you want
+
+11
+00:01:08,560 --> 00:01:15,200
+e.g. here we are publishing to GitHub Pages
+
+12
+00:01:19,560 --> 00:01:24,560
+A static website is just a bunch of .html files
+
+13
+00:01:24,560 --> 00:01:27,920
+and can be published easily and cheaply (often free) on many platforms
+
+14
+00:01:27,920 --> 00:01:35,880
+E.g. cirosantilli.com is a static website hosted on GitHub Pages
+
+15
+00:01:35,880 --> 00:01:39,160
+and here's our update
+
+16
+00:01:39,160 --> 00:01:44,679
+You can optionally link from static headers to the dynamic ones to get the best of both worlds
+
+17
+00:01:44,680 --> 00:01:48,360
+And you can have a split version of each header for better SEO on static renders
+
+18
+00:01:48,360 --> 00:01:52,440
+it contains just one section on top without child sections
+
+19
+00:01:52,440 --> 00:01:54,720
+With OurBigBook, you remain in control of your content
+
+20
+00:01:54,720 --> 00:01:57,440
+with flexible and reliable publishing options to fit your needs
+

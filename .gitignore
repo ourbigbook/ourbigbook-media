@@ -1,3 +1,6 @@
 tmp
 tmp.*
 *.tmp
+# We store e.g. KDEnlive projects and all source clips in these folders.
+# for mor complex video projects. They're just too large for GitHub unfortnately.
+video-projects
