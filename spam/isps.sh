@@ -8,4 +8,4 @@ jq -r '
   | sort_by([-.count, .isp])[]
   | [.count, .isp]
   | @tsv
-' "${1:-data.csv}"
+' "${1:-data.json}"
