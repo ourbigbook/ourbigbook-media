@@ -5,3 +5,4 @@ tmp.*
 # for mor complex video projects. They're just too large for GitHub unfortnately.
 video-projects
 *.xcf
+*.kdenlive
