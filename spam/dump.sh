@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
-output=data.csv
+output=data.json
 tmp="$(mktemp "${output}.tmp.XXXXXX")"
 trap 'rm -f "$tmp"' EXIT
 
-./heroku psql DATABASE_URL <<EOF | jq --exit-status --raw-input --slurp --slurpfile existing <(
+heroku psql -a ourbigbook DATABASE_URL <<EOF | jq --exit-status --raw-input --slurp --slurpfile existing <(
   if [[ -f "$output" ]]; then
     cat "$output"
   else
@@ -26,7 +26,7 @@ trap 'rm -f "$tmp"' EXIT
 \\a
 \\t
 select coalesce(json_agg(r), '[]'::json) from (
-  SELECT username,email,ip,"createdAt"
+  SELECT "displayName",username,email,ip,"createdAt"
   FROM "User"
   WHERE locked = true
   ORDER BY "createdAt" DESC
@@ -36,11 +36,12 @@ EOF
 mv "$tmp" "$output"
 trap - EXIT
 
-command -v whois >/dev/null
-whois_delay="${WHOIS_DELAY_SECONDS:-0}"
-whois_retries="${WHOIS_RETRIES:-3}"
-whois_retry_delay="${WHOIS_RETRY_DELAY_SECONDS:-5}"
-whois_rate_delay="${WHOIS_RATE_DELAY_SECONDS:-30}"
+command -v curl >/dev/null
+ripestat_url="${RIPESTAT_URL:-https://stat.ripe.net/data/prefix-overview/data.json}"
+ripestat_delay="${RIPESTAT_DELAY_SECONDS:-0.25}"
+ripestat_retries="${RIPESTAT_RETRIES:-3}"
+ripestat_retry_delay="${RIPESTAT_RETRY_DELAY_SECONDS:-5}"
+ripestat_rate_delay="${RIPESTAT_RATE_DELAY_SECONDS:-30}"
 
 while IFS= read -r ip; do
   isp="$(jq --raw-output --arg ip "$ip" '
@@ -52,41 +53,39 @@ while IFS= read -r ip; do
   queried=false
 
   if [[ -z "$isp" ]]; then
-    for ((attempt = 1; attempt <= whois_retries; attempt++)); do
-      whois_tmp="$(mktemp)"
-      trap 'rm -f "$whois_tmp"' EXIT
-      whois_status=0
-      LC_ALL=C whois "$ip" > "$whois_tmp" 2>&1 || whois_status=$?
+    for ((attempt = 1; attempt <= ripestat_retries; attempt++)); do
+      ripestat_tmp="$(mktemp)"
+      trap 'rm -f "$ripestat_tmp"' EXIT
+      ripestat_status=0
+      curl \
+        --connect-timeout 10 \
+        --fail \
+        --get \
+        --location \
+        --max-time 30 \
+        --show-error \
+        --silent \
+        --data-urlencode "resource=$ip" \
+        "$ripestat_url" > "$ripestat_tmp" 2>&1 || ripestat_status=$?
       rate_limited=false
-      if LC_ALL=C grep -Eiq 'rate.?limit|query limit|too many (queries|requests)|quota exceeded|access denied' "$whois_tmp"; then
+      if LC_ALL=C grep -Eiq '(^|[^0-9])429([^0-9]|$)|rate.?limit|too many (queries|requests)' "$ripestat_tmp"; then
         rate_limited=true
       fi
 
-      # Some WHOIS clients return nonzero after a failed referral even though
-      # the response already contains enough registry data for this purpose.
-      isp="$(LC_ALL=C awk '
-        BEGIN { best = 999 }
-        {
-          separator = index($0, ":")
-          if (separator == 0) next
-          key = tolower(substr($0, 1, separator - 1))
-          value = substr($0, separator + 1)
-          gsub(/^[[:space:]]+|[[:space:]]+$/, "", key)
-          gsub(/^[[:space:]]+|[[:space:]]+$/, "", value)
-          priority = 999
-          if (key == "org-name" || key == "orgname") priority = 1
-          else if (key == "organization" || key == "owner") priority = 2
-          else if (key == "descr") priority = 3
-          else if (key == "netname") priority = 4
-          if (value != "" && priority < best) {
-            result = value
-            best = priority
-          }
-        }
-        END { print result }
-      ' "$whois_tmp")"
+      isp=""
+      if ((ripestat_status == 0)); then
+        isp="$(jq --raw-output '
+          if .status == "ok" then
+            [.data.asns[]?.holder | select(type == "string" and length > 0)]
+            | unique
+            | join(", ")
+          else
+            empty
+          end
+        ' "$ripestat_tmp" 2>/dev/null || true)"
+      fi
 
-      rm -f "$whois_tmp"
+      rm -f "$ripestat_tmp"
       trap - EXIT
 
       if [[ -n "$isp" ]]; then
@@ -95,21 +94,21 @@ while IFS= read -r ip; do
         break
       fi
 
-      if ((attempt < whois_retries)); then
+      if ((attempt < ripestat_retries)); then
         if "$rate_limited"; then
-          printf 'WHOIS rate limit detected for %s; retrying in %s seconds.\n' "$ip" "$whois_rate_delay" >&2
-          sleep "$whois_rate_delay"
+          printf 'RIPEstat rate limit detected for %s; retrying in %s seconds.\n' "$ip" "$ripestat_rate_delay" >&2
+          sleep "$ripestat_rate_delay"
         else
-          printf 'WHOIS attempt %s/%s failed for %s (exit %s); retrying in %s seconds.\n' \
-            "$attempt" "$whois_retries" "$ip" "$whois_status" "$whois_retry_delay" >&2
-          sleep "$whois_retry_delay"
+          printf 'RIPEstat attempt %s/%s failed for %s (curl exit %s); retrying in %s seconds.\n' \
+            "$attempt" "$ripestat_retries" "$ip" "$ripestat_status" "$ripestat_retry_delay" >&2
+          sleep "$ripestat_retry_delay"
         fi
       fi
     done
 
     if [[ -z "$isp" ]]; then
       printf 'No ISP found for %s after %s attempts; leaving it for the next run.\n' \
-        "$ip" "$whois_retries" >&2
+        "$ip" "$ripestat_retries" >&2
       continue
     fi
   elif [[ -z "$isp_date" ]]; then
@@ -131,7 +130,7 @@ while IFS= read -r ip; do
   trap - EXIT
 
   if "$queried"; then
-    sleep "$whois_delay"
+    sleep "$ripestat_delay"
   fi
 done < <(jq --raw-output '
   [.[]
