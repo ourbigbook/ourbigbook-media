@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="circle.svg"
+   inkscape:export-xdpi="254"
+   inkscape:export-ydpi="254"
+   inkscape:export-filename="circle.png"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="true"
+     inkscape:document-units="mm"
+     showgrid="false"
+     width="100mm"
+     inkscape:zoom="1.7761247"
+     inkscape:cx="81.07539"
+     inkscape:cy="179.04149"
+     inkscape:window-width="1920"
+     inkscape:window-height="1053"
+     inkscape:window-x="0"
+     inkscape:window-y="-10"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:showpageshadow="false"
+     inkscape:deskcolor="#d1d1d1"
+     showborder="true"
+     borderlayer="true" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#000000;stroke:#c8c800;stroke-width:0"
+       id="path365"
+       cx="50"
+       cy="50"
+       r="50" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.6066px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.229136"
+       x="12.803267"
+       y="36.030849"
+       id="text3818"
+       transform="scale(1.1547005,0.86602543)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:33.6066px;font-family:monospace;-inkscape-font-specification:'monospace Bold';fill:#00ff00;stroke-width:0.229136"
+         x="12.803267"
+         y="36.030849"
+         id="tspan5482">OUR</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.3333px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.229136"
+       x="4.4604506"
+       y="70.027481"
+       id="text40208"
+       transform="scale(1.1547005,0.86602543)"><tspan
+         sodipodi:role="line"
+         id="tspan40206"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:42.3333px;font-family:monospace;-inkscape-font-specification:'monospace Bold';fill:#ffff00;stroke-width:0.229136"
+         x="4.4604506"
+         y="70.027481">BIG</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.229136"
+       x="8.7855053"
+       y="94.966469"
+       id="text40740"
+       transform="scale(1.1547005,0.86602543)"><tspan
+         sodipodi:role="line"
+         id="tspan40738"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:28.2222px;font-family:monospace;-inkscape-font-specification:'monospace Bold';fill:#88ccff;fill-opacity:1;stroke-width:0.229136"
+         x="8.7855053"
+         y="94.966469">BOOK</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6389px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.229136"
+       x="20.349983"
+       y="108.67063"
+       id="text40740-3"
+       transform="scale(1.1547005,0.86602543)"><tspan
+         sodipodi:role="line"
+         id="tspan40738-6"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.6389px;font-family:monospace;-inkscape-font-specification:'monospace Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.229136"
+         x="20.349983"
+         y="108.67063">.com</tspan></text>
+  </g>
+</svg>
