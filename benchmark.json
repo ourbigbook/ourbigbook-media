@@ -9262,5 +9262,6780 @@
         ]
       }
     }
+  },
+  {
+    "about": {
+      "git_sha": "55ce53caf08cd0dc84a63e53a15a59ee2e19fb1b",
+      "git_dirty": false,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 214775,
+        "users": 1892,
+        "topics": 208716,
+        "issues": 824,
+        "comments": 637,
+        "uploads": 939,
+        "files": 226042,
+        "ids": 230574,
+        "refs": 340136,
+        "listed_articles": 211020,
+        "nonempty_topics": 206394,
+        "file_uploads": 724,
+        "listed_uploads": 721,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 1813213999,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 61,
+            "username": "wikibot",
+            "articles": 104840
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-14T07:37:53.812Z",
+      "run_id": "45037d94-095f-4425-8c11-66894c2a072e",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 136,
+      "planned_requests": 544,
+      "completed": true,
+      "finished_at": "2026-10-14T07:38:26.324Z"
+    },
+    "results": {
+      "/api/": 1.665,
+      "/api/min": 1.083,
+      "/api/articles?limit=20&offset=0&sort=created": 23.269,
+      "/api/articles?limit=20&offset=0&sort=updated": 57.753,
+      "/api/articles?limit=20&offset=0&sort=score": 25.02,
+      "/api/articles?limit=20&offset=0&sort=id": 19.642,
+      "/api/articles?limit=20&offset=0&sort=follower-count": 58.639,
+      "/api/articles?limit=20&offset=0&sort=issues": 56.762,
+      "/api/articles?limit=20&offset=107380&sort=created": 40.389,
+      "/api/articles?limit=20&offset=107380&sort=updated": 87.956,
+      "/api/articles?limit=20&offset=107380&sort=score": 51.416,
+      "/api/articles?limit=20&offset=107380&sort=id": 13.587,
+      "/api/articles?limit=20&offset=107380&sort=follower-count": 92.304,
+      "/api/articles?limit=20&offset=107380&sort=issues": 90.482,
+      "/api/articles?limit=20&offset=214760&sort=created": 42.546,
+      "/api/articles?limit=20&offset=214760&sort=updated": 187.407,
+      "/api/articles?limit=20&offset=214760&sort=score": 79.211,
+      "/api/articles?limit=20&offset=214760&sort=id": 21.627,
+      "/api/articles?limit=20&offset=214760&sort=follower-count": 196.647,
+      "/api/articles?limit=20&offset=214760&sort=issues": 210.57,
+      "/api/topics?limit=20&offset=0&sort=created": 15.113,
+      "/api/topics?limit=20&offset=0&sort=updated": 20.37,
+      "/api/topics?limit=20&offset=0&sort=article-count": 14.944,
+      "/api/topics?limit=20&offset=0&sort=id": 15.68,
+      "/api/topics?limit=20&offset=103180&sort=created": 25.365,
+      "/api/topics?limit=20&offset=103180&sort=updated": 43.572,
+      "/api/topics?limit=20&offset=103180&sort=article-count": 25.746,
+      "/api/topics?limit=20&offset=103180&sort=id": 38.884,
+      "/api/topics?limit=20&offset=206380&sort=created": 48.189,
+      "/api/topics?limit=20&offset=206380&sort=updated": 62.98,
+      "/api/topics?limit=20&offset=206380&sort=article-count": 54.226,
+      "/api/topics?limit=20&offset=206380&sort=id": 76.937,
+      "/api/users?limit=20&offset=0&sort=created": 2.333,
+      "/api/users?limit=20&offset=0&sort=score": 2.728,
+      "/api/users?limit=20&offset=0&sort=discussions": 1.548,
+      "/api/users?limit=20&offset=0&sort=comments": 2.537,
+      "/api/users?limit=20&offset=0&sort=files": 3.855,
+      "/api/users?limit=20&offset=0&sort=file-size": 2.385,
+      "/api/users?limit=20&offset=940&sort=created": 6.142,
+      "/api/users?limit=20&offset=940&sort=score": 7.315,
+      "/api/users?limit=20&offset=940&sort=discussions": 2.808,
+      "/api/users?limit=20&offset=940&sort=comments": 3.097,
+      "/api/users?limit=20&offset=940&sort=files": 2.589,
+      "/api/users?limit=20&offset=940&sort=file-size": 2.321,
+      "/api/users?limit=20&offset=1880&sort=created": 2.73,
+      "/api/users?limit=20&offset=1880&sort=score": 7.071,
+      "/api/users?limit=20&offset=1880&sort=discussions": 2.264,
+      "/api/users?limit=20&offset=1880&sort=comments": 2.422,
+      "/api/users?limit=20&offset=1880&sort=files": 2.472,
+      "/api/users?limit=20&offset=1880&sort=file-size": 2.593,
+      "/api/users?username=wikibot": 1.714,
+      "/api/users?followedBy=wikibot&limit=20": 1.509,
+      "/api/users?following=wikibot&limit=20": 1.474,
+      "/api/articles?author=wikibot&limit=20&offset=0&sort=created": 9.628,
+      "/api/articles?author=wikibot&limit=20&offset=0&sort=score": 11.461,
+      "/api/articles?author=wikibot&limit=20&offset=0&sort=id": 9.755,
+      "/api/articles?author=wikibot&limit=20&offset=52400&sort=created": 8.967,
+      "/api/articles?author=wikibot&limit=20&offset=52400&sort=score": 10.011,
+      "/api/articles?author=wikibot&limit=20&offset=52400&sort=id": 10.766,
+      "/api/articles?author=wikibot&limit=20&offset=104820&sort=created": 12.627,
+      "/api/articles?author=wikibot&limit=20&offset=104820&sort=score": 13.501,
+      "/api/articles?author=wikibot&limit=20&offset=104820&sort=id": 13.686,
+      "/api/articles?followedBy=wikibot&limit=20": 299.448,
+      "/api/articles?likedBy=wikibot&limit=20": 1.575,
+      "/api/articles?limit=20&parent=%40wikibot": 6.44,
+      "/api/articles/hash?author=wikibot&limit=20": 9.011,
+      "/api/uploads/hash?author=wikibot&limit=20": 1.446,
+      "/api/articles?id=donald-trump%2Ftest-child": 2.867,
+      "/api/articles?limit=20&topicId=test-child": 4.301,
+      "/api/articles?limit=20&search=test-chi": 12.917,
+      "/api/topics?limit=20&search=test-chi": 19.959,
+      "/api/issues?id=donald-trump%2Ftest-child&sort=created": 4.656,
+      "/api/issues?id=donald-trump%2Ftest-child&sort=updated": 3.902,
+      "/api/issues?id=donald-trump%2Ftest-child&sort=score": 4.356,
+      "/api/issues?id=donald-trump%2Ftest-data&number=1": 4.361,
+      "/api/issues/1/comments?id=donald-trump%2Ftest-data": 3.402,
+      "/cirosantilli": 249.272,
+      "/-/articles?page=1&sort=created": 99.526,
+      "/-/articles?page=1&sort=score": 80.18,
+      "/-/articles?page=1&sort=id": 40.37,
+      "/-/articles?page=1&sort=id-desc": 66.238,
+      "/-/articles?page=5276&sort=created": 40.999,
+      "/-/articles?page=5276&sort=score": 41.524,
+      "/-/articles?page=5276&sort=id": 40.275,
+      "/-/articles?page=5276&sort=id-desc": 41.964,
+      "/-/articles?page=10551&sort=created": 49.321,
+      "/-/articles?page=10551&sort=score": 50.419,
+      "/-/articles?page=10551&sort=id": 75.214,
+      "/-/articles?page=10551&sort=id-desc": 56.33,
+      "/-/files?page=1&sort=created": 33.84,
+      "/-/files?page=1&sort=size": 31.077,
+      "/-/files?page=1&sort=path": 29.835,
+      "/-/files?page=1&sort=path-desc": 28.171,
+      "/-/files?page=19&sort=created": 29.308,
+      "/-/files?page=19&sort=size": 29.216,
+      "/-/files?page=19&sort=path": 33.017,
+      "/-/files?page=19&sort=path-desc": 27.861,
+      "/-/files?page=37&sort=created": 22.607,
+      "/-/files?page=37&sort=size": 27.344,
+      "/-/files?page=37&sort=path": 21.855,
+      "/-/files?page=37&sort=path-desc": 22.517,
+      "/-/files?listed=0&page=1&sort=created": 23.041,
+      "/-/files?listed=0&page=1&sort=size": 22.092,
+      "/-/files?listed=0&page=1&sort=path": 21.235,
+      "/-/files?listed=0&page=1&sort=path-desc": 22.469,
+      "/-/files?listed=2&page=1&sort=created": 25.756,
+      "/-/files?listed=2&page=1&sort=size": 30.752,
+      "/-/files?listed=2&page=1&sort=path": 33.679,
+      "/-/files?listed=2&page=1&sort=path-desc": 32.759,
+      "/-/files?listed=2&page=19&sort=created": 29.501,
+      "/-/files?listed=2&page=19&sort=size": 31.454,
+      "/-/files?listed=2&page=19&sort=path": 27.331,
+      "/-/files?listed=2&page=19&sort=path-desc": 30.077,
+      "/-/files?listed=2&page=37&sort=created": 23.237,
+      "/-/files?listed=2&page=37&sort=size": 23.708,
+      "/-/files?listed=2&page=37&sort=path": 26.009,
+      "/-/files?listed=2&page=37&sort=path-desc": 27.593,
+      "/-/topics?page=1&sort=created": 41.878,
+      "/-/topics?page=1&sort=article-count": 40.504,
+      "/-/topics?page=1&sort=id": 34.109,
+      "/-/topics?page=1&sort=id-desc": 47.341,
+      "/-/topics?page=5160&sort=created": 87.82,
+      "/-/topics?page=5160&sort=article-count": 108.637,
+      "/-/topics?page=5160&sort=id": 65.61,
+      "/-/topics?page=5160&sort=id-desc": 484.765,
+      "/-/topics?page=10320&sort=created": 77.318,
+      "/-/topics?page=10320&sort=article-count": 104.554,
+      "/-/topics?page=10320&sort=id": 91.416,
+      "/-/topics?page=10320&sort=id-desc": 1062.323,
+      "/?sort=article-count": 38.952,
+      "/?sort=id": 41.179,
+      "/-/users?sort=created": 39.876,
+      "/-/users?sort=score": 37.257,
+      "/-/discussions?sort=created": 45.53,
+      "/-/discussions?sort=score": 54.215,
+      "/-/comments?sort=created": 58.524
+    },
+    "samples": {
+      "/api/": [
+        1.707,
+        0.972,
+        1.665
+      ],
+      "/api/min": [
+        3.686,
+        1.083,
+        1.052
+      ],
+      "/api/articles?limit=20&offset=0&sort=created": [
+        24.574,
+        21.902,
+        23.269
+      ],
+      "/api/articles?limit=20&offset=0&sort=updated": [
+        64.262,
+        57.753,
+        56.594
+      ],
+      "/api/articles?limit=20&offset=0&sort=score": [
+        25.706,
+        24.787,
+        25.02
+      ],
+      "/api/articles?limit=20&offset=0&sort=id": [
+        22.638,
+        19.642,
+        18.952
+      ],
+      "/api/articles?limit=20&offset=0&sort=follower-count": [
+        57.753,
+        58.639,
+        64.453
+      ],
+      "/api/articles?limit=20&offset=0&sort=issues": [
+        56.7,
+        56.762,
+        56.915
+      ],
+      "/api/articles?limit=20&offset=107380&sort=created": [
+        40.389,
+        37.356,
+        41.715
+      ],
+      "/api/articles?limit=20&offset=107380&sort=updated": [
+        87.956,
+        90.364,
+        86.811
+      ],
+      "/api/articles?limit=20&offset=107380&sort=score": [
+        54.701,
+        46.878,
+        51.416
+      ],
+      "/api/articles?limit=20&offset=107380&sort=id": [
+        16.123,
+        13.518,
+        13.587
+      ],
+      "/api/articles?limit=20&offset=107380&sort=follower-count": [
+        92.304,
+        94.961,
+        90.677
+      ],
+      "/api/articles?limit=20&offset=107380&sort=issues": [
+        89.272,
+        90.482,
+        92.285
+      ],
+      "/api/articles?limit=20&offset=214760&sort=created": [
+        45.882,
+        42.13,
+        42.546
+      ],
+      "/api/articles?limit=20&offset=214760&sort=updated": [
+        187.407,
+        189.936,
+        186.405
+      ],
+      "/api/articles?limit=20&offset=214760&sort=score": [
+        79.211,
+        73.902,
+        79.805
+      ],
+      "/api/articles?limit=20&offset=214760&sort=id": [
+        22.055,
+        21.627,
+        20.984
+      ],
+      "/api/articles?limit=20&offset=214760&sort=follower-count": [
+        196.647,
+        203.751,
+        196.487
+      ],
+      "/api/articles?limit=20&offset=214760&sort=issues": [
+        210.57,
+        201.36,
+        212.213
+      ],
+      "/api/topics?limit=20&offset=0&sort=created": [
+        15.578,
+        14.637,
+        15.113
+      ],
+      "/api/topics?limit=20&offset=0&sort=updated": [
+        22.493,
+        20.37,
+        18.801
+      ],
+      "/api/topics?limit=20&offset=0&sort=article-count": [
+        15.024,
+        14.944,
+        14.915
+      ],
+      "/api/topics?limit=20&offset=0&sort=id": [
+        15.708,
+        15.172,
+        15.68
+      ],
+      "/api/topics?limit=20&offset=103180&sort=created": [
+        25.3,
+        25.365,
+        28.14
+      ],
+      "/api/topics?limit=20&offset=103180&sort=updated": [
+        46.971,
+        43.572,
+        41.76
+      ],
+      "/api/topics?limit=20&offset=103180&sort=article-count": [
+        26.108,
+        25.661,
+        25.746
+      ],
+      "/api/topics?limit=20&offset=103180&sort=id": [
+        38.884,
+        39.252,
+        38.47
+      ],
+      "/api/topics?limit=20&offset=206380&sort=created": [
+        46.653,
+        49.09,
+        48.189
+      ],
+      "/api/topics?limit=20&offset=206380&sort=updated": [
+        62.98,
+        59.271,
+        63.153
+      ],
+      "/api/topics?limit=20&offset=206380&sort=article-count": [
+        54.226,
+        57.924,
+        50.178
+      ],
+      "/api/topics?limit=20&offset=206380&sort=id": [
+        77.861,
+        73.26,
+        76.937
+      ],
+      "/api/users?limit=20&offset=0&sort=created": [
+        2.798,
+        2.333,
+        1.665
+      ],
+      "/api/users?limit=20&offset=0&sort=score": [
+        2.748,
+        2.316,
+        2.728
+      ],
+      "/api/users?limit=20&offset=0&sort=discussions": [
+        1.867,
+        1.539,
+        1.548
+      ],
+      "/api/users?limit=20&offset=0&sort=comments": [
+        2.593,
+        2.475,
+        2.537
+      ],
+      "/api/users?limit=20&offset=0&sort=files": [
+        3.855,
+        4.147,
+        2.725
+      ],
+      "/api/users?limit=20&offset=0&sort=file-size": [
+        2.846,
+        2.385,
+        1.702
+      ],
+      "/api/users?limit=20&offset=940&sort=created": [
+        6.713,
+        6.142,
+        5.619
+      ],
+      "/api/users?limit=20&offset=940&sort=score": [
+        7.821,
+        6.871,
+        7.315
+      ],
+      "/api/users?limit=20&offset=940&sort=discussions": [
+        3.905,
+        2.808,
+        2.736
+      ],
+      "/api/users?limit=20&offset=940&sort=comments": [
+        3.097,
+        3.263,
+        2.345
+      ],
+      "/api/users?limit=20&offset=940&sort=files": [
+        3.053,
+        2.589,
+        2.394
+      ],
+      "/api/users?limit=20&offset=940&sort=file-size": [
+        2.321,
+        1.895,
+        2.435
+      ],
+      "/api/users?limit=20&offset=1880&sort=created": [
+        2.73,
+        2.939,
+        2.389
+      ],
+      "/api/users?limit=20&offset=1880&sort=score": [
+        7.435,
+        7.071,
+        6.72
+      ],
+      "/api/users?limit=20&offset=1880&sort=discussions": [
+        2.979,
+        2.182,
+        2.264
+      ],
+      "/api/users?limit=20&offset=1880&sort=comments": [
+        2.422,
+        2.411,
+        2.88
+      ],
+      "/api/users?limit=20&offset=1880&sort=files": [
+        3.095,
+        2.126,
+        2.472
+      ],
+      "/api/users?limit=20&offset=1880&sort=file-size": [
+        2.97,
+        2.593,
+        2.137
+      ],
+      "/api/users?username=wikibot": [
+        1.714,
+        1.034,
+        1.742
+      ],
+      "/api/users?followedBy=wikibot&limit=20": [
+        1.927,
+        1.315,
+        1.509
+      ],
+      "/api/users?following=wikibot&limit=20": [
+        1.624,
+        1.474,
+        1.378
+      ],
+      "/api/articles?author=wikibot&limit=20&offset=0&sort=created": [
+        9.628,
+        8.941,
+        9.983
+      ],
+      "/api/articles?author=wikibot&limit=20&offset=0&sort=score": [
+        11.461,
+        9.158,
+        11.689
+      ],
+      "/api/articles?author=wikibot&limit=20&offset=0&sort=id": [
+        9.755,
+        10.077,
+        9.409
+      ],
+      "/api/articles?author=wikibot&limit=20&offset=52400&sort=created": [
+        9.279,
+        8.967,
+        8.419
+      ],
+      "/api/articles?author=wikibot&limit=20&offset=52400&sort=score": [
+        9.594,
+        10.011,
+        10.721
+      ],
+      "/api/articles?author=wikibot&limit=20&offset=52400&sort=id": [
+        11.08,
+        10.766,
+        10.338
+      ],
+      "/api/articles?author=wikibot&limit=20&offset=104820&sort=created": [
+        15.926,
+        12.627,
+        12.438
+      ],
+      "/api/articles?author=wikibot&limit=20&offset=104820&sort=score": [
+        12.309,
+        13.501,
+        14.71
+      ],
+      "/api/articles?author=wikibot&limit=20&offset=104820&sort=id": [
+        13.686,
+        12.601,
+        13.69
+      ],
+      "/api/articles?followedBy=wikibot&limit=20": [
+        293.567,
+        300.736,
+        299.448
+      ],
+      "/api/articles?likedBy=wikibot&limit=20": [
+        1.968,
+        1.468,
+        1.575
+      ],
+      "/api/articles?limit=20&parent=%40wikibot": [
+        6.44,
+        6.01,
+        6.631
+      ],
+      "/api/articles/hash?author=wikibot&limit=20": [
+        9.051,
+        8.106,
+        9.011
+      ],
+      "/api/uploads/hash?author=wikibot&limit=20": [
+        1.684,
+        1.446,
+        1.259
+      ],
+      "/api/articles?id=donald-trump%2Ftest-child": [
+        2.967,
+        2.867,
+        2.666
+      ],
+      "/api/articles?limit=20&topicId=test-child": [
+        4.301,
+        4.588,
+        2.86
+      ],
+      "/api/articles?limit=20&search=test-chi": [
+        15.622,
+        11.578,
+        12.917
+      ],
+      "/api/topics?limit=20&search=test-chi": [
+        19.959,
+        20.133,
+        19.153
+      ],
+      "/api/issues?id=donald-trump%2Ftest-child&sort=created": [
+        4.754,
+        4.656,
+        3.931
+      ],
+      "/api/issues?id=donald-trump%2Ftest-child&sort=updated": [
+        3.985,
+        3.902,
+        3.63
+      ],
+      "/api/issues?id=donald-trump%2Ftest-child&sort=score": [
+        3.777,
+        4.356,
+        4.789
+      ],
+      "/api/issues?id=donald-trump%2Ftest-data&number=1": [
+        4.896,
+        3.659,
+        4.361
+      ],
+      "/api/issues/1/comments?id=donald-trump%2Ftest-data": [
+        3.446,
+        3.402,
+        2.956
+      ],
+      "/cirosantilli": [
+        341.871,
+        249.272,
+        229.127
+      ],
+      "/-/articles?page=1&sort=created": [
+        99.526,
+        108.567,
+        76.953
+      ],
+      "/-/articles?page=1&sort=score": [
+        79.767,
+        80.18,
+        80.211
+      ],
+      "/-/articles?page=1&sort=id": [
+        43.381,
+        40.37,
+        39.344
+      ],
+      "/-/articles?page=1&sort=id-desc": [
+        59.562,
+        66.238,
+        67.99
+      ],
+      "/-/articles?page=5276&sort=created": [
+        44.777,
+        40.999,
+        39.951
+      ],
+      "/-/articles?page=5276&sort=score": [
+        39.084,
+        43.217,
+        41.524
+      ],
+      "/-/articles?page=5276&sort=id": [
+        38.873,
+        40.349,
+        40.275
+      ],
+      "/-/articles?page=5276&sort=id-desc": [
+        45.864,
+        41.964,
+        40.838
+      ],
+      "/-/articles?page=10551&sort=created": [
+        47.646,
+        49.321,
+        57.163
+      ],
+      "/-/articles?page=10551&sort=score": [
+        52.504,
+        50.419,
+        49.08
+      ],
+      "/-/articles?page=10551&sort=id": [
+        75.214,
+        77.874,
+        70.113
+      ],
+      "/-/articles?page=10551&sort=id-desc": [
+        51.102,
+        56.33,
+        57.504
+      ],
+      "/-/files?page=1&sort=created": [
+        33.84,
+        28.907,
+        34.353
+      ],
+      "/-/files?page=1&sort=size": [
+        41.068,
+        29.148,
+        31.077
+      ],
+      "/-/files?page=1&sort=path": [
+        29.835,
+        28.902,
+        32.332
+      ],
+      "/-/files?page=1&sort=path-desc": [
+        28.076,
+        28.513,
+        28.171
+      ],
+      "/-/files?page=19&sort=created": [
+        29.308,
+        29.46,
+        27.028
+      ],
+      "/-/files?page=19&sort=size": [
+        26.704,
+        30.078,
+        29.216
+      ],
+      "/-/files?page=19&sort=path": [
+        37.872,
+        33.017,
+        28.385
+      ],
+      "/-/files?page=19&sort=path-desc": [
+        27.861,
+        25.266,
+        29.186
+      ],
+      "/-/files?page=37&sort=created": [
+        21.722,
+        22.607,
+        23.577
+      ],
+      "/-/files?page=37&sort=size": [
+        27.344,
+        32.355,
+        27.246
+      ],
+      "/-/files?page=37&sort=path": [
+        24.142,
+        21.776,
+        21.855
+      ],
+      "/-/files?page=37&sort=path-desc": [
+        22.517,
+        23.39,
+        21.525
+      ],
+      "/-/files?listed=0&page=1&sort=created": [
+        23.041,
+        22.218,
+        24.094
+      ],
+      "/-/files?listed=0&page=1&sort=size": [
+        23.326,
+        22.092,
+        21.277
+      ],
+      "/-/files?listed=0&page=1&sort=path": [
+        21.235,
+        21.57,
+        20.886
+      ],
+      "/-/files?listed=0&page=1&sort=path-desc": [
+        23.392,
+        22.469,
+        22.279
+      ],
+      "/-/files?listed=2&page=1&sort=created": [
+        25.402,
+        30.389,
+        25.756
+      ],
+      "/-/files?listed=2&page=1&sort=size": [
+        30.752,
+        27.278,
+        36.48
+      ],
+      "/-/files?listed=2&page=1&sort=path": [
+        32.105,
+        33.679,
+        35.488
+      ],
+      "/-/files?listed=2&page=1&sort=path-desc": [
+        28.97,
+        35.659,
+        32.759
+      ],
+      "/-/files?listed=2&page=19&sort=created": [
+        29.121,
+        29.501,
+        33.494
+      ],
+      "/-/files?listed=2&page=19&sort=size": [
+        31.454,
+        32.733,
+        28.374
+      ],
+      "/-/files?listed=2&page=19&sort=path": [
+        27.052,
+        27.42,
+        27.331
+      ],
+      "/-/files?listed=2&page=19&sort=path-desc": [
+        32.494,
+        29.563,
+        30.077
+      ],
+      "/-/files?listed=2&page=37&sort=created": [
+        25.05,
+        22.797,
+        23.237
+      ],
+      "/-/files?listed=2&page=37&sort=size": [
+        26.033,
+        23.377,
+        23.708
+      ],
+      "/-/files?listed=2&page=37&sort=path": [
+        22.851,
+        26.009,
+        26.746
+      ],
+      "/-/files?listed=2&page=37&sort=path-desc": [
+        29.546,
+        27.593,
+        25.342
+      ],
+      "/-/topics?page=1&sort=created": [
+        41.878,
+        40.824,
+        43.645
+      ],
+      "/-/topics?page=1&sort=article-count": [
+        40.504,
+        38.435,
+        44.589
+      ],
+      "/-/topics?page=1&sort=id": [
+        34.109,
+        32.992,
+        39.144
+      ],
+      "/-/topics?page=1&sort=id-desc": [
+        47.341,
+        46.315,
+        47.837
+      ],
+      "/-/topics?page=5160&sort=created": [
+        90.906,
+        81.959,
+        87.82
+      ],
+      "/-/topics?page=5160&sort=article-count": [
+        108.637,
+        113.528,
+        105.941
+      ],
+      "/-/topics?page=5160&sort=id": [
+        64.502,
+        65.61,
+        71.952
+      ],
+      "/-/topics?page=5160&sort=id-desc": [
+        484.765,
+        514.7,
+        455.461
+      ],
+      "/-/topics?page=10320&sort=created": [
+        77.318,
+        75.943,
+        78.75
+      ],
+      "/-/topics?page=10320&sort=article-count": [
+        109.155,
+        104.554,
+        102.499
+      ],
+      "/-/topics?page=10320&sort=id": [
+        91.416,
+        90.442,
+        111.472
+      ],
+      "/-/topics?page=10320&sort=id-desc": [
+        1051.226,
+        1101.86,
+        1062.323
+      ],
+      "/?sort=article-count": [
+        37.177,
+        38.952,
+        42.456
+      ],
+      "/?sort=id": [
+        41.179,
+        37.435,
+        47.756
+      ],
+      "/-/users?sort=created": [
+        83.949,
+        39.876,
+        33.449
+      ],
+      "/-/users?sort=score": [
+        39.625,
+        37.257,
+        30.774
+      ],
+      "/-/discussions?sort=created": [
+        45.53,
+        50.571,
+        43.92
+      ],
+      "/-/discussions?sort=score": [
+        54.215,
+        56.634,
+        48.722
+      ],
+      "/-/comments?sort=created": [
+        58.524,
+        52.496,
+        59.105
+      ]
+    },
+    "errors": {}
+  },
+  {
+    "about": {
+      "git_sha": "0b85100ddfb70d031b8a1006368772382b3f9985",
+      "git_dirty": false,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 214775,
+        "users": 1892,
+        "topics": 208716,
+        "issues": 824,
+        "comments": 637,
+        "uploads": 939,
+        "files": 226042,
+        "ids": 230574,
+        "refs": 340136,
+        "listed_articles": 211020,
+        "nonempty_topics": 206394,
+        "file_uploads": 724,
+        "listed_uploads": 721,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 1813213999,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 61,
+            "username": "wikibot",
+            "articles": 104840
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-14T07:46:12.541Z",
+      "run_id": "3d3f6dcf-6bf7-4251-9500-12398b4b313f",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 136,
+      "planned_requests": 544,
+      "completed": true,
+      "finished_at": "2026-10-14T07:46:37.555Z"
+    },
+    "results": {
+      "/api/": 1.592,
+      "/api/min": 0.899,
+      "/api/articles?limit=20&offset=0&sort=created": 25.201,
+      "/api/articles?limit=20&offset=0&sort=updated": 56.994,
+      "/api/articles?limit=20&offset=0&sort=score": 26.618,
+      "/api/articles?limit=20&offset=0&sort=id": 23.99,
+      "/api/articles?limit=20&offset=0&sort=follower-count": 58.749,
+      "/api/articles?limit=20&offset=0&sort=issues": 56.741,
+      "/api/articles?limit=20&offset=107380&sort=created": 34.083,
+      "/api/articles?limit=20&offset=107380&sort=updated": 88.695,
+      "/api/articles?limit=20&offset=107380&sort=score": 54.401,
+      "/api/articles?limit=20&offset=107380&sort=id": 14.039,
+      "/api/articles?limit=20&offset=107380&sort=follower-count": 91.848,
+      "/api/articles?limit=20&offset=107380&sort=issues": 92.78,
+      "/api/articles?limit=20&offset=214760&sort=created": 43.29,
+      "/api/articles?limit=20&offset=214760&sort=updated": 184.376,
+      "/api/articles?limit=20&offset=214760&sort=score": 80.05,
+      "/api/articles?limit=20&offset=214760&sort=id": 23.573,
+      "/api/articles?limit=20&offset=214760&sort=follower-count": 207.948,
+      "/api/articles?limit=20&offset=214760&sort=issues": 228.362,
+      "/api/topics?limit=20&offset=0&sort=created": 16.903,
+      "/api/topics?limit=20&offset=0&sort=updated": 23.435,
+      "/api/topics?limit=20&offset=0&sort=article-count": 17.099,
+      "/api/topics?limit=20&offset=0&sort=id": 17.355,
+      "/api/topics?limit=20&offset=103180&sort=created": 25.43,
+      "/api/topics?limit=20&offset=103180&sort=updated": 41.82,
+      "/api/topics?limit=20&offset=103180&sort=article-count": 26.827,
+      "/api/topics?limit=20&offset=103180&sort=id": 48.196,
+      "/api/topics?limit=20&offset=206380&sort=created": 46.613,
+      "/api/topics?limit=20&offset=206380&sort=updated": 60.56,
+      "/api/topics?limit=20&offset=206380&sort=article-count": 47.653,
+      "/api/topics?limit=20&offset=206380&sort=id": 79.479,
+      "/api/users?limit=20&offset=0&sort=created": 2.008,
+      "/api/users?limit=20&offset=0&sort=score": 3.065,
+      "/api/users?limit=20&offset=0&sort=discussions": 1.573,
+      "/api/users?limit=20&offset=0&sort=comments": 2.215,
+      "/api/users?limit=20&offset=0&sort=files": 2.318,
+      "/api/users?limit=20&offset=0&sort=file-size": 2.843,
+      "/api/users?limit=20&offset=940&sort=created": 7.449,
+      "/api/users?limit=20&offset=940&sort=score": 8.057,
+      "/api/users?limit=20&offset=940&sort=discussions": 3.206,
+      "/api/users?limit=20&offset=940&sort=comments": 3.3,
+      "/api/users?limit=20&offset=940&sort=files": 3.341,
+      "/api/users?limit=20&offset=940&sort=file-size": 3.206,
+      "/api/users?limit=20&offset=1880&sort=created": 3.779,
+      "/api/users?limit=20&offset=1880&sort=score": 8.604,
+      "/api/users?limit=20&offset=1880&sort=discussions": 4.221,
+      "/api/users?limit=20&offset=1880&sort=comments": 3.078,
+      "/api/users?limit=20&offset=1880&sort=files": 2.92,
+      "/api/users?limit=20&offset=1880&sort=file-size": 3.994,
+      "/api/users?username=wikibot": 2.301,
+      "/api/users?followedBy=wikibot&limit=20": 1.496,
+      "/api/users?following=wikibot&limit=20": 1.495,
+      "/api/articles?author=wikibot&limit=20&offset=0&sort=created": 9.893,
+      "/api/articles?author=wikibot&limit=20&offset=0&sort=score": 10.343,
+      "/api/articles?author=wikibot&limit=20&offset=0&sort=id": 9.796,
+      "/api/articles?author=wikibot&limit=20&offset=52400&sort=created": 9.628,
+      "/api/articles?author=wikibot&limit=20&offset=52400&sort=score": 10.828,
+      "/api/articles?author=wikibot&limit=20&offset=52400&sort=id": 9.617,
+      "/api/articles?author=wikibot&limit=20&offset=104820&sort=created": 12.081,
+      "/api/articles?author=wikibot&limit=20&offset=104820&sort=score": 15.729,
+      "/api/articles?author=wikibot&limit=20&offset=104820&sort=id": 13.474,
+      "/api/articles?followedBy=wikibot&limit=20": 298.918,
+      "/api/articles?likedBy=wikibot&limit=20": 1.994,
+      "/api/articles?limit=20&parent=%40wikibot": 5.27,
+      "/api/articles/hash?author=wikibot&limit=20": 8.633,
+      "/api/uploads/hash?author=wikibot&limit=20": 1.54,
+      "/api/articles?id=donald-trump%2Ftest-child": 4.399,
+      "/api/articles?limit=20&topicId=test-child": 3.098,
+      "/api/articles?limit=20&search=test-chi": 11.521,
+      "/api/topics?limit=20&search=test-chi": 19.771,
+      "/api/issues?id=donald-trump%2Ftest-child&sort=created": 5.376,
+      "/api/issues?id=donald-trump%2Ftest-child&sort=updated": 4.758,
+      "/api/issues?id=donald-trump%2Ftest-child&sort=score": 4.567,
+      "/api/issues?id=donald-trump%2Ftest-data&number=1": 5.004,
+      "/api/issues/1/comments?id=donald-trump%2Ftest-data": 3.261,
+      "/cirosantilli": 268.904,
+      "/-/articles?page=1&sort=created": 78.417,
+      "/-/articles?page=1&sort=score": 85.263,
+      "/-/articles?page=1&sort=id": 42.715,
+      "/-/articles?page=1&sort=id-desc": 66.929,
+      "/-/articles?page=5276&sort=created": 44.121,
+      "/-/articles?page=5276&sort=score": 40.155,
+      "/-/articles?page=5276&sort=id": 43.371,
+      "/-/articles?page=5276&sort=id-desc": 40.337,
+      "/-/articles?page=10551&sort=created": 49.309,
+      "/-/articles?page=10551&sort=score": 46.464,
+      "/-/articles?page=10551&sort=id": 77.622,
+      "/-/articles?page=10551&sort=id-desc": 52.556,
+      "/-/files?page=1&sort=created": 31.269,
+      "/-/files?page=1&sort=size": 30.01,
+      "/-/files?page=1&sort=path": 29.329,
+      "/-/files?page=1&sort=path-desc": 28.138,
+      "/-/files?page=19&sort=created": 28.989,
+      "/-/files?page=19&sort=size": 32.803,
+      "/-/files?page=19&sort=path": 29.996,
+      "/-/files?page=19&sort=path-desc": 29.585,
+      "/-/files?page=37&sort=created": 27.612,
+      "/-/files?page=37&sort=size": 23.625,
+      "/-/files?page=37&sort=path": 22.457,
+      "/-/files?page=37&sort=path-desc": 25.837,
+      "/-/files?listed=0&page=1&sort=created": 22.759,
+      "/-/files?listed=0&page=1&sort=size": 23.743,
+      "/-/files?listed=0&page=1&sort=path": 27.328,
+      "/-/files?listed=0&page=1&sort=path-desc": 25.612,
+      "/-/files?listed=2&page=1&sort=created": 34.908,
+      "/-/files?listed=2&page=1&sort=size": 31.31,
+      "/-/files?listed=2&page=1&sort=path": 28.736,
+      "/-/files?listed=2&page=1&sort=path-desc": 26.688,
+      "/-/files?listed=2&page=19&sort=created": 27.6,
+      "/-/files?listed=2&page=19&sort=size": 26.32,
+      "/-/files?listed=2&page=19&sort=path": 32.214,
+      "/-/files?listed=2&page=19&sort=path-desc": 40.338,
+      "/-/files?listed=2&page=37&sort=created": 24.899,
+      "/-/files?listed=2&page=37&sort=size": 23.69,
+      "/-/files?listed=2&page=37&sort=path": 25.739,
+      "/-/files?listed=2&page=37&sort=path-desc": 24.438,
+      "/-/topics?page=1&sort=created": 32.868,
+      "/-/topics?page=1&sort=article-count": 38.917,
+      "/-/topics?page=1&sort=id": 39.825,
+      "/-/topics?page=1&sort=id-desc": 34.71,
+      "/-/topics?page=5160&sort=created": 43.088,
+      "/-/topics?page=5160&sort=article-count": 43.432,
+      "/-/topics?page=5160&sort=id": 60.133,
+      "/-/topics?page=5160&sort=id-desc": 62.814,
+      "/-/topics?page=10320&sort=created": 67.602,
+      "/-/topics?page=10320&sort=article-count": 63.458,
+      "/-/topics?page=10320&sort=id": 104.912,
+      "/-/topics?page=10320&sort=id-desc": 100.132,
+      "/?sort=article-count": 36.795,
+      "/?sort=id": 44.093,
+      "/-/users?sort=created": 34.649,
+      "/-/users?sort=score": 45.94,
+      "/-/discussions?sort=created": 50.489,
+      "/-/discussions?sort=score": 56.161,
+      "/-/comments?sort=created": 55.518
+    },
+    "samples": {
+      "/api/": [
+        1.843,
+        1.592,
+        1.03
+      ],
+      "/api/min": [
+        1.33,
+        0.883,
+        0.899
+      ],
+      "/api/articles?limit=20&offset=0&sort=created": [
+        27.121,
+        23.927,
+        25.201
+      ],
+      "/api/articles?limit=20&offset=0&sort=updated": [
+        57.662,
+        56.188,
+        56.994
+      ],
+      "/api/articles?limit=20&offset=0&sort=score": [
+        26.618,
+        24.321,
+        37.729
+      ],
+      "/api/articles?limit=20&offset=0&sort=id": [
+        23.99,
+        26.513,
+        22.554
+      ],
+      "/api/articles?limit=20&offset=0&sort=follower-count": [
+        60.761,
+        58.317,
+        58.749
+      ],
+      "/api/articles?limit=20&offset=0&sort=issues": [
+        56.512,
+        58.406,
+        56.741
+      ],
+      "/api/articles?limit=20&offset=107380&sort=created": [
+        37.068,
+        33.591,
+        34.083
+      ],
+      "/api/articles?limit=20&offset=107380&sort=updated": [
+        85.573,
+        88.876,
+        88.695
+      ],
+      "/api/articles?limit=20&offset=107380&sort=score": [
+        54.926,
+        54.401,
+        49.171
+      ],
+      "/api/articles?limit=20&offset=107380&sort=id": [
+        14.518,
+        13.749,
+        14.039
+      ],
+      "/api/articles?limit=20&offset=107380&sort=follower-count": [
+        91.112,
+        91.848,
+        94.367
+      ],
+      "/api/articles?limit=20&offset=107380&sort=issues": [
+        92.78,
+        91.695,
+        99.84
+      ],
+      "/api/articles?limit=20&offset=214760&sort=created": [
+        44.617,
+        43.224,
+        43.29
+      ],
+      "/api/articles?limit=20&offset=214760&sort=updated": [
+        184.376,
+        177.584,
+        190.439
+      ],
+      "/api/articles?limit=20&offset=214760&sort=score": [
+        81.184,
+        76.448,
+        80.05
+      ],
+      "/api/articles?limit=20&offset=214760&sort=id": [
+        23.573,
+        23.779,
+        19.645
+      ],
+      "/api/articles?limit=20&offset=214760&sort=follower-count": [
+        204.866,
+        215.043,
+        207.948
+      ],
+      "/api/articles?limit=20&offset=214760&sort=issues": [
+        202.992,
+        236.272,
+        228.362
+      ],
+      "/api/topics?limit=20&offset=0&sort=created": [
+        16.903,
+        17.193,
+        16.692
+      ],
+      "/api/topics?limit=20&offset=0&sort=updated": [
+        23.435,
+        24.702,
+        22.159
+      ],
+      "/api/topics?limit=20&offset=0&sort=article-count": [
+        17.015,
+        17.099,
+        19.711
+      ],
+      "/api/topics?limit=20&offset=0&sort=id": [
+        17.355,
+        17.475,
+        17.235
+      ],
+      "/api/topics?limit=20&offset=103180&sort=created": [
+        26.23,
+        25.235,
+        25.43
+      ],
+      "/api/topics?limit=20&offset=103180&sort=updated": [
+        41.048,
+        42.895,
+        41.82
+      ],
+      "/api/topics?limit=20&offset=103180&sort=article-count": [
+        26.318,
+        26.927,
+        26.827
+      ],
+      "/api/topics?limit=20&offset=103180&sort=id": [
+        48.196,
+        53.406,
+        45.126
+      ],
+      "/api/topics?limit=20&offset=206380&sort=created": [
+        47.574,
+        46.364,
+        46.613
+      ],
+      "/api/topics?limit=20&offset=206380&sort=updated": [
+        59.412,
+        62.228,
+        60.56
+      ],
+      "/api/topics?limit=20&offset=206380&sort=article-count": [
+        52.349,
+        47.653,
+        47.416
+      ],
+      "/api/topics?limit=20&offset=206380&sort=id": [
+        73.557,
+        79.479,
+        86.075
+      ],
+      "/api/users?limit=20&offset=0&sort=created": [
+        2.495,
+        2.008,
+        1.756
+      ],
+      "/api/users?limit=20&offset=0&sort=score": [
+        3.065,
+        4.154,
+        2.556
+      ],
+      "/api/users?limit=20&offset=0&sort=discussions": [
+        1.914,
+        1.573,
+        1.461
+      ],
+      "/api/users?limit=20&offset=0&sort=comments": [
+        2.922,
+        2.015,
+        2.215
+      ],
+      "/api/users?limit=20&offset=0&sort=files": [
+        3.028,
+        2.318,
+        1.994
+      ],
+      "/api/users?limit=20&offset=0&sort=file-size": [
+        2.45,
+        2.843,
+        3.228
+      ],
+      "/api/users?limit=20&offset=940&sort=created": [
+        8.929,
+        6.469,
+        7.449
+      ],
+      "/api/users?limit=20&offset=940&sort=score": [
+        8.057,
+        8.265,
+        7.942
+      ],
+      "/api/users?limit=20&offset=940&sort=discussions": [
+        4.09,
+        3.206,
+        3.172
+      ],
+      "/api/users?limit=20&offset=940&sort=comments": [
+        3.822,
+        3.3,
+        3.019
+      ],
+      "/api/users?limit=20&offset=940&sort=files": [
+        4.456,
+        3.341,
+        3.152
+      ],
+      "/api/users?limit=20&offset=940&sort=file-size": [
+        3.881,
+        3.206,
+        2.537
+      ],
+      "/api/users?limit=20&offset=1880&sort=created": [
+        4.421,
+        3.779,
+        3.493
+      ],
+      "/api/users?limit=20&offset=1880&sort=score": [
+        8.898,
+        8.604,
+        6.894
+      ],
+      "/api/users?limit=20&offset=1880&sort=discussions": [
+        4.221,
+        4.51,
+        3.886
+      ],
+      "/api/users?limit=20&offset=1880&sort=comments": [
+        3.078,
+        3.059,
+        5.187
+      ],
+      "/api/users?limit=20&offset=1880&sort=files": [
+        2.92,
+        2.814,
+        3.05
+      ],
+      "/api/users?limit=20&offset=1880&sort=file-size": [
+        3.394,
+        3.994,
+        4.087
+      ],
+      "/api/users?username=wikibot": [
+        2.009,
+        2.518,
+        2.301
+      ],
+      "/api/users?followedBy=wikibot&limit=20": [
+        1.71,
+        1.389,
+        1.496
+      ],
+      "/api/users?following=wikibot&limit=20": [
+        2.154,
+        1.495,
+        1.312
+      ],
+      "/api/articles?author=wikibot&limit=20&offset=0&sort=created": [
+        9.893,
+        9.632,
+        10.403
+      ],
+      "/api/articles?author=wikibot&limit=20&offset=0&sort=score": [
+        10.172,
+        10.343,
+        10.425
+      ],
+      "/api/articles?author=wikibot&limit=20&offset=0&sort=id": [
+        9.796,
+        10.607,
+        9.591
+      ],
+      "/api/articles?author=wikibot&limit=20&offset=52400&sort=created": [
+        9.628,
+        10.611,
+        9.35
+      ],
+      "/api/articles?author=wikibot&limit=20&offset=52400&sort=score": [
+        10.103,
+        10.828,
+        12.534
+      ],
+      "/api/articles?author=wikibot&limit=20&offset=52400&sort=id": [
+        9.617,
+        9.073,
+        10.662
+      ],
+      "/api/articles?author=wikibot&limit=20&offset=104820&sort=created": [
+        12.081,
+        11.657,
+        12.134
+      ],
+      "/api/articles?author=wikibot&limit=20&offset=104820&sort=score": [
+        15.771,
+        15.729,
+        12.76
+      ],
+      "/api/articles?author=wikibot&limit=20&offset=104820&sort=id": [
+        12.496,
+        13.474,
+        14.79
+      ],
+      "/api/articles?followedBy=wikibot&limit=20": [
+        296.637,
+        298.918,
+        306.027
+      ],
+      "/api/articles?likedBy=wikibot&limit=20": [
+        2.095,
+        1.994,
+        1.91
+      ],
+      "/api/articles?limit=20&parent=%40wikibot": [
+        8.105,
+        5.27,
+        5.182
+      ],
+      "/api/articles/hash?author=wikibot&limit=20": [
+        8.633,
+        8.492,
+        9.692
+      ],
+      "/api/uploads/hash?author=wikibot&limit=20": [
+        1.973,
+        1.54,
+        1.494
+      ],
+      "/api/articles?id=donald-trump%2Ftest-child": [
+        2.957,
+        4.399,
+        4.45
+      ],
+      "/api/articles?limit=20&topicId=test-child": [
+        3.098,
+        2.704,
+        3.4
+      ],
+      "/api/articles?limit=20&search=test-chi": [
+        11.521,
+        12.522,
+        11.431
+      ],
+      "/api/topics?limit=20&search=test-chi": [
+        20.202,
+        18.683,
+        19.771
+      ],
+      "/api/issues?id=donald-trump%2Ftest-child&sort=created": [
+        6.045,
+        5.376,
+        5.244
+      ],
+      "/api/issues?id=donald-trump%2Ftest-child&sort=updated": [
+        4.844,
+        3.982,
+        4.758
+      ],
+      "/api/issues?id=donald-trump%2Ftest-child&sort=score": [
+        5.157,
+        4.567,
+        4.248
+      ],
+      "/api/issues?id=donald-trump%2Ftest-data&number=1": [
+        5.932,
+        5.004,
+        4.698
+      ],
+      "/api/issues/1/comments?id=donald-trump%2Ftest-data": [
+        4.413,
+        3.261,
+        2.738
+      ],
+      "/cirosantilli": [
+        268.904,
+        273.288,
+        202.537
+      ],
+      "/-/articles?page=1&sort=created": [
+        80.755,
+        74.209,
+        78.417
+      ],
+      "/-/articles?page=1&sort=score": [
+        84.718,
+        85.263,
+        88.724
+      ],
+      "/-/articles?page=1&sort=id": [
+        46.219,
+        42.362,
+        42.715
+      ],
+      "/-/articles?page=1&sort=id-desc": [
+        66.929,
+        66.35,
+        67.429
+      ],
+      "/-/articles?page=5276&sort=created": [
+        47.941,
+        43.75,
+        44.121
+      ],
+      "/-/articles?page=5276&sort=score": [
+        41.02,
+        40.155,
+        39.479
+      ],
+      "/-/articles?page=5276&sort=id": [
+        43.396,
+        43.371,
+        42.654
+      ],
+      "/-/articles?page=5276&sort=id-desc": [
+        40.557,
+        40.048,
+        40.337
+      ],
+      "/-/articles?page=10551&sort=created": [
+        52.327,
+        49.309,
+        48.834
+      ],
+      "/-/articles?page=10551&sort=score": [
+        47.79,
+        46.464,
+        44.977
+      ],
+      "/-/articles?page=10551&sort=id": [
+        75.765,
+        77.622,
+        80.558
+      ],
+      "/-/articles?page=10551&sort=id-desc": [
+        63.645,
+        52.172,
+        52.556
+      ],
+      "/-/files?page=1&sort=created": [
+        30.379,
+        31.84,
+        31.269
+      ],
+      "/-/files?page=1&sort=size": [
+        29.67,
+        30.01,
+        32.093
+      ],
+      "/-/files?page=1&sort=path": [
+        29.329,
+        30.788,
+        28.624
+      ],
+      "/-/files?page=1&sort=path-desc": [
+        29.601,
+        28.138,
+        27.183
+      ],
+      "/-/files?page=19&sort=created": [
+        28.989,
+        27.732,
+        29.22
+      ],
+      "/-/files?page=19&sort=size": [
+        32.803,
+        34.521,
+        30.822
+      ],
+      "/-/files?page=19&sort=path": [
+        27.236,
+        29.996,
+        30.029
+      ],
+      "/-/files?page=19&sort=path-desc": [
+        27.989,
+        30.23,
+        29.585
+      ],
+      "/-/files?page=37&sort=created": [
+        28.361,
+        27.042,
+        27.612
+      ],
+      "/-/files?page=37&sort=size": [
+        23.625,
+        22.899,
+        24.456
+      ],
+      "/-/files?page=37&sort=path": [
+        21.756,
+        22.719,
+        22.457
+      ],
+      "/-/files?page=37&sort=path-desc": [
+        23.155,
+        25.837,
+        26.498
+      ],
+      "/-/files?listed=0&page=1&sort=created": [
+        22.017,
+        22.833,
+        22.759
+      ],
+      "/-/files?listed=0&page=1&sort=size": [
+        23.743,
+        23.21,
+        29.314
+      ],
+      "/-/files?listed=0&page=1&sort=path": [
+        27.328,
+        32.208,
+        26.47
+      ],
+      "/-/files?listed=0&page=1&sort=path-desc": [
+        25.713,
+        25.164,
+        25.612
+      ],
+      "/-/files?listed=2&page=1&sort=created": [
+        35.249,
+        34.908,
+        32.815
+      ],
+      "/-/files?listed=2&page=1&sort=size": [
+        31.31,
+        31.498,
+        28.974
+      ],
+      "/-/files?listed=2&page=1&sort=path": [
+        26.886,
+        31.122,
+        28.736
+      ],
+      "/-/files?listed=2&page=1&sort=path-desc": [
+        26.485,
+        26.688,
+        26.806
+      ],
+      "/-/files?listed=2&page=19&sort=created": [
+        27.6,
+        27.145,
+        27.929
+      ],
+      "/-/files?listed=2&page=19&sort=size": [
+        26.32,
+        24.985,
+        26.507
+      ],
+      "/-/files?listed=2&page=19&sort=path": [
+        32.214,
+        32.219,
+        28.917
+      ],
+      "/-/files?listed=2&page=19&sort=path-desc": [
+        29.1,
+        40.338,
+        42.363
+      ],
+      "/-/files?listed=2&page=37&sort=created": [
+        65.171,
+        24.899,
+        24.235
+      ],
+      "/-/files?listed=2&page=37&sort=size": [
+        23.69,
+        23.354,
+        24.338
+      ],
+      "/-/files?listed=2&page=37&sort=path": [
+        27.107,
+        24.695,
+        25.739
+      ],
+      "/-/files?listed=2&page=37&sort=path-desc": [
+        24.438,
+        26.747,
+        22.819
+      ],
+      "/-/topics?page=1&sort=created": [
+        32.613,
+        32.868,
+        35.688
+      ],
+      "/-/topics?page=1&sort=article-count": [
+        40.801,
+        38.917,
+        38.349
+      ],
+      "/-/topics?page=1&sort=id": [
+        39.946,
+        39.825,
+        34.597
+      ],
+      "/-/topics?page=1&sort=id-desc": [
+        34.71,
+        37.566,
+        34.578
+      ],
+      "/-/topics?page=5160&sort=created": [
+        43.088,
+        43.148,
+        42.268
+      ],
+      "/-/topics?page=5160&sort=article-count": [
+        43.513,
+        41.598,
+        43.432
+      ],
+      "/-/topics?page=5160&sort=id": [
+        57.437,
+        60.133,
+        64.164
+      ],
+      "/-/topics?page=5160&sort=id-desc": [
+        62.726,
+        62.814,
+        66.016
+      ],
+      "/-/topics?page=10320&sort=created": [
+        67.602,
+        68.023,
+        62.073
+      ],
+      "/-/topics?page=10320&sort=article-count": [
+        62.842,
+        63.458,
+        66.645
+      ],
+      "/-/topics?page=10320&sort=id": [
+        104.912,
+        107.07,
+        100.642
+      ],
+      "/-/topics?page=10320&sort=id-desc": [
+        112.322,
+        100.132,
+        95.706
+      ],
+      "/?sort=article-count": [
+        34.153,
+        37.395,
+        36.795
+      ],
+      "/?sort=id": [
+        47.604,
+        44.093,
+        38.694
+      ],
+      "/-/users?sort=created": [
+        34.649,
+        34.31,
+        36.362
+      ],
+      "/-/users?sort=score": [
+        36.11,
+        50.344,
+        45.94
+      ],
+      "/-/discussions?sort=created": [
+        49.68,
+        50.711,
+        50.489
+      ],
+      "/-/discussions?sort=score": [
+        56.161,
+        53.456,
+        56.66
+      ],
+      "/-/comments?sort=created": [
+        48.912,
+        59.477,
+        55.518
+      ]
+    },
+    "errors": {}
+  },
+  {
+    "about": {
+      "git_sha": "ab237599716896d25438800de15cd29328aade6d",
+      "git_dirty": true,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 296016,
+        "users": 2151,
+        "topics": 285636,
+        "issues": 829,
+        "comments": 643,
+        "uploads": 6117,
+        "files": 296067,
+        "ids": 309009,
+        "refs": 803938,
+        "listed_articles": 290994,
+        "nonempty_topics": 282264,
+        "file_uploads": 5871,
+        "listed_uploads": 5695,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 3004986159,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 44038,
+            "username": "codex",
+            "articles": 172236
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "deepArticle": {
+            "slug": "codex/green-operator-potential-for-ddbar-exactness",
+            "depth": 16,
+            "nestedSetIndex": 21650
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-16T06:32:46.286Z",
+      "run_id": "f211b671-9d23-4a32-a48e-14bb896fe4d2",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 145,
+      "planned_requests": 580,
+      "completed": true,
+      "finished_at": "2026-10-16T06:33:29.247Z"
+    },
+    "results": {
+      "/api/": 1.925,
+      "/api/min": 1.691,
+      "/api/articles?limit=20&offset=0&sort=created": 39.46,
+      "/api/articles?limit=20&offset=0&sort=updated": 92.932,
+      "/api/articles?limit=20&offset=0&sort=score": 36.122,
+      "/api/articles?limit=20&offset=0&sort=id": 29.805,
+      "/api/articles?limit=20&offset=0&sort=follower-count": 93.146,
+      "/api/articles?limit=20&offset=0&sort=issues": 89.417,
+      "/api/articles?limit=20&offset=148000&sort=created": 50.209,
+      "/api/articles?limit=20&offset=148000&sort=updated": 131.876,
+      "/api/articles?limit=20&offset=148000&sort=score": 58.95,
+      "/api/articles?limit=20&offset=148000&sort=id": 22.078,
+      "/api/articles?limit=20&offset=148000&sort=follower-count": 155.094,
+      "/api/articles?limit=20&offset=148000&sort=issues": 159.502,
+      "/api/articles?limit=20&offset=296000&sort=created": 70.018,
+      "/api/articles?limit=20&offset=296000&sort=updated": 291.408,
+      "/api/articles?limit=20&offset=296000&sort=score": 82.169,
+      "/api/articles?limit=20&offset=296000&sort=id": 34.751,
+      "/api/articles?limit=20&offset=296000&sort=follower-count": 321.868,
+      "/api/articles?limit=20&offset=296000&sort=issues": 316.081,
+      "/api/topics?limit=20&offset=0&sort=created": 33.745,
+      "/api/topics?limit=20&offset=0&sort=updated": 44.425,
+      "/api/topics?limit=20&offset=0&sort=article-count": 34.336,
+      "/api/topics?limit=20&offset=0&sort=id": 34.658,
+      "/api/topics?limit=20&offset=141120&sort=created": 42.737,
+      "/api/topics?limit=20&offset=141120&sort=updated": 77.053,
+      "/api/topics?limit=20&offset=141120&sort=article-count": 41.974,
+      "/api/topics?limit=20&offset=141120&sort=id": 67.579,
+      "/api/topics?limit=20&offset=282260&sort=created": 92.064,
+      "/api/topics?limit=20&offset=282260&sort=updated": 104.183,
+      "/api/topics?limit=20&offset=282260&sort=article-count": 73.063,
+      "/api/topics?limit=20&offset=282260&sort=id": 130.337,
+      "/api/users?limit=20&offset=0&sort=created": 2.355,
+      "/api/users?limit=20&offset=0&sort=score": 4.053,
+      "/api/users?limit=20&offset=0&sort=discussions": 2.49,
+      "/api/users?limit=20&offset=0&sort=comments": 2.559,
+      "/api/users?limit=20&offset=0&sort=files": 2.428,
+      "/api/users?limit=20&offset=0&sort=file-size": 2.91,
+      "/api/users?limit=20&offset=1060&sort=created": 12.475,
+      "/api/users?limit=20&offset=1060&sort=score": 8.753,
+      "/api/users?limit=20&offset=1060&sort=discussions": 3.469,
+      "/api/users?limit=20&offset=1060&sort=comments": 3.681,
+      "/api/users?limit=20&offset=1060&sort=files": 4.098,
+      "/api/users?limit=20&offset=1060&sort=file-size": 3.782,
+      "/api/users?limit=20&offset=2140&sort=created": 5.199,
+      "/api/users?limit=20&offset=2140&sort=score": 12.919,
+      "/api/users?limit=20&offset=2140&sort=discussions": 3.912,
+      "/api/users?limit=20&offset=2140&sort=comments": 4.229,
+      "/api/users?limit=20&offset=2140&sort=files": 4.928,
+      "/api/users?limit=20&offset=2140&sort=file-size": 4.348,
+      "/api/users?username=codex": 2.485,
+      "/api/users?followedBy=codex&limit=20": 3.209,
+      "/api/users?following=codex&limit=20": 2.998,
+      "/api/articles?author=codex&limit=20&offset=0&sort=created": 32.789,
+      "/api/articles?author=codex&limit=20&offset=0&sort=score": 31.842,
+      "/api/articles?author=codex&limit=20&offset=0&sort=id": 30.837,
+      "/api/articles?author=codex&limit=20&offset=86100&sort=created": 32.165,
+      "/api/articles?author=codex&limit=20&offset=86100&sort=score": 30.233,
+      "/api/articles?author=codex&limit=20&offset=86100&sort=id": 30.641,
+      "/api/articles?author=codex&limit=20&offset=172220&sort=created": 31.189,
+      "/api/articles?author=codex&limit=20&offset=172220&sort=score": 32.117,
+      "/api/articles?author=codex&limit=20&offset=172220&sort=id": 30.655,
+      "/api/articles?followedBy=codex&limit=20": 64.317,
+      "/api/articles?likedBy=codex&limit=20": 3.189,
+      "/api/articles?limit=20&parent=%40codex": 9.136,
+      "/api/articles/hash?author=codex&limit=20": 11.841,
+      "/api/uploads/hash?author=codex&limit=20": 2.687,
+      "/api/articles?id=donald-trump%2Ftest-child": 3.206,
+      "/api/articles?limit=20&topicId=test-child": 3.756,
+      "/api/articles?limit=20&search=test-chi": 34.981,
+      "/api/topics?limit=20&search=test-chi": 42.41,
+      "/api/issues?id=donald-trump%2Ftest-child&sort=created": 5.083,
+      "/api/issues?id=donald-trump%2Ftest-child&sort=updated": 5.311,
+      "/api/issues?id=donald-trump%2Ftest-child&sort=score": 5.795,
+      "/api/issues?id=donald-trump%2Ftest-data&number=1": 5.087,
+      "/api/issues/1/comments?id=donald-trump%2Ftest-data": 4.267,
+      "/cirosantilli": 277.023,
+      "/codex/green-operator-potential-for-ddbar-exactness": 31.017,
+      "/-/articles?page=1&sort=created": 81.894,
+      "/-/articles?page=1&sort=score": 104.798,
+      "/-/articles?page=1&sort=id": 68.199,
+      "/-/articles?page=1&sort=id-desc": 84.793,
+      "/-/articles?page=7275&sort=created": 58.595,
+      "/-/articles?page=7275&sort=score": 58.671,
+      "/-/articles?page=7275&sort=id": 60.014,
+      "/-/articles?page=7275&sort=id-desc": 71.133,
+      "/-/articles?page=14550&sort=created": 86.295,
+      "/-/articles?page=14550&sort=score": 72.542,
+      "/-/articles?page=14550&sort=id": 108.218,
+      "/-/articles?page=14550&sort=id-desc": 107.001,
+      "/-/files?page=1&sort=created": 62.137,
+      "/-/files?page=1&sort=size": 55.352,
+      "/-/files?page=1&sort=path": 57.581,
+      "/-/files?page=1&sort=path-desc": 52.264,
+      "/-/files?page=143&sort=created": 60.036,
+      "/-/files?page=143&sort=size": 63.429,
+      "/-/files?page=143&sort=path": 80.853,
+      "/-/files?page=143&sort=path-desc": 75.338,
+      "/-/files?page=285&sort=created": 54.566,
+      "/-/files?page=285&sort=size": 49.951,
+      "/-/files?page=285&sort=path": 69.071,
+      "/-/files?page=285&sort=path-desc": 64.867,
+      "/-/files?listed=0&page=1&sort=created": 46.708,
+      "/-/files?listed=0&page=1&sort=size": 47.807,
+      "/-/files?listed=0&page=1&sort=path": 51.394,
+      "/-/files?listed=0&page=1&sort=path-desc": 37.414,
+      "/-/files?listed=0&page=5&sort=created": 49.503,
+      "/-/files?listed=0&page=5&sort=size": 56.846,
+      "/-/files?listed=0&page=5&sort=path": 33.124,
+      "/-/files?listed=0&page=5&sort=path-desc": 33.702,
+      "/-/files?listed=0&page=9&sort=created": 46.397,
+      "/-/files?listed=0&page=9&sort=size": 45.048,
+      "/-/files?listed=0&page=9&sort=path": 44.835,
+      "/-/files?listed=0&page=9&sort=path-desc": 31.94,
+      "/-/files?listed=2&page=1&sort=created": 46.516,
+      "/-/files?listed=2&page=1&sort=size": 55.856,
+      "/-/files?listed=2&page=1&sort=path": 50.739,
+      "/-/files?listed=2&page=1&sort=path-desc": 47.403,
+      "/-/files?listed=2&page=147&sort=created": 45.261,
+      "/-/files?listed=2&page=147&sort=size": 45.416,
+      "/-/files?listed=2&page=147&sort=path": 64.082,
+      "/-/files?listed=2&page=147&sort=path-desc": 64.764,
+      "/-/files?listed=2&page=294&sort=created": 43.406,
+      "/-/files?listed=2&page=294&sort=size": 43.525,
+      "/-/files?listed=2&page=294&sort=path": 69.224,
+      "/-/files?listed=2&page=294&sort=path-desc": 65.652,
+      "/-/topics?page=1&sort=created": 65.223,
+      "/-/topics?page=1&sort=article-count": 60.316,
+      "/-/topics?page=1&sort=id": 59.621,
+      "/-/topics?page=1&sort=id-desc": 58.92,
+      "/-/topics?page=7057&sort=created": 71.476,
+      "/-/topics?page=7057&sort=article-count": 84.412,
+      "/-/topics?page=7057&sort=id": 107.127,
+      "/-/topics?page=7057&sort=id-desc": 99.065,
+      "/-/topics?page=14114&sort=created": 97.536,
+      "/-/topics?page=14114&sort=article-count": 103.718,
+      "/-/topics?page=14114&sort=id": 184.369,
+      "/-/topics?page=14114&sort=id-desc": 186.463,
+      "/?sort=article-count": 68.711,
+      "/?sort=id": 76.15,
+      "/-/users?sort=created": 71.975,
+      "/-/users?sort=score": 62.111,
+      "/-/discussions?sort=created": 80.198,
+      "/-/discussions?sort=score": 77.625,
+      "/-/comments?sort=created": 100.372
+    },
+    "samples": {
+      "/api/": [
+        2.675,
+        1.925,
+        1.626
+      ],
+      "/api/min": [
+        3.613,
+        1.691,
+        1.582
+      ],
+      "/api/articles?limit=20&offset=0&sort=created": [
+        39.75,
+        35.49,
+        39.46
+      ],
+      "/api/articles?limit=20&offset=0&sort=updated": [
+        91.113,
+        92.932,
+        98.469
+      ],
+      "/api/articles?limit=20&offset=0&sort=score": [
+        34.353,
+        36.122,
+        37.849
+      ],
+      "/api/articles?limit=20&offset=0&sort=id": [
+        33.718,
+        27.776,
+        29.805
+      ],
+      "/api/articles?limit=20&offset=0&sort=follower-count": [
+        91.454,
+        93.146,
+        96.525
+      ],
+      "/api/articles?limit=20&offset=0&sort=issues": [
+        88.714,
+        89.417,
+        92.746
+      ],
+      "/api/articles?limit=20&offset=148000&sort=created": [
+        56.945,
+        49.565,
+        50.209
+      ],
+      "/api/articles?limit=20&offset=148000&sort=updated": [
+        141.672,
+        131.876,
+        129.537
+      ],
+      "/api/articles?limit=20&offset=148000&sort=score": [
+        63.662,
+        58.95,
+        55.706
+      ],
+      "/api/articles?limit=20&offset=148000&sort=id": [
+        21.022,
+        22.078,
+        25.384
+      ],
+      "/api/articles?limit=20&offset=148000&sort=follower-count": [
+        162.796,
+        155.094,
+        152.235
+      ],
+      "/api/articles?limit=20&offset=148000&sort=issues": [
+        159.502,
+        177.233,
+        159.322
+      ],
+      "/api/articles?limit=20&offset=296000&sort=created": [
+        70.018,
+        93.687,
+        66.147
+      ],
+      "/api/articles?limit=20&offset=296000&sort=updated": [
+        312.429,
+        288.52,
+        291.408
+      ],
+      "/api/articles?limit=20&offset=296000&sort=score": [
+        87.416,
+        82.169,
+        80.293
+      ],
+      "/api/articles?limit=20&offset=296000&sort=id": [
+        38.872,
+        34.751,
+        34.55
+      ],
+      "/api/articles?limit=20&offset=296000&sort=follower-count": [
+        321.868,
+        317.824,
+        333.949
+      ],
+      "/api/articles?limit=20&offset=296000&sort=issues": [
+        316.081,
+        315.799,
+        328.497
+      ],
+      "/api/topics?limit=20&offset=0&sort=created": [
+        32.092,
+        33.757,
+        33.745
+      ],
+      "/api/topics?limit=20&offset=0&sort=updated": [
+        44.425,
+        45.173,
+        43.66
+      ],
+      "/api/topics?limit=20&offset=0&sort=article-count": [
+        33.639,
+        35.067,
+        34.336
+      ],
+      "/api/topics?limit=20&offset=0&sort=id": [
+        34.658,
+        34.005,
+        39.443
+      ],
+      "/api/topics?limit=20&offset=141120&sort=created": [
+        51.336,
+        42.737,
+        39.543
+      ],
+      "/api/topics?limit=20&offset=141120&sort=updated": [
+        78.011,
+        77.053,
+        75.44
+      ],
+      "/api/topics?limit=20&offset=141120&sort=article-count": [
+        42.337,
+        41.974,
+        40.786
+      ],
+      "/api/topics?limit=20&offset=141120&sort=id": [
+        67.133,
+        68.91,
+        67.579
+      ],
+      "/api/topics?limit=20&offset=282260&sort=created": [
+        80.579,
+        92.064,
+        103.103
+      ],
+      "/api/topics?limit=20&offset=282260&sort=updated": [
+        105.167,
+        104.183,
+        99.007
+      ],
+      "/api/topics?limit=20&offset=282260&sort=article-count": [
+        73.063,
+        69.786,
+        78.683
+      ],
+      "/api/topics?limit=20&offset=282260&sort=id": [
+        148.992,
+        130.337,
+        128.136
+      ],
+      "/api/users?limit=20&offset=0&sort=created": [
+        4.22,
+        2.355,
+        2.189
+      ],
+      "/api/users?limit=20&offset=0&sort=score": [
+        4.053,
+        3.68,
+        4.176
+      ],
+      "/api/users?limit=20&offset=0&sort=discussions": [
+        4.287,
+        2.49,
+        2.182
+      ],
+      "/api/users?limit=20&offset=0&sort=comments": [
+        2.559,
+        2.036,
+        3.795
+      ],
+      "/api/users?limit=20&offset=0&sort=files": [
+        3.262,
+        2.428,
+        2.199
+      ],
+      "/api/users?limit=20&offset=0&sort=file-size": [
+        3.291,
+        2.6,
+        2.91
+      ],
+      "/api/users?limit=20&offset=1060&sort=created": [
+        13.756,
+        12.475,
+        10.632
+      ],
+      "/api/users?limit=20&offset=1060&sort=score": [
+        7.405,
+        9.132,
+        8.753
+      ],
+      "/api/users?limit=20&offset=1060&sort=discussions": [
+        3.485,
+        3.076,
+        3.469
+      ],
+      "/api/users?limit=20&offset=1060&sort=comments": [
+        4.587,
+        3.681,
+        3.551
+      ],
+      "/api/users?limit=20&offset=1060&sort=files": [
+        5.012,
+        4.098,
+        3.337
+      ],
+      "/api/users?limit=20&offset=1060&sort=file-size": [
+        3.782,
+        4.694,
+        3.505
+      ],
+      "/api/users?limit=20&offset=2140&sort=created": [
+        4.16,
+        5.199,
+        5.322
+      ],
+      "/api/users?limit=20&offset=2140&sort=score": [
+        14.07,
+        12.096,
+        12.919
+      ],
+      "/api/users?limit=20&offset=2140&sort=discussions": [
+        3.912,
+        4.257,
+        3.429
+      ],
+      "/api/users?limit=20&offset=2140&sort=comments": [
+        4.229,
+        3.626,
+        4.255
+      ],
+      "/api/users?limit=20&offset=2140&sort=files": [
+        4.996,
+        4.928,
+        4.741
+      ],
+      "/api/users?limit=20&offset=2140&sort=file-size": [
+        4.764,
+        4.348,
+        4.008
+      ],
+      "/api/users?username=codex": [
+        2.485,
+        2.761,
+        2.334
+      ],
+      "/api/users?followedBy=codex&limit=20": [
+        3.341,
+        2.987,
+        3.209
+      ],
+      "/api/users?following=codex&limit=20": [
+        3.791,
+        2.953,
+        2.998
+      ],
+      "/api/articles?author=codex&limit=20&offset=0&sort=created": [
+        31.61,
+        32.871,
+        32.789
+      ],
+      "/api/articles?author=codex&limit=20&offset=0&sort=score": [
+        37.789,
+        31.518,
+        31.842
+      ],
+      "/api/articles?author=codex&limit=20&offset=0&sort=id": [
+        31.184,
+        28.985,
+        30.837
+      ],
+      "/api/articles?author=codex&limit=20&offset=86100&sort=created": [
+        35.448,
+        32.165,
+        29.589
+      ],
+      "/api/articles?author=codex&limit=20&offset=86100&sort=score": [
+        30.233,
+        29.064,
+        31.302
+      ],
+      "/api/articles?author=codex&limit=20&offset=86100&sort=id": [
+        23.337,
+        32.245,
+        30.641
+      ],
+      "/api/articles?author=codex&limit=20&offset=172220&sort=created": [
+        29.217,
+        31.189,
+        31.658
+      ],
+      "/api/articles?author=codex&limit=20&offset=172220&sort=score": [
+        33.195,
+        32.117,
+        29.348
+      ],
+      "/api/articles?author=codex&limit=20&offset=172220&sort=id": [
+        25.59,
+        30.655,
+        36.615
+      ],
+      "/api/articles?followedBy=codex&limit=20": [
+        64.252,
+        70.38,
+        64.317
+      ],
+      "/api/articles?likedBy=codex&limit=20": [
+        3.459,
+        3.189,
+        2.836
+      ],
+      "/api/articles?limit=20&parent=%40codex": [
+        10.357,
+        9.136,
+        8.188
+      ],
+      "/api/articles/hash?author=codex&limit=20": [
+        11.841,
+        13.729,
+        11.451
+      ],
+      "/api/uploads/hash?author=codex&limit=20": [
+        3.526,
+        2.687,
+        2.398
+      ],
+      "/api/articles?id=donald-trump%2Ftest-child": [
+        3.483,
+        3.206,
+        3.007
+      ],
+      "/api/articles?limit=20&topicId=test-child": [
+        4.686,
+        3.756,
+        3.531
+      ],
+      "/api/articles?limit=20&search=test-chi": [
+        45.364,
+        34.362,
+        34.981
+      ],
+      "/api/topics?limit=20&search=test-chi": [
+        42.41,
+        45.653,
+        39.442
+      ],
+      "/api/issues?id=donald-trump%2Ftest-child&sort=created": [
+        7.889,
+        4.797,
+        5.083
+      ],
+      "/api/issues?id=donald-trump%2Ftest-child&sort=updated": [
+        5.311,
+        4.923,
+        5.37
+      ],
+      "/api/issues?id=donald-trump%2Ftest-child&sort=score": [
+        5.795,
+        6.016,
+        5.362
+      ],
+      "/api/issues?id=donald-trump%2Ftest-data&number=1": [
+        5.254,
+        5.087,
+        4.426
+      ],
+      "/api/issues/1/comments?id=donald-trump%2Ftest-data": [
+        5.442,
+        4.267,
+        3.48
+      ],
+      "/cirosantilli": [
+        277.023,
+        252.038,
+        336.678
+      ],
+      "/codex/green-operator-potential-for-ddbar-exactness": [
+        37.613,
+        31.017,
+        29.74
+      ],
+      "/-/articles?page=1&sort=created": [
+        81.894,
+        81.061,
+        82.66
+      ],
+      "/-/articles?page=1&sort=score": [
+        100.356,
+        104.798,
+        110.405
+      ],
+      "/-/articles?page=1&sort=id": [
+        72.834,
+        68.199,
+        62.2
+      ],
+      "/-/articles?page=1&sort=id-desc": [
+        96.718,
+        84.793,
+        82.907
+      ],
+      "/-/articles?page=7275&sort=created": [
+        58.119,
+        58.595,
+        60.152
+      ],
+      "/-/articles?page=7275&sort=score": [
+        67.049,
+        58.671,
+        57.72
+      ],
+      "/-/articles?page=7275&sort=id": [
+        60.014,
+        58.378,
+        60.827
+      ],
+      "/-/articles?page=7275&sort=id-desc": [
+        70.708,
+        76.64,
+        71.133
+      ],
+      "/-/articles?page=14550&sort=created": [
+        86.8,
+        83.25,
+        86.295
+      ],
+      "/-/articles?page=14550&sort=score": [
+        75.952,
+        71.068,
+        72.542
+      ],
+      "/-/articles?page=14550&sort=id": [
+        110.701,
+        99.591,
+        108.218
+      ],
+      "/-/articles?page=14550&sort=id-desc": [
+        106.159,
+        113.124,
+        107.001
+      ],
+      "/-/files?page=1&sort=created": [
+        65.372,
+        60.652,
+        62.137
+      ],
+      "/-/files?page=1&sort=size": [
+        71.613,
+        55.352,
+        52.2
+      ],
+      "/-/files?page=1&sort=path": [
+        59.667,
+        57.581,
+        55.389
+      ],
+      "/-/files?page=1&sort=path-desc": [
+        48.74,
+        52.714,
+        52.264
+      ],
+      "/-/files?page=143&sort=created": [
+        50.872,
+        60.036,
+        60.496
+      ],
+      "/-/files?page=143&sort=size": [
+        60.97,
+        63.429,
+        68.502
+      ],
+      "/-/files?page=143&sort=path": [
+        86.366,
+        75.762,
+        80.853
+      ],
+      "/-/files?page=143&sort=path-desc": [
+        75.338,
+        75.561,
+        71.004
+      ],
+      "/-/files?page=285&sort=created": [
+        48.924,
+        56.558,
+        54.566
+      ],
+      "/-/files?page=285&sort=size": [
+        49.951,
+        50.764,
+        44.831
+      ],
+      "/-/files?page=285&sort=path": [
+        72.841,
+        69.071,
+        64.92
+      ],
+      "/-/files?page=285&sort=path-desc": [
+        67.615,
+        64.867,
+        64.034
+      ],
+      "/-/files?listed=0&page=1&sort=created": [
+        46.188,
+        46.708,
+        47.225
+      ],
+      "/-/files?listed=0&page=1&sort=size": [
+        49.371,
+        47.807,
+        44.476
+      ],
+      "/-/files?listed=0&page=1&sort=path": [
+        33.151,
+        61.251,
+        51.394
+      ],
+      "/-/files?listed=0&page=1&sort=path-desc": [
+        35.926,
+        58.566,
+        37.414
+      ],
+      "/-/files?listed=0&page=5&sort=created": [
+        49.274,
+        56.15,
+        49.503
+      ],
+      "/-/files?listed=0&page=5&sort=size": [
+        56.846,
+        58.243,
+        54.63
+      ],
+      "/-/files?listed=0&page=5&sort=path": [
+        33.124,
+        31.846,
+        46.4
+      ],
+      "/-/files?listed=0&page=5&sort=path-desc": [
+        31.776,
+        33.702,
+        52.257
+      ],
+      "/-/files?listed=0&page=9&sort=created": [
+        46.397,
+        45.456,
+        47.49
+      ],
+      "/-/files?listed=0&page=9&sort=size": [
+        44.856,
+        45.987,
+        45.048
+      ],
+      "/-/files?listed=0&page=9&sort=path": [
+        30.065,
+        44.835,
+        45.516
+      ],
+      "/-/files?listed=0&page=9&sort=path-desc": [
+        45.355,
+        30.673,
+        31.94
+      ],
+      "/-/files?listed=2&page=1&sort=created": [
+        46.516,
+        44.823,
+        48.856
+      ],
+      "/-/files?listed=2&page=1&sort=size": [
+        61.716,
+        55.856,
+        49.011
+      ],
+      "/-/files?listed=2&page=1&sort=path": [
+        51.371,
+        48.221,
+        50.739
+      ],
+      "/-/files?listed=2&page=1&sort=path-desc": [
+        47.403,
+        46.749,
+        48.511
+      ],
+      "/-/files?listed=2&page=147&sort=created": [
+        45.261,
+        44.904,
+        46.169
+      ],
+      "/-/files?listed=2&page=147&sort=size": [
+        48.674,
+        45.416,
+        45.156
+      ],
+      "/-/files?listed=2&page=147&sort=path": [
+        71.257,
+        64.082,
+        63.826
+      ],
+      "/-/files?listed=2&page=147&sort=path-desc": [
+        63.769,
+        72.038,
+        64.764
+      ],
+      "/-/files?listed=2&page=294&sort=created": [
+        43.406,
+        43.473,
+        41.823
+      ],
+      "/-/files?listed=2&page=294&sort=size": [
+        44.98,
+        43.525,
+        43.313
+      ],
+      "/-/files?listed=2&page=294&sort=path": [
+        59.215,
+        71.121,
+        69.224
+      ],
+      "/-/files?listed=2&page=294&sort=path-desc": [
+        65.652,
+        65.846,
+        64.92
+      ],
+      "/-/topics?page=1&sort=created": [
+        94.723,
+        60.796,
+        65.223
+      ],
+      "/-/topics?page=1&sort=article-count": [
+        64.377,
+        57.21,
+        60.316
+      ],
+      "/-/topics?page=1&sort=id": [
+        77.084,
+        57.084,
+        59.621
+      ],
+      "/-/topics?page=1&sort=id-desc": [
+        59.409,
+        58.811,
+        58.92
+      ],
+      "/-/topics?page=7057&sort=created": [
+        66.023,
+        71.476,
+        76.835
+      ],
+      "/-/topics?page=7057&sort=article-count": [
+        69.553,
+        84.412,
+        100.791
+      ],
+      "/-/topics?page=7057&sort=id": [
+        107.127,
+        110.62,
+        100.118
+      ],
+      "/-/topics?page=7057&sort=id-desc": [
+        104.214,
+        90.975,
+        99.065
+      ],
+      "/-/topics?page=14114&sort=created": [
+        96.844,
+        97.536,
+        97.597
+      ],
+      "/-/topics?page=14114&sort=article-count": [
+        101.167,
+        111.153,
+        103.718
+      ],
+      "/-/topics?page=14114&sort=id": [
+        184.369,
+        192.936,
+        177.708
+      ],
+      "/-/topics?page=14114&sort=id-desc": [
+        185.88,
+        206.333,
+        186.463
+      ],
+      "/?sort=article-count": [
+        68.711,
+        68.119,
+        71.212
+      ],
+      "/?sort=id": [
+        84.254,
+        76.15,
+        75.591
+      ],
+      "/-/users?sort=created": [
+        65.466,
+        71.975,
+        72.211
+      ],
+      "/-/users?sort=score": [
+        68.945,
+        62.111,
+        57.788
+      ],
+      "/-/discussions?sort=created": [
+        86.901,
+        80.198,
+        63.2
+      ],
+      "/-/discussions?sort=score": [
+        87.652,
+        77.625,
+        61.445
+      ],
+      "/-/comments?sort=created": [
+        94.506,
+        112.762,
+        100.372
+      ]
+    },
+    "errors": {}
+  },
+  {
+    "about": {
+      "git_sha": "39f5cb360103fb441abef0a5394a7678b0422287",
+      "git_dirty": true,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 296016,
+        "users": 2151,
+        "topics": 285636,
+        "issues": 829,
+        "comments": 643,
+        "uploads": 6117,
+        "files": 296067,
+        "ids": 309009,
+        "refs": 803938,
+        "listed_articles": 290994,
+        "nonempty_topics": 282264,
+        "file_uploads": 5871,
+        "listed_uploads": 5695,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 3066213167,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 44038,
+            "username": "codex",
+            "articles": 172236
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "deepArticle": {
+            "slug": "codex/green-operator-potential-for-ddbar-exactness",
+            "depth": 16,
+            "nestedSetIndex": 21650
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-16T07:11:59.471Z",
+      "run_id": "2e665160-68d3-4fca-94c7-5f00029b1b51",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 145,
+      "planned_requests": 580,
+      "completed": true,
+      "finished_at": "2026-10-16T07:12:24.289Z"
+    },
+    "results": {
+      "/api/": 1.183,
+      "/api/min": 1.074,
+      "/api/articles?limit=20&offset=0&sort=created": 39.709,
+      "/api/articles?limit=20&offset=0&sort=updated": 29.747,
+      "/api/articles?limit=20&offset=0&sort=score": 34.509,
+      "/api/articles?limit=20&offset=0&sort=id": 37.482,
+      "/api/articles?limit=20&offset=0&sort=follower-count": 27.954,
+      "/api/articles?limit=20&offset=0&sort=issues": 27.284,
+      "/api/articles?limit=20&offset=148000&sort=created": 60.22,
+      "/api/articles?limit=20&offset=148000&sort=updated": 27.403,
+      "/api/articles?limit=20&offset=148000&sort=score": 68.521,
+      "/api/articles?limit=20&offset=148000&sort=id": 28.997,
+      "/api/articles?limit=20&offset=148000&sort=follower-count": 28.435,
+      "/api/articles?limit=20&offset=148000&sort=issues": 27.598,
+      "/api/articles?limit=20&offset=296000&sort=created": 66.85,
+      "/api/articles?limit=20&offset=296000&sort=updated": 31.171,
+      "/api/articles?limit=20&offset=296000&sort=score": 82.425,
+      "/api/articles?limit=20&offset=296000&sort=id": 37.666,
+      "/api/articles?limit=20&offset=296000&sort=follower-count": 30.603,
+      "/api/articles?limit=20&offset=296000&sort=issues": 29.143,
+      "/api/topics?limit=20&offset=0&sort=created": 32.787,
+      "/api/topics?limit=20&offset=0&sort=updated": 37.349,
+      "/api/topics?limit=20&offset=0&sort=article-count": 33.689,
+      "/api/topics?limit=20&offset=0&sort=id": 38.058,
+      "/api/topics?limit=20&offset=141120&sort=created": 37.211,
+      "/api/topics?limit=20&offset=141120&sort=updated": 73.321,
+      "/api/topics?limit=20&offset=141120&sort=article-count": 40.889,
+      "/api/topics?limit=20&offset=141120&sort=id": 36.045,
+      "/api/topics?limit=20&offset=282260&sort=created": 69.56,
+      "/api/topics?limit=20&offset=282260&sort=updated": 99.916,
+      "/api/topics?limit=20&offset=282260&sort=article-count": 68.77,
+      "/api/topics?limit=20&offset=282260&sort=id": 37.526,
+      "/api/users?limit=20&offset=0&sort=created": 2.056,
+      "/api/users?limit=20&offset=0&sort=score": 2.94,
+      "/api/users?limit=20&offset=0&sort=discussions": 2.193,
+      "/api/users?limit=20&offset=0&sort=comments": 2.162,
+      "/api/users?limit=20&offset=0&sort=files": 1.779,
+      "/api/users?limit=20&offset=0&sort=file-size": 1.829,
+      "/api/users?limit=20&offset=1060&sort=created": 9.836,
+      "/api/users?limit=20&offset=1060&sort=score": 7.075,
+      "/api/users?limit=20&offset=1060&sort=discussions": 3.283,
+      "/api/users?limit=20&offset=1060&sort=comments": 3.328,
+      "/api/users?limit=20&offset=1060&sort=files": 3.29,
+      "/api/users?limit=20&offset=1060&sort=file-size": 3.36,
+      "/api/users?limit=20&offset=2140&sort=created": 3.902,
+      "/api/users?limit=20&offset=2140&sort=score": 11.86,
+      "/api/users?limit=20&offset=2140&sort=discussions": 3.592,
+      "/api/users?limit=20&offset=2140&sort=comments": 2.978,
+      "/api/users?limit=20&offset=2140&sort=files": 4.332,
+      "/api/users?limit=20&offset=2140&sort=file-size": 2.778,
+      "/api/users?username=codex": 1.498,
+      "/api/users?followedBy=codex&limit=20": 1.574,
+      "/api/users?following=codex&limit=20": 1.497,
+      "/api/articles?author=codex&limit=20&offset=0&sort=created": 29.451,
+      "/api/articles?author=codex&limit=20&offset=0&sort=score": 30.434,
+      "/api/articles?author=codex&limit=20&offset=0&sort=id": 29.502,
+      "/api/articles?author=codex&limit=20&offset=86100&sort=created": 28.948,
+      "/api/articles?author=codex&limit=20&offset=86100&sort=score": 28.643,
+      "/api/articles?author=codex&limit=20&offset=86100&sort=id": 32.135,
+      "/api/articles?author=codex&limit=20&offset=172220&sort=created": 27.252,
+      "/api/articles?author=codex&limit=20&offset=172220&sort=score": 27.814,
+      "/api/articles?author=codex&limit=20&offset=172220&sort=id": 28.524,
+      "/api/articles?followedBy=codex&limit=20": 68.22,
+      "/api/articles?likedBy=codex&limit=20": 2.465,
+      "/api/articles?limit=20&parent=%40codex": 10.407,
+      "/api/articles/hash?author=codex&limit=20": 10.583,
+      "/api/uploads/hash?author=codex&limit=20": 2.319,
+      "/api/articles?id=donald-trump%2Ftest-child": 2.832,
+      "/api/articles?limit=20&topicId=test-child": 3.278,
+      "/api/articles?limit=20&search=test-chi": 33.649,
+      "/api/topics?limit=20&search=test-chi": 35.167,
+      "/api/issues?id=donald-trump%2Ftest-child&sort=created": 6.141,
+      "/api/issues?id=donald-trump%2Ftest-child&sort=updated": 5.595,
+      "/api/issues?id=donald-trump%2Ftest-child&sort=score": 5.745,
+      "/api/issues?id=donald-trump%2Ftest-data&number=1": 4.698,
+      "/api/issues/1/comments?id=donald-trump%2Ftest-data": 3.732,
+      "/cirosantilli": 176.863,
+      "/codex/green-operator-potential-for-ddbar-exactness": 33.014,
+      "/-/articles?page=1&sort=created": 74.149,
+      "/-/articles?page=1&sort=score": 98.173,
+      "/-/articles?page=1&sort=id": 54.851,
+      "/-/articles?page=1&sort=id-desc": 74.516,
+      "/-/articles?page=7275&sort=created": 55.281,
+      "/-/articles?page=7275&sort=score": 53.434,
+      "/-/articles?page=7275&sort=id": 54.465,
+      "/-/articles?page=7275&sort=id-desc": 52.945,
+      "/-/articles?page=14550&sort=created": 66.013,
+      "/-/articles?page=14550&sort=score": 58.269,
+      "/-/articles?page=14550&sort=id": 83.659,
+      "/-/articles?page=14550&sort=id-desc": 71.003,
+      "/-/files?page=1&sort=created": 42.972,
+      "/-/files?page=1&sort=size": 46.393,
+      "/-/files?page=1&sort=path": 41.348,
+      "/-/files?page=1&sort=path-desc": 41.968,
+      "/-/files?page=143&sort=created": 46.968,
+      "/-/files?page=143&sort=size": 48.211,
+      "/-/files?page=143&sort=path": 71.734,
+      "/-/files?page=143&sort=path-desc": 62.289,
+      "/-/files?page=285&sort=created": 42.997,
+      "/-/files?page=285&sort=size": 44.348,
+      "/-/files?page=285&sort=path": 60.29,
+      "/-/files?page=285&sort=path-desc": 60.768,
+      "/-/files?listed=0&page=1&sort=created": 46.419,
+      "/-/files?listed=0&page=1&sort=size": 46.009,
+      "/-/files?listed=0&page=1&sort=path": 32.302,
+      "/-/files?listed=0&page=1&sort=path-desc": 39.191,
+      "/-/files?listed=0&page=5&sort=created": 50.644,
+      "/-/files?listed=0&page=5&sort=size": 46.726,
+      "/-/files?listed=0&page=5&sort=path": 39.075,
+      "/-/files?listed=0&page=5&sort=path-desc": 36.154,
+      "/-/files?listed=0&page=9&sort=created": 44.058,
+      "/-/files?listed=0&page=9&sort=size": 48.064,
+      "/-/files?listed=0&page=9&sort=path": 39.625,
+      "/-/files?listed=0&page=9&sort=path-desc": 32.034,
+      "/-/files?listed=2&page=1&sort=created": 45.478,
+      "/-/files?listed=2&page=1&sort=size": 47.219,
+      "/-/files?listed=2&page=1&sort=path": 39.868,
+      "/-/files?listed=2&page=1&sort=path-desc": 39.641,
+      "/-/files?listed=2&page=147&sort=created": 47.569,
+      "/-/files?listed=2&page=147&sort=size": 50.67,
+      "/-/files?listed=2&page=147&sort=path": 62.7,
+      "/-/files?listed=2&page=147&sort=path-desc": 61.995,
+      "/-/files?listed=2&page=294&sort=created": 43.646,
+      "/-/files?listed=2&page=294&sort=size": 45.756,
+      "/-/files?listed=2&page=294&sort=path": 61.491,
+      "/-/files?listed=2&page=294&sort=path-desc": 60.536,
+      "/-/topics?page=1&sort=created": 52.433,
+      "/-/topics?page=1&sort=article-count": 52.496,
+      "/-/topics?page=1&sort=id": 55.565,
+      "/-/topics?page=1&sort=id-desc": 56.68,
+      "/-/topics?page=7057&sort=created": 69.224,
+      "/-/topics?page=7057&sort=article-count": 64.538,
+      "/-/topics?page=7057&sort=id": 90.539,
+      "/-/topics?page=7057&sort=id-desc": 50.504,
+      "/-/topics?page=14114&sort=created": 95.429,
+      "/-/topics?page=14114&sort=article-count": 89.375,
+      "/-/topics?page=14114&sort=id": 179.627,
+      "/-/topics?page=14114&sort=id-desc": 52.956,
+      "/?sort=article-count": 54.756,
+      "/?sort=id": 53.463,
+      "/-/users?sort=created": 50.348,
+      "/-/users?sort=score": 58.631,
+      "/-/discussions?sort=created": 73.285,
+      "/-/discussions?sort=score": 59.337,
+      "/-/comments?sort=created": 61.877
+    },
+    "samples": {
+      "/api/": [
+        2.179,
+        1.183,
+        1.118
+      ],
+      "/api/min": [
+        2.937,
+        1.074,
+        1.019
+      ],
+      "/api/articles?limit=20&offset=0&sort=created": [
+        39.709,
+        43.388,
+        32.313
+      ],
+      "/api/articles?limit=20&offset=0&sort=updated": [
+        29.432,
+        29.747,
+        29.877
+      ],
+      "/api/articles?limit=20&offset=0&sort=score": [
+        44.441,
+        32.407,
+        34.509
+      ],
+      "/api/articles?limit=20&offset=0&sort=id": [
+        40.822,
+        37.482,
+        36.809
+      ],
+      "/api/articles?limit=20&offset=0&sort=follower-count": [
+        31.64,
+        27.63,
+        27.954
+      ],
+      "/api/articles?limit=20&offset=0&sort=issues": [
+        27.284,
+        27.662,
+        26.399
+      ],
+      "/api/articles?limit=20&offset=148000&sort=created": [
+        60.22,
+        49.981,
+        60.859
+      ],
+      "/api/articles?limit=20&offset=148000&sort=updated": [
+        27.403,
+        27.703,
+        27.062
+      ],
+      "/api/articles?limit=20&offset=148000&sort=score": [
+        70.966,
+        57.511,
+        68.521
+      ],
+      "/api/articles?limit=20&offset=148000&sort=id": [
+        21.123,
+        28.997,
+        29.89
+      ],
+      "/api/articles?limit=20&offset=148000&sort=follower-count": [
+        28.435,
+        29.051,
+        27.469
+      ],
+      "/api/articles?limit=20&offset=148000&sort=issues": [
+        27.661,
+        27.186,
+        27.598
+      ],
+      "/api/articles?limit=20&offset=296000&sort=created": [
+        66.85,
+        69.24,
+        64.692
+      ],
+      "/api/articles?limit=20&offset=296000&sort=updated": [
+        26.952,
+        31.171,
+        31.686
+      ],
+      "/api/articles?limit=20&offset=296000&sort=score": [
+        86.05,
+        78.543,
+        82.425
+      ],
+      "/api/articles?limit=20&offset=296000&sort=id": [
+        37.666,
+        34.929,
+        39.783
+      ],
+      "/api/articles?limit=20&offset=296000&sort=follower-count": [
+        29.612,
+        34.968,
+        30.603
+      ],
+      "/api/articles?limit=20&offset=296000&sort=issues": [
+        29.143,
+        33.579,
+        24.688
+      ],
+      "/api/topics?limit=20&offset=0&sort=created": [
+        32.787,
+        32.741,
+        33.66
+      ],
+      "/api/topics?limit=20&offset=0&sort=updated": [
+        37.145,
+        37.528,
+        37.349
+      ],
+      "/api/topics?limit=20&offset=0&sort=article-count": [
+        33.689,
+        34.199,
+        33.473
+      ],
+      "/api/topics?limit=20&offset=0&sort=id": [
+        39.106,
+        35.72,
+        38.058
+      ],
+      "/api/topics?limit=20&offset=141120&sort=created": [
+        37.211,
+        38.031,
+        35.057
+      ],
+      "/api/topics?limit=20&offset=141120&sort=updated": [
+        73.321,
+        62.748,
+        79.027
+      ],
+      "/api/topics?limit=20&offset=141120&sort=article-count": [
+        35.885,
+        42.245,
+        40.889
+      ],
+      "/api/topics?limit=20&offset=141120&sort=id": [
+        36.045,
+        37.197,
+        35.752
+      ],
+      "/api/topics?limit=20&offset=282260&sort=created": [
+        69.56,
+        72.576,
+        68.854
+      ],
+      "/api/topics?limit=20&offset=282260&sort=updated": [
+        99.916,
+        114.25,
+        91.601
+      ],
+      "/api/topics?limit=20&offset=282260&sort=article-count": [
+        68.77,
+        71.983,
+        67.255
+      ],
+      "/api/topics?limit=20&offset=282260&sort=id": [
+        37.526,
+        37.18,
+        38.011
+      ],
+      "/api/users?limit=20&offset=0&sort=created": [
+        3.073,
+        2.056,
+        1.769
+      ],
+      "/api/users?limit=20&offset=0&sort=score": [
+        3.413,
+        2.749,
+        2.94
+      ],
+      "/api/users?limit=20&offset=0&sort=discussions": [
+        2.361,
+        1.79,
+        2.193
+      ],
+      "/api/users?limit=20&offset=0&sort=comments": [
+        2.162,
+        2.95,
+        2.007
+      ],
+      "/api/users?limit=20&offset=0&sort=files": [
+        2.297,
+        1.779,
+        1.715
+      ],
+      "/api/users?limit=20&offset=0&sort=file-size": [
+        2.38,
+        1.829,
+        1.691
+      ],
+      "/api/users?limit=20&offset=1060&sort=created": [
+        11.727,
+        9.836,
+        9.566
+      ],
+      "/api/users?limit=20&offset=1060&sort=score": [
+        7.075,
+        6.602,
+        8.031
+      ],
+      "/api/users?limit=20&offset=1060&sort=discussions": [
+        4.869,
+        3.283,
+        2.929
+      ],
+      "/api/users?limit=20&offset=1060&sort=comments": [
+        3.06,
+        3.328,
+        3.343
+      ],
+      "/api/users?limit=20&offset=1060&sort=files": [
+        4.085,
+        3.29,
+        3.258
+      ],
+      "/api/users?limit=20&offset=1060&sort=file-size": [
+        4.352,
+        3.36,
+        2.566
+      ],
+      "/api/users?limit=20&offset=2140&sort=created": [
+        4.218,
+        3.902,
+        2.944
+      ],
+      "/api/users?limit=20&offset=2140&sort=score": [
+        13.745,
+        9.662,
+        11.86
+      ],
+      "/api/users?limit=20&offset=2140&sort=discussions": [
+        4.941,
+        3.592,
+        2.936
+      ],
+      "/api/users?limit=20&offset=2140&sort=comments": [
+        4.26,
+        2.805,
+        2.978
+      ],
+      "/api/users?limit=20&offset=2140&sort=files": [
+        4.332,
+        4.483,
+        2.978
+      ],
+      "/api/users?limit=20&offset=2140&sort=file-size": [
+        3.811,
+        2.778,
+        2.569
+      ],
+      "/api/users?username=codex": [
+        1.708,
+        1.307,
+        1.498
+      ],
+      "/api/users?followedBy=codex&limit=20": [
+        2.166,
+        1.574,
+        1.491
+      ],
+      "/api/users?following=codex&limit=20": [
+        1.741,
+        1.497,
+        1.451
+      ],
+      "/api/articles?author=codex&limit=20&offset=0&sort=created": [
+        29.451,
+        28.291,
+        29.941
+      ],
+      "/api/articles?author=codex&limit=20&offset=0&sort=score": [
+        33.579,
+        30.434,
+        28.937
+      ],
+      "/api/articles?author=codex&limit=20&offset=0&sort=id": [
+        28.613,
+        29.502,
+        29.987
+      ],
+      "/api/articles?author=codex&limit=20&offset=86100&sort=created": [
+        27.289,
+        29.099,
+        28.948
+      ],
+      "/api/articles?author=codex&limit=20&offset=86100&sort=score": [
+        28.643,
+        30.676,
+        27.69
+      ],
+      "/api/articles?author=codex&limit=20&offset=86100&sort=id": [
+        32.135,
+        32.196,
+        30.765
+      ],
+      "/api/articles?author=codex&limit=20&offset=172220&sort=created": [
+        27.252,
+        28.891,
+        27.148
+      ],
+      "/api/articles?author=codex&limit=20&offset=172220&sort=score": [
+        27.913,
+        27.814,
+        26.999
+      ],
+      "/api/articles?author=codex&limit=20&offset=172220&sort=id": [
+        25.376,
+        30.666,
+        28.524
+      ],
+      "/api/articles?followedBy=codex&limit=20": [
+        68.22,
+        67.957,
+        70.782
+      ],
+      "/api/articles?likedBy=codex&limit=20": [
+        2.402,
+        3.878,
+        2.465
+      ],
+      "/api/articles?limit=20&parent=%40codex": [
+        10.407,
+        11.026,
+        9.498
+      ],
+      "/api/articles/hash?author=codex&limit=20": [
+        11.624,
+        10.583,
+        9.689
+      ],
+      "/api/uploads/hash?author=codex&limit=20": [
+        2.498,
+        2.319,
+        1.858
+      ],
+      "/api/articles?id=donald-trump%2Ftest-child": [
+        3.018,
+        2.517,
+        2.832
+      ],
+      "/api/articles?limit=20&topicId=test-child": [
+        3.613,
+        2.967,
+        3.278
+      ],
+      "/api/articles?limit=20&search=test-chi": [
+        33.649,
+        34.642,
+        33.552
+      ],
+      "/api/topics?limit=20&search=test-chi": [
+        35.952,
+        34.407,
+        35.167
+      ],
+      "/api/issues?id=donald-trump%2Ftest-child&sort=created": [
+        5.647,
+        6.946,
+        6.141
+      ],
+      "/api/issues?id=donald-trump%2Ftest-child&sort=updated": [
+        5.595,
+        5.418,
+        6.675
+      ],
+      "/api/issues?id=donald-trump%2Ftest-child&sort=score": [
+        5.467,
+        5.983,
+        5.745
+      ],
+      "/api/issues?id=donald-trump%2Ftest-data&number=1": [
+        4.698,
+        5.29,
+        4.656
+      ],
+      "/api/issues/1/comments?id=donald-trump%2Ftest-data": [
+        3.789,
+        3.732,
+        2.853
+      ],
+      "/cirosantilli": [
+        205.59,
+        172.468,
+        176.863
+      ],
+      "/codex/green-operator-potential-for-ddbar-exactness": [
+        60.941,
+        27.573,
+        33.014
+      ],
+      "/-/articles?page=1&sort=created": [
+        74.149,
+        69.553,
+        74.431
+      ],
+      "/-/articles?page=1&sort=score": [
+        98.173,
+        99.721,
+        89.532
+      ],
+      "/-/articles?page=1&sort=id": [
+        55.153,
+        54.325,
+        54.851
+      ],
+      "/-/articles?page=1&sort=id-desc": [
+        71.668,
+        74.516,
+        77.081
+      ],
+      "/-/articles?page=7275&sort=created": [
+        53.771,
+        55.281,
+        55.753
+      ],
+      "/-/articles?page=7275&sort=score": [
+        52.383,
+        53.434,
+        56.387
+      ],
+      "/-/articles?page=7275&sort=id": [
+        54.465,
+        54.889,
+        53.763
+      ],
+      "/-/articles?page=7275&sort=id-desc": [
+        52.126,
+        53.927,
+        52.945
+      ],
+      "/-/articles?page=14550&sort=created": [
+        62.534,
+        76.004,
+        66.013
+      ],
+      "/-/articles?page=14550&sort=score": [
+        58.269,
+        57.988,
+        58.947
+      ],
+      "/-/articles?page=14550&sort=id": [
+        85.942,
+        80.714,
+        83.659
+      ],
+      "/-/articles?page=14550&sort=id-desc": [
+        67.698,
+        71.003,
+        76.898
+      ],
+      "/-/files?page=1&sort=created": [
+        42.972,
+        61.215,
+        36.888
+      ],
+      "/-/files?page=1&sort=size": [
+        46.393,
+        48.423,
+        45.186
+      ],
+      "/-/files?page=1&sort=path": [
+        41.348,
+        38.703,
+        41.752
+      ],
+      "/-/files?page=1&sort=path-desc": [
+        41.156,
+        41.968,
+        44.676
+      ],
+      "/-/files?page=143&sort=created": [
+        47.189,
+        45.908,
+        46.968
+      ],
+      "/-/files?page=143&sort=size": [
+        48.368,
+        47.904,
+        48.211
+      ],
+      "/-/files?page=143&sort=path": [
+        71.734,
+        71.968,
+        62.003
+      ],
+      "/-/files?page=143&sort=path-desc": [
+        67.037,
+        62.207,
+        62.289
+      ],
+      "/-/files?page=285&sort=created": [
+        42.716,
+        42.997,
+        44.494
+      ],
+      "/-/files?page=285&sort=size": [
+        43.006,
+        44.557,
+        44.348
+      ],
+      "/-/files?page=285&sort=path": [
+        60.29,
+        60.621,
+        60.187
+      ],
+      "/-/files?page=285&sort=path-desc": [
+        62.647,
+        60.768,
+        60.322
+      ],
+      "/-/files?listed=0&page=1&sort=created": [
+        47.134,
+        46.419,
+        45.995
+      ],
+      "/-/files?listed=0&page=1&sort=size": [
+        46.496,
+        45.544,
+        46.009
+      ],
+      "/-/files?listed=0&page=1&sort=path": [
+        32.302,
+        46.907,
+        32.021
+      ],
+      "/-/files?listed=0&page=1&sort=path-desc": [
+        39.191,
+        55.809,
+        36.146
+      ],
+      "/-/files?listed=0&page=5&sort=created": [
+        45.098,
+        50.644,
+        52.949
+      ],
+      "/-/files?listed=0&page=5&sort=size": [
+        49.062,
+        44.968,
+        46.726
+      ],
+      "/-/files?listed=0&page=5&sort=path": [
+        33.786,
+        39.075,
+        45.977
+      ],
+      "/-/files?listed=0&page=5&sort=path-desc": [
+        30.979,
+        46.228,
+        36.154
+      ],
+      "/-/files?listed=0&page=9&sort=created": [
+        30.997,
+        44.058,
+        55.43
+      ],
+      "/-/files?listed=0&page=9&sort=size": [
+        49.985,
+        46.281,
+        48.064
+      ],
+      "/-/files?listed=0&page=9&sort=path": [
+        39.625,
+        33.788,
+        48.117
+      ],
+      "/-/files?listed=0&page=9&sort=path-desc": [
+        32.034,
+        47.581,
+        31.594
+      ],
+      "/-/files?listed=2&page=1&sort=created": [
+        46.775,
+        45.478,
+        44.364
+      ],
+      "/-/files?listed=2&page=1&sort=size": [
+        52.528,
+        47.219,
+        46.889
+      ],
+      "/-/files?listed=2&page=1&sort=path": [
+        39.197,
+        42.179,
+        39.868
+      ],
+      "/-/files?listed=2&page=1&sort=path-desc": [
+        40.718,
+        39.036,
+        39.641
+      ],
+      "/-/files?listed=2&page=147&sort=created": [
+        45.905,
+        49.431,
+        47.569
+      ],
+      "/-/files?listed=2&page=147&sort=size": [
+        51.618,
+        50.67,
+        48.707
+      ],
+      "/-/files?listed=2&page=147&sort=path": [
+        62.72,
+        61.295,
+        62.7
+      ],
+      "/-/files?listed=2&page=147&sort=path-desc": [
+        61.995,
+        64.46,
+        61.159
+      ],
+      "/-/files?listed=2&page=294&sort=created": [
+        44.537,
+        43.646,
+        41.932
+      ],
+      "/-/files?listed=2&page=294&sort=size": [
+        42.632,
+        45.756,
+        50.612
+      ],
+      "/-/files?listed=2&page=294&sort=path": [
+        67.975,
+        56.741,
+        61.491
+      ],
+      "/-/files?listed=2&page=294&sort=path-desc": [
+        60.323,
+        61.094,
+        60.536
+      ],
+      "/-/topics?page=1&sort=created": [
+        50.317,
+        52.433,
+        56.239
+      ],
+      "/-/topics?page=1&sort=article-count": [
+        52.496,
+        54.889,
+        52.175
+      ],
+      "/-/topics?page=1&sort=id": [
+        53.836,
+        55.565,
+        58.219
+      ],
+      "/-/topics?page=1&sort=id-desc": [
+        64.369,
+        54.485,
+        56.68
+      ],
+      "/-/topics?page=7057&sort=created": [
+        69.564,
+        69.224,
+        60.683
+      ],
+      "/-/topics?page=7057&sort=article-count": [
+        59.04,
+        64.538,
+        68.977
+      ],
+      "/-/topics?page=7057&sort=id": [
+        89.788,
+        90.539,
+        95.076
+      ],
+      "/-/topics?page=7057&sort=id-desc": [
+        50.504,
+        53.034,
+        50.118
+      ],
+      "/-/topics?page=14114&sort=created": [
+        82.628,
+        98.649,
+        95.429
+      ],
+      "/-/topics?page=14114&sort=article-count": [
+        92.037,
+        88.624,
+        89.375
+      ],
+      "/-/topics?page=14114&sort=id": [
+        179.627,
+        179.276,
+        188.275
+      ],
+      "/-/topics?page=14114&sort=id-desc": [
+        53.843,
+        52.793,
+        52.956
+      ],
+      "/?sort=article-count": [
+        59.508,
+        54.756,
+        52.041
+      ],
+      "/?sort=id": [
+        52.168,
+        53.463,
+        55.224
+      ],
+      "/-/users?sort=created": [
+        49.479,
+        54.127,
+        50.348
+      ],
+      "/-/users?sort=score": [
+        58.871,
+        58.631,
+        57.479
+      ],
+      "/-/discussions?sort=created": [
+        76.143,
+        73.285,
+        53.484
+      ],
+      "/-/discussions?sort=score": [
+        73.822,
+        56.267,
+        59.337
+      ],
+      "/-/comments?sort=created": [
+        61.877,
+        76.781,
+        60.344
+      ]
+    },
+    "errors": {}
+  },
+  {
+    "about": {
+      "git_sha": "bbfe830447f8f52eebe4bd3aa25aeb31f9ddf3cb",
+      "git_dirty": true,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 296016,
+        "users": 2151,
+        "topics": 285636,
+        "issues": 829,
+        "comments": 643,
+        "uploads": 6117,
+        "files": 296067,
+        "ids": 309009,
+        "refs": 803938,
+        "listed_articles": 290994,
+        "nonempty_topics": 282264,
+        "file_uploads": 5871,
+        "listed_uploads": 5695,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 3066213167,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 44038,
+            "username": "codex",
+            "articles": 172236
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "deepArticle": {
+            "slug": "codex/green-operator-potential-for-ddbar-exactness",
+            "depth": 16,
+            "nestedSetIndex": 21650
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-16T07:26:03.938Z",
+      "run_id": "308cc910-2ffc-4aa7-a45c-05b93b1b62bf",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 1,
+      "planned_requests": 4,
+      "completed": true,
+      "finished_at": "2026-10-16T07:26:04.833Z"
+    },
+    "results": {
+      "/-/topics?page=14114": 93.253
+    },
+    "samples": {
+      "/-/topics?page=14114": [
+        105.255,
+        93.253,
+        89.895
+      ]
+    },
+    "errors": {}
+  },
+  {
+    "about": {
+      "git_sha": "bbfe830447f8f52eebe4bd3aa25aeb31f9ddf3cb",
+      "git_dirty": true,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 296016,
+        "users": 2151,
+        "topics": 285636,
+        "issues": 829,
+        "comments": 643,
+        "uploads": 6117,
+        "files": 296067,
+        "ids": 309009,
+        "refs": 803938,
+        "listed_articles": 290994,
+        "nonempty_topics": 282264,
+        "file_uploads": 5871,
+        "listed_uploads": 5695,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 3068801839,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 44038,
+            "username": "codex",
+            "articles": 172236
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "deepArticle": {
+            "slug": "codex/green-operator-potential-for-ddbar-exactness",
+            "depth": 16,
+            "nestedSetIndex": 21650
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-16T07:26:35.197Z",
+      "run_id": "0de2caea-49cf-421e-929b-154137d71443",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 1,
+      "planned_requests": 4,
+      "completed": true,
+      "finished_at": "2026-10-16T07:26:35.666Z"
+    },
+    "results": {
+      "/-/topics?page=14114": 96.585
+    },
+    "samples": {
+      "/-/topics?page=14114": [
+        98.864,
+        96.585,
+        89.993
+      ]
+    },
+    "errors": {}
+  },
+  {
+    "about": {
+      "git_sha": "bbfe830447f8f52eebe4bd3aa25aeb31f9ddf3cb",
+      "git_dirty": true,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 296016,
+        "users": 2151,
+        "topics": 285636,
+        "issues": 829,
+        "comments": 643,
+        "uploads": 6117,
+        "files": 296067,
+        "ids": 309009,
+        "refs": 803938,
+        "listed_articles": 290994,
+        "nonempty_topics": 282264,
+        "file_uploads": 5871,
+        "listed_uploads": 5695,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 3068801839,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 44038,
+            "username": "codex",
+            "articles": 172236
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "deepArticle": {
+            "slug": "codex/green-operator-potential-for-ddbar-exactness",
+            "depth": 16,
+            "nestedSetIndex": 21650
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-16T07:27:26.978Z",
+      "run_id": "dd502ca6-d32e-45bf-accb-e4080ade0711",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 145,
+      "planned_requests": 580,
+      "completed": true,
+      "finished_at": "2026-10-16T07:27:50.529Z"
+    },
+    "results": {
+      "/api/": 1.216,
+      "/api/min": 1.788,
+      "/api/articles?limit=20&offset=0&sort=created": 38.011,
+      "/api/articles?limit=20&offset=0&sort=updated": 18.328,
+      "/api/articles?limit=20&offset=0&sort=score": 33.837,
+      "/api/articles?limit=20&offset=0&sort=id": 23.786,
+      "/api/articles?limit=20&offset=0&sort=follower-count": 17.25,
+      "/api/articles?limit=20&offset=0&sort=issues": 16.511,
+      "/api/articles?limit=20&offset=148000&sort=created": 56.33,
+      "/api/articles?limit=20&offset=148000&sort=updated": 20.365,
+      "/api/articles?limit=20&offset=148000&sort=score": 60.795,
+      "/api/articles?limit=20&offset=148000&sort=id": 19.731,
+      "/api/articles?limit=20&offset=148000&sort=follower-count": 17.299,
+      "/api/articles?limit=20&offset=148000&sort=issues": 17.795,
+      "/api/articles?limit=20&offset=296000&sort=created": 68.084,
+      "/api/articles?limit=20&offset=296000&sort=updated": 25.807,
+      "/api/articles?limit=20&offset=296000&sort=score": 84.175,
+      "/api/articles?limit=20&offset=296000&sort=id": 30.391,
+      "/api/articles?limit=20&offset=296000&sort=follower-count": 24.995,
+      "/api/articles?limit=20&offset=296000&sort=issues": 24.481,
+      "/api/topics?limit=20&offset=0&sort=created": 22.715,
+      "/api/topics?limit=20&offset=0&sort=updated": 32.67,
+      "/api/topics?limit=20&offset=0&sort=article-count": 23.902,
+      "/api/topics?limit=20&offset=0&sort=id": 23.922,
+      "/api/topics?limit=20&offset=141120&sort=created": 48.702,
+      "/api/topics?limit=20&offset=141120&sort=updated": 62.058,
+      "/api/topics?limit=20&offset=141120&sort=article-count": 37.588,
+      "/api/topics?limit=20&offset=141120&sort=id": 25.153,
+      "/api/topics?limit=20&offset=282260&sort=created": 68.646,
+      "/api/topics?limit=20&offset=282260&sort=updated": 101.296,
+      "/api/topics?limit=20&offset=282260&sort=article-count": 67.9,
+      "/api/topics?limit=20&offset=282260&sort=id": 27.37,
+      "/api/users?limit=20&offset=0&sort=created": 2.26,
+      "/api/users?limit=20&offset=0&sort=score": 2.294,
+      "/api/users?limit=20&offset=0&sort=discussions": 2.517,
+      "/api/users?limit=20&offset=0&sort=comments": 1.881,
+      "/api/users?limit=20&offset=0&sort=files": 2.389,
+      "/api/users?limit=20&offset=0&sort=file-size": 2.416,
+      "/api/users?limit=20&offset=1060&sort=created": 10.399,
+      "/api/users?limit=20&offset=1060&sort=score": 6.964,
+      "/api/users?limit=20&offset=1060&sort=discussions": 3.679,
+      "/api/users?limit=20&offset=1060&sort=comments": 3.767,
+      "/api/users?limit=20&offset=1060&sort=files": 4.32,
+      "/api/users?limit=20&offset=1060&sort=file-size": 4.721,
+      "/api/users?limit=20&offset=2140&sort=created": 4.089,
+      "/api/users?limit=20&offset=2140&sort=score": 9.506,
+      "/api/users?limit=20&offset=2140&sort=discussions": 3.728,
+      "/api/users?limit=20&offset=2140&sort=comments": 4.326,
+      "/api/users?limit=20&offset=2140&sort=files": 3.592,
+      "/api/users?limit=20&offset=2140&sort=file-size": 3.533,
+      "/api/users?username=codex": 2.247,
+      "/api/users?followedBy=codex&limit=20": 2.222,
+      "/api/users?following=codex&limit=20": 2.834,
+      "/api/articles?author=codex&limit=20&offset=0&sort=created": 19.251,
+      "/api/articles?author=codex&limit=20&offset=0&sort=score": 18.836,
+      "/api/articles?author=codex&limit=20&offset=0&sort=id": 14.987,
+      "/api/articles?author=codex&limit=20&offset=86100&sort=created": 14.718,
+      "/api/articles?author=codex&limit=20&offset=86100&sort=score": 15.682,
+      "/api/articles?author=codex&limit=20&offset=86100&sort=id": 20.516,
+      "/api/articles?author=codex&limit=20&offset=172220&sort=created": 23.687,
+      "/api/articles?author=codex&limit=20&offset=172220&sort=score": 20.041,
+      "/api/articles?author=codex&limit=20&offset=172220&sort=id": 24.811,
+      "/api/articles?followedBy=codex&limit=20": 49.829,
+      "/api/articles?likedBy=codex&limit=20": 2.969,
+      "/api/articles?limit=20&parent=%40codex": 10.528,
+      "/api/articles/hash?author=codex&limit=20": 10.928,
+      "/api/uploads/hash?author=codex&limit=20": 3.991,
+      "/api/articles?id=donald-trump%2Ftest-child": 3.111,
+      "/api/articles?limit=20&topicId=test-child": 3.12,
+      "/api/articles?limit=20&search=test-chi": 37.645,
+      "/api/topics?limit=20&search=test-chi": 25.855,
+      "/api/issues?id=donald-trump%2Ftest-child&sort=created": 5.16,
+      "/api/issues?id=donald-trump%2Ftest-child&sort=updated": 5.778,
+      "/api/issues?id=donald-trump%2Ftest-child&sort=score": 5.301,
+      "/api/issues?id=donald-trump%2Ftest-data&number=1": 5.913,
+      "/api/issues/1/comments?id=donald-trump%2Ftest-data": 3.872,
+      "/cirosantilli": 199.623,
+      "/codex/green-operator-potential-for-ddbar-exactness": 29.278,
+      "/-/articles?page=1&sort=created": 78.478,
+      "/-/articles?page=1&sort=score": 108.795,
+      "/-/articles?page=1&sort=id": 52.631,
+      "/-/articles?page=1&sort=id-desc": 69.657,
+      "/-/articles?page=7275&sort=created": 69.726,
+      "/-/articles?page=7275&sort=score": 54.495,
+      "/-/articles?page=7275&sort=id": 51.264,
+      "/-/articles?page=7275&sort=id-desc": 48.379,
+      "/-/articles?page=14550&sort=created": 58.603,
+      "/-/articles?page=14550&sort=score": 57.081,
+      "/-/articles?page=14550&sort=id": 81.057,
+      "/-/articles?page=14550&sort=id-desc": 82.949,
+      "/-/files?page=1&sort=created": 41.19,
+      "/-/files?page=1&sort=size": 35.527,
+      "/-/files?page=1&sort=path": 51.827,
+      "/-/files?page=1&sort=path-desc": 52.079,
+      "/-/files?page=143&sort=created": 32.312,
+      "/-/files?page=143&sort=size": 31.917,
+      "/-/files?page=143&sort=path": 64.906,
+      "/-/files?page=143&sort=path-desc": 73.78,
+      "/-/files?page=285&sort=created": 35.981,
+      "/-/files?page=285&sort=size": 30.67,
+      "/-/files?page=285&sort=path": 59.524,
+      "/-/files?page=285&sort=path-desc": 60.618,
+      "/-/files?listed=0&page=1&sort=created": 32.804,
+      "/-/files?listed=0&page=1&sort=size": 31.936,
+      "/-/files?listed=0&page=1&sort=path": 37.149,
+      "/-/files?listed=0&page=1&sort=path-desc": 36.611,
+      "/-/files?listed=0&page=5&sort=created": 38.115,
+      "/-/files?listed=0&page=5&sort=size": 34.968,
+      "/-/files?listed=0&page=5&sort=path": 33.257,
+      "/-/files?listed=0&page=5&sort=path-desc": 32.351,
+      "/-/files?listed=0&page=9&sort=created": 33.015,
+      "/-/files?listed=0&page=9&sort=size": 36.714,
+      "/-/files?listed=0&page=9&sort=path": 29.886,
+      "/-/files?listed=0&page=9&sort=path-desc": 30.421,
+      "/-/files?listed=2&page=1&sort=created": 31.184,
+      "/-/files?listed=2&page=1&sort=size": 38.82,
+      "/-/files?listed=2&page=1&sort=path": 41.542,
+      "/-/files?listed=2&page=1&sort=path-desc": 52.468,
+      "/-/files?listed=2&page=147&sort=created": 32.004,
+      "/-/files?listed=2&page=147&sort=size": 30.91,
+      "/-/files?listed=2&page=147&sort=path": 62.37,
+      "/-/files?listed=2&page=147&sort=path-desc": 65.898,
+      "/-/files?listed=2&page=294&sort=created": 31.497,
+      "/-/files?listed=2&page=294&sort=size": 37.947,
+      "/-/files?listed=2&page=294&sort=path": 63.458,
+      "/-/files?listed=2&page=294&sort=path-desc": 61.33,
+      "/-/topics?page=1&sort=created": 35.441,
+      "/-/topics?page=1&sort=article-count": 37.986,
+      "/-/topics?page=1&sort=id": 31.945,
+      "/-/topics?page=1&sort=id-desc": 31.774,
+      "/-/topics?page=7057&sort=created": 55.092,
+      "/-/topics?page=7057&sort=article-count": 56.685,
+      "/-/topics?page=7057&sort=id": 32.644,
+      "/-/topics?page=7057&sort=id-desc": 41.232,
+      "/-/topics?page=14114&sort=created": 92.496,
+      "/-/topics?page=14114&sort=article-count": 83.688,
+      "/-/topics?page=14114&sort=id": 44.155,
+      "/-/topics?page=14114&sort=id-desc": 39.342,
+      "/?sort=article-count": 35.755,
+      "/?sort=id": 30.123,
+      "/-/users?sort=created": 50.678,
+      "/-/users?sort=score": 43.795,
+      "/-/discussions?sort=created": 65.377,
+      "/-/discussions?sort=score": 56.746,
+      "/-/comments?sort=created": 66.578
+    },
+    "samples": {
+      "/api/": [
+        2.127,
+        1.216,
+        1.044
+      ],
+      "/api/min": [
+        1.788,
+        2.936,
+        1.277
+      ],
+      "/api/articles?limit=20&offset=0&sort=created": [
+        40.971,
+        35.198,
+        38.011
+      ],
+      "/api/articles?limit=20&offset=0&sort=updated": [
+        19.033,
+        18.328,
+        17.753
+      ],
+      "/api/articles?limit=20&offset=0&sort=score": [
+        33.837,
+        36.524,
+        33.096
+      ],
+      "/api/articles?limit=20&offset=0&sort=id": [
+        23.786,
+        22.855,
+        25.551
+      ],
+      "/api/articles?limit=20&offset=0&sort=follower-count": [
+        20.096,
+        17.25,
+        15.953
+      ],
+      "/api/articles?limit=20&offset=0&sort=issues": [
+        16.511,
+        15.872,
+        17.361
+      ],
+      "/api/articles?limit=20&offset=148000&sort=created": [
+        54.801,
+        59.301,
+        56.33
+      ],
+      "/api/articles?limit=20&offset=148000&sort=updated": [
+        21.062,
+        20.365,
+        19.4
+      ],
+      "/api/articles?limit=20&offset=148000&sort=score": [
+        65.157,
+        60.795,
+        55.994
+      ],
+      "/api/articles?limit=20&offset=148000&sort=id": [
+        25.477,
+        19.731,
+        19.45
+      ],
+      "/api/articles?limit=20&offset=148000&sort=follower-count": [
+        17.299,
+        17.593,
+        17.109
+      ],
+      "/api/articles?limit=20&offset=148000&sort=issues": [
+        17.795,
+        17.617,
+        17.86
+      ],
+      "/api/articles?limit=20&offset=296000&sort=created": [
+        68.57,
+        65.385,
+        68.084
+      ],
+      "/api/articles?limit=20&offset=296000&sort=updated": [
+        26.034,
+        25.237,
+        25.807
+      ],
+      "/api/articles?limit=20&offset=296000&sort=score": [
+        84.175,
+        91.776,
+        82.776
+      ],
+      "/api/articles?limit=20&offset=296000&sort=id": [
+        30.391,
+        29.713,
+        31.994
+      ],
+      "/api/articles?limit=20&offset=296000&sort=follower-count": [
+        25.429,
+        24.995,
+        24.68
+      ],
+      "/api/articles?limit=20&offset=296000&sort=issues": [
+        25.503,
+        24.363,
+        24.481
+      ],
+      "/api/topics?limit=20&offset=0&sort=created": [
+        23.07,
+        22.715,
+        22.459
+      ],
+      "/api/topics?limit=20&offset=0&sort=updated": [
+        35.832,
+        32.67,
+        31.138
+      ],
+      "/api/topics?limit=20&offset=0&sort=article-count": [
+        24.192,
+        23.369,
+        23.902
+      ],
+      "/api/topics?limit=20&offset=0&sort=id": [
+        23.709,
+        24.542,
+        23.922
+      ],
+      "/api/topics?limit=20&offset=141120&sort=created": [
+        45.929,
+        48.822,
+        48.702
+      ],
+      "/api/topics?limit=20&offset=141120&sort=updated": [
+        63.771,
+        60.947,
+        62.058
+      ],
+      "/api/topics?limit=20&offset=141120&sort=article-count": [
+        39.826,
+        36.971,
+        37.588
+      ],
+      "/api/topics?limit=20&offset=141120&sort=id": [
+        25.153,
+        24.715,
+        25.378
+      ],
+      "/api/topics?limit=20&offset=282260&sort=created": [
+        68.646,
+        67.824,
+        69.79
+      ],
+      "/api/topics?limit=20&offset=282260&sort=updated": [
+        108.176,
+        99.483,
+        101.296
+      ],
+      "/api/topics?limit=20&offset=282260&sort=article-count": [
+        67.341,
+        73.768,
+        67.9
+      ],
+      "/api/topics?limit=20&offset=282260&sort=id": [
+        29.412,
+        27.37,
+        24.659
+      ],
+      "/api/users?limit=20&offset=0&sort=created": [
+        2.431,
+        2.26,
+        2.044
+      ],
+      "/api/users?limit=20&offset=0&sort=score": [
+        2.399,
+        2.141,
+        2.294
+      ],
+      "/api/users?limit=20&offset=0&sort=discussions": [
+        2.67,
+        2.517,
+        2.197
+      ],
+      "/api/users?limit=20&offset=0&sort=comments": [
+        2.019,
+        1.872,
+        1.881
+      ],
+      "/api/users?limit=20&offset=0&sort=files": [
+        2.778,
+        1.934,
+        2.389
+      ],
+      "/api/users?limit=20&offset=0&sort=file-size": [
+        3.067,
+        2.416,
+        2.161
+      ],
+      "/api/users?limit=20&offset=1060&sort=created": [
+        10.399,
+        11.14,
+        8.802
+      ],
+      "/api/users?limit=20&offset=1060&sort=score": [
+        6.862,
+        8.635,
+        6.964
+      ],
+      "/api/users?limit=20&offset=1060&sort=discussions": [
+        3.34,
+        3.789,
+        3.679
+      ],
+      "/api/users?limit=20&offset=1060&sort=comments": [
+        3.767,
+        4.336,
+        3.588
+      ],
+      "/api/users?limit=20&offset=1060&sort=files": [
+        4.478,
+        4.32,
+        3.69
+      ],
+      "/api/users?limit=20&offset=1060&sort=file-size": [
+        4.3,
+        4.721,
+        4.833
+      ],
+      "/api/users?limit=20&offset=2140&sort=created": [
+        5.252,
+        3.898,
+        4.089
+      ],
+      "/api/users?limit=20&offset=2140&sort=score": [
+        9.506,
+        11.996,
+        9.487
+      ],
+      "/api/users?limit=20&offset=2140&sort=discussions": [
+        4.01,
+        3.631,
+        3.728
+      ],
+      "/api/users?limit=20&offset=2140&sort=comments": [
+        4.026,
+        4.44,
+        4.326
+      ],
+      "/api/users?limit=20&offset=2140&sort=files": [
+        3.722,
+        3.592,
+        2.889
+      ],
+      "/api/users?limit=20&offset=2140&sort=file-size": [
+        3.533,
+        3.525,
+        4.039
+      ],
+      "/api/users?username=codex": [
+        2.351,
+        1.993,
+        2.247
+      ],
+      "/api/users?followedBy=codex&limit=20": [
+        2.948,
+        2.222,
+        1.879
+      ],
+      "/api/users?following=codex&limit=20": [
+        2.631,
+        2.834,
+        3.265
+      ],
+      "/api/articles?author=codex&limit=20&offset=0&sort=created": [
+        19.251,
+        17.905,
+        19.668
+      ],
+      "/api/articles?author=codex&limit=20&offset=0&sort=score": [
+        18.836,
+        20.22,
+        17.985
+      ],
+      "/api/articles?author=codex&limit=20&offset=0&sort=id": [
+        14.963,
+        14.987,
+        16.99
+      ],
+      "/api/articles?author=codex&limit=20&offset=86100&sort=created": [
+        14.718,
+        15.82,
+        14.673
+      ],
+      "/api/articles?author=codex&limit=20&offset=86100&sort=score": [
+        15.595,
+        15.682,
+        17.3
+      ],
+      "/api/articles?author=codex&limit=20&offset=86100&sort=id": [
+        21.45,
+        20.516,
+        18.908
+      ],
+      "/api/articles?author=codex&limit=20&offset=172220&sort=created": [
+        21.635,
+        23.687,
+        26.953
+      ],
+      "/api/articles?author=codex&limit=20&offset=172220&sort=score": [
+        18.511,
+        24.558,
+        20.041
+      ],
+      "/api/articles?author=codex&limit=20&offset=172220&sort=id": [
+        24.811,
+        24.497,
+        26.222
+      ],
+      "/api/articles?followedBy=codex&limit=20": [
+        66.444,
+        49.829,
+        49.196
+      ],
+      "/api/articles?likedBy=codex&limit=20": [
+        2.483,
+        3.045,
+        2.969
+      ],
+      "/api/articles?limit=20&parent=%40codex": [
+        11.661,
+        10.528,
+        10.211
+      ],
+      "/api/articles/hash?author=codex&limit=20": [
+        11.091,
+        9.832,
+        10.928
+      ],
+      "/api/uploads/hash?author=codex&limit=20": [
+        3.991,
+        3.832,
+        6.054
+      ],
+      "/api/articles?id=donald-trump%2Ftest-child": [
+        3.111,
+        3.236,
+        2.757
+      ],
+      "/api/articles?limit=20&topicId=test-child": [
+        3.12,
+        2.765,
+        3.258
+      ],
+      "/api/articles?limit=20&search=test-chi": [
+        43.478,
+        37.645,
+        35.93
+      ],
+      "/api/topics?limit=20&search=test-chi": [
+        28.488,
+        25.099,
+        25.855
+      ],
+      "/api/issues?id=donald-trump%2Ftest-child&sort=created": [
+        5.361,
+        4.226,
+        5.16
+      ],
+      "/api/issues?id=donald-trump%2Ftest-child&sort=updated": [
+        5.778,
+        6.934,
+        5.137
+      ],
+      "/api/issues?id=donald-trump%2Ftest-child&sort=score": [
+        5.301,
+        5.339,
+        4.645
+      ],
+      "/api/issues?id=donald-trump%2Ftest-data&number=1": [
+        6.222,
+        5.747,
+        5.913
+      ],
+      "/api/issues/1/comments?id=donald-trump%2Ftest-data": [
+        5.093,
+        3.872,
+        3.204
+      ],
+      "/cirosantilli": [
+        212.793,
+        199.623,
+        198.678
+      ],
+      "/codex/green-operator-potential-for-ddbar-exactness": [
+        28.945,
+        29.278,
+        33.559
+      ],
+      "/-/articles?page=1&sort=created": [
+        99.85,
+        78.478,
+        62.855
+      ],
+      "/-/articles?page=1&sort=score": [
+        167.376,
+        108.795,
+        93.491
+      ],
+      "/-/articles?page=1&sort=id": [
+        51.241,
+        52.631,
+        60.195
+      ],
+      "/-/articles?page=1&sort=id-desc": [
+        74.133,
+        69.657,
+        68.65
+      ],
+      "/-/articles?page=7275&sort=created": [
+        70.8,
+        69.726,
+        62.403
+      ],
+      "/-/articles?page=7275&sort=score": [
+        54.148,
+        67.64,
+        54.495
+      ],
+      "/-/articles?page=7275&sort=id": [
+        51.264,
+        50.708,
+        52.654
+      ],
+      "/-/articles?page=7275&sort=id-desc": [
+        48.286,
+        48.379,
+        49.079
+      ],
+      "/-/articles?page=14550&sort=created": [
+        58.603,
+        58.505,
+        63.77
+      ],
+      "/-/articles?page=14550&sort=score": [
+        57.689,
+        57.081,
+        54.397
+      ],
+      "/-/articles?page=14550&sort=id": [
+        84.411,
+        74.965,
+        81.057
+      ],
+      "/-/articles?page=14550&sort=id-desc": [
+        90.701,
+        82.949,
+        81.178
+      ],
+      "/-/files?page=1&sort=created": [
+        41.19,
+        40.174,
+        48.8
+      ],
+      "/-/files?page=1&sort=size": [
+        35.093,
+        35.527,
+        36.546
+      ],
+      "/-/files?page=1&sort=path": [
+        54.058,
+        49.408,
+        51.827
+      ],
+      "/-/files?page=1&sort=path-desc": [
+        52.079,
+        63.224,
+        49.362
+      ],
+      "/-/files?page=143&sort=created": [
+        32.449,
+        32.312,
+        30.82
+      ],
+      "/-/files?page=143&sort=size": [
+        31.265,
+        31.917,
+        38.263
+      ],
+      "/-/files?page=143&sort=path": [
+        64.906,
+        73.6,
+        61.947
+      ],
+      "/-/files?page=143&sort=path-desc": [
+        73.78,
+        71.938,
+        75.27
+      ],
+      "/-/files?page=285&sort=created": [
+        35.981,
+        35.203,
+        37.271
+      ],
+      "/-/files?page=285&sort=size": [
+        30.67,
+        29.848,
+        33.158
+      ],
+      "/-/files?page=285&sort=path": [
+        59.767,
+        59.07,
+        59.524
+      ],
+      "/-/files?page=285&sort=path-desc": [
+        58.899,
+        62.941,
+        60.618
+      ],
+      "/-/files?listed=0&page=1&sort=created": [
+        34.909,
+        32.379,
+        32.804
+      ],
+      "/-/files?listed=0&page=1&sort=size": [
+        30.98,
+        31.936,
+        32.02
+      ],
+      "/-/files?listed=0&page=1&sort=path": [
+        38.829,
+        36.186,
+        37.149
+      ],
+      "/-/files?listed=0&page=1&sort=path-desc": [
+        36.611,
+        39.838,
+        36.047
+      ],
+      "/-/files?listed=0&page=5&sort=created": [
+        38.115,
+        36.765,
+        43.916
+      ],
+      "/-/files?listed=0&page=5&sort=size": [
+        34.968,
+        36.16,
+        34.413
+      ],
+      "/-/files?listed=0&page=5&sort=path": [
+        36.844,
+        33.257,
+        30.39
+      ],
+      "/-/files?listed=0&page=5&sort=path-desc": [
+        33.843,
+        31.446,
+        32.351
+      ],
+      "/-/files?listed=0&page=9&sort=created": [
+        33.015,
+        33.007,
+        37.003
+      ],
+      "/-/files?listed=0&page=9&sort=size": [
+        48.221,
+        36.714,
+        34.738
+      ],
+      "/-/files?listed=0&page=9&sort=path": [
+        32.18,
+        29.886,
+        28.648
+      ],
+      "/-/files?listed=0&page=9&sort=path-desc": [
+        30.421,
+        29.361,
+        34.497
+      ],
+      "/-/files?listed=2&page=1&sort=created": [
+        31.152,
+        32.309,
+        31.184
+      ],
+      "/-/files?listed=2&page=1&sort=size": [
+        45.196,
+        38.82,
+        32.457
+      ],
+      "/-/files?listed=2&page=1&sort=path": [
+        38.41,
+        41.542,
+        43.736
+      ],
+      "/-/files?listed=2&page=1&sort=path-desc": [
+        39.631,
+        53.712,
+        52.468
+      ],
+      "/-/files?listed=2&page=147&sort=created": [
+        33.593,
+        31.347,
+        32.004
+      ],
+      "/-/files?listed=2&page=147&sort=size": [
+        29.899,
+        35.999,
+        30.91
+      ],
+      "/-/files?listed=2&page=147&sort=path": [
+        60.241,
+        63.213,
+        62.37
+      ],
+      "/-/files?listed=2&page=147&sort=path-desc": [
+        66.021,
+        65.898,
+        63.537
+      ],
+      "/-/files?listed=2&page=294&sort=created": [
+        31.497,
+        30.212,
+        34.16
+      ],
+      "/-/files?listed=2&page=294&sort=size": [
+        37.947,
+        45.598,
+        35.304
+      ],
+      "/-/files?listed=2&page=294&sort=path": [
+        64.825,
+        61.272,
+        63.458
+      ],
+      "/-/files?listed=2&page=294&sort=path-desc": [
+        61.33,
+        58.016,
+        68.354
+      ],
+      "/-/topics?page=1&sort=created": [
+        30.169,
+        35.441,
+        37.268
+      ],
+      "/-/topics?page=1&sort=article-count": [
+        37.986,
+        41.003,
+        37.41
+      ],
+      "/-/topics?page=1&sort=id": [
+        32.95,
+        31.945,
+        30.323
+      ],
+      "/-/topics?page=1&sort=id-desc": [
+        33.925,
+        31.774,
+        29.704
+      ],
+      "/-/topics?page=7057&sort=created": [
+        60.094,
+        55.092,
+        51.253
+      ],
+      "/-/topics?page=7057&sort=article-count": [
+        54.22,
+        61.792,
+        56.685
+      ],
+      "/-/topics?page=7057&sort=id": [
+        32.539,
+        35.535,
+        32.644
+      ],
+      "/-/topics?page=7057&sort=id-desc": [
+        41.232,
+        53.53,
+        38.781
+      ],
+      "/-/topics?page=14114&sort=created": [
+        95.841,
+        92.496,
+        89.598
+      ],
+      "/-/topics?page=14114&sort=article-count": [
+        104.575,
+        83.688,
+        81.172
+      ],
+      "/-/topics?page=14114&sort=id": [
+        46.599,
+        44.155,
+        39.291
+      ],
+      "/-/topics?page=14114&sort=id-desc": [
+        47.133,
+        38.096,
+        39.342
+      ],
+      "/?sort=article-count": [
+        35.755,
+        32.618,
+        42.765
+      ],
+      "/?sort=id": [
+        27.721,
+        30.881,
+        30.123
+      ],
+      "/-/users?sort=created": [
+        49.239,
+        52.909,
+        50.678
+      ],
+      "/-/users?sort=score": [
+        46.475,
+        43.795,
+        39.606
+      ],
+      "/-/discussions?sort=created": [
+        104.728,
+        65.377,
+        64.607
+      ],
+      "/-/discussions?sort=score": [
+        56.746,
+        53.923,
+        57.355
+      ],
+      "/-/comments?sort=created": [
+        72.834,
+        66.578,
+        63.948
+      ]
+    },
+    "errors": {}
+  },
+  {
+    "about": {
+      "git_sha": "6ca737bad02704be76b4782eb67434233a006402",
+      "git_dirty": false,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 296016,
+        "users": 2151,
+        "topics": 285636,
+        "issues": 829,
+        "comments": 643,
+        "uploads": 6117,
+        "files": 296067,
+        "ids": 309009,
+        "refs": 803938,
+        "listed_articles": 290994,
+        "nonempty_topics": 282264,
+        "file_uploads": 5871,
+        "listed_uploads": 5695,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 3068801839,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 44038,
+            "username": "codex",
+            "articles": 172236
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "deepArticle": {
+            "slug": "codex/green-operator-potential-for-ddbar-exactness",
+            "depth": 16,
+            "nestedSetIndex": 21650
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-16T09:30:58.641Z",
+      "run_id": "48103cc8-29dd-4ca7-bf8c-cc3fc6e4de65",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 148,
+      "planned_requests": 592,
+      "completed": true,
+      "finished_at": "2026-10-16T09:31:28.622Z"
+    },
+    "results": {
+      "/api/": 1.291,
+      "/api/min": 1.326,
+      "/api/articles?limit=20&offset=0&sort=created": 30.633,
+      "/api/articles?limit=20&offset=0&sort=updated": 17.768,
+      "/api/articles?limit=20&offset=0&sort=score": 31.704,
+      "/api/articles?limit=20&offset=0&sort=id": 25.624,
+      "/api/articles?limit=20&offset=0&sort=follower-count": 16.83,
+      "/api/articles?limit=20&offset=0&sort=issues": 15.971,
+      "/api/articles?limit=20&offset=148000&sort=created": 56.762,
+      "/api/articles?limit=20&offset=148000&sort=updated": 17.234,
+      "/api/articles?limit=20&offset=148000&sort=score": 52.931,
+      "/api/articles?limit=20&offset=148000&sort=id": 22.796,
+      "/api/articles?limit=20&offset=148000&sort=follower-count": 16.601,
+      "/api/articles?limit=20&offset=148000&sort=issues": 19.563,
+      "/api/articles?limit=20&offset=296000&sort=created": 69.54,
+      "/api/articles?limit=20&offset=296000&sort=updated": 24.713,
+      "/api/articles?limit=20&offset=296000&sort=score": 77.17,
+      "/api/articles?limit=20&offset=296000&sort=id": 31.797,
+      "/api/articles?limit=20&offset=296000&sort=follower-count": 26.932,
+      "/api/articles?limit=20&offset=296000&sort=issues": 26.417,
+      "/api/topics?limit=20&offset=0&sort=created": 21.061,
+      "/api/topics?limit=20&offset=0&sort=updated": 29.774,
+      "/api/topics?limit=20&offset=0&sort=article-count": 21.185,
+      "/api/topics?limit=20&offset=0&sort=id": 21.766,
+      "/api/topics?limit=20&offset=141120&sort=created": 34.421,
+      "/api/topics?limit=20&offset=141120&sort=updated": 65.108,
+      "/api/topics?limit=20&offset=141120&sort=article-count": 37.542,
+      "/api/topics?limit=20&offset=141120&sort=id": 24.715,
+      "/api/topics?limit=20&offset=282260&sort=created": 68.133,
+      "/api/topics?limit=20&offset=282260&sort=updated": 92.921,
+      "/api/topics?limit=20&offset=282260&sort=article-count": 70.896,
+      "/api/topics?limit=20&offset=282260&sort=id": 25.532,
+      "/api/users?limit=20&offset=0&sort=created": 2.263,
+      "/api/users?limit=20&offset=0&sort=score": 2.571,
+      "/api/users?limit=20&offset=0&sort=discussions": 1.959,
+      "/api/users?limit=20&offset=0&sort=comments": 2.001,
+      "/api/users?limit=20&offset=0&sort=files": 2.361,
+      "/api/users?limit=20&offset=0&sort=file-size": 2.396,
+      "/api/users?limit=20&offset=1060&sort=created": 9.581,
+      "/api/users?limit=20&offset=1060&sort=score": 7.867,
+      "/api/users?limit=20&offset=1060&sort=discussions": 3.085,
+      "/api/users?limit=20&offset=1060&sort=comments": 2.811,
+      "/api/users?limit=20&offset=1060&sort=files": 2.954,
+      "/api/users?limit=20&offset=1060&sort=file-size": 2.586,
+      "/api/users?limit=20&offset=2140&sort=created": 3.801,
+      "/api/users?limit=20&offset=2140&sort=score": 10.89,
+      "/api/users?limit=20&offset=2140&sort=discussions": 2.825,
+      "/api/users?limit=20&offset=2140&sort=comments": 3.255,
+      "/api/users?limit=20&offset=2140&sort=files": 2.811,
+      "/api/users?limit=20&offset=2140&sort=file-size": 3.255,
+      "/api/users?username=codex": 1.313,
+      "/api/users?followedBy=codex&limit=20": 2.835,
+      "/api/users?following=codex&limit=20": 1.386,
+      "/api/articles?author=codex&limit=20&offset=0&sort=created": 16.306,
+      "/api/articles?author=codex&limit=20&offset=0&sort=score": 18.135,
+      "/api/articles?author=codex&limit=20&offset=0&sort=id": 15.635,
+      "/api/articles?author=codex&limit=20&offset=86100&sort=created": 19.627,
+      "/api/articles?author=codex&limit=20&offset=86100&sort=score": 18.087,
+      "/api/articles?author=codex&limit=20&offset=86100&sort=id": 24.249,
+      "/api/articles?author=codex&limit=20&offset=172220&sort=created": 25.715,
+      "/api/articles?author=codex&limit=20&offset=172220&sort=score": 19.721,
+      "/api/articles?author=codex&limit=20&offset=172220&sort=id": 23.089,
+      "/api/articles?followedBy=codex&limit=20": 52.878,
+      "/api/articles?likedBy=codex&limit=20": 2.008,
+      "/api/articles?limit=20&parent=%40codex": 8.492,
+      "/api/articles/hash?author=codex&limit=20": 10.214,
+      "/api/uploads/hash?author=codex&limit=20": 2.952,
+      "/api/articles?id=donald-trump%2Ftest-child": 3.331,
+      "/api/articles?limit=20&topicId=test-child": 2.981,
+      "/api/articles?limit=20&search=test-chi": 38.441,
+      "/api/topics?limit=20&search=test-chi": 26.305,
+      "/api/issues?id=donald-trump%2Ftest-child&sort=created": 5.045,
+      "/api/issues?id=donald-trump%2Ftest-child&sort=updated": 6.653,
+      "/api/issues?id=donald-trump%2Ftest-child&sort=score": 6.245,
+      "/api/issues?id=donald-trump%2Ftest-data&number=1": 5.583,
+      "/api/issues/1/comments?id=donald-trump%2Ftest-data": 3.418,
+      "/cirosantilli": 273.694,
+      "/codex/green-operator-potential-for-ddbar-exactness": 46.764,
+      "/-/articles?page=1&sort=created": 78.085,
+      "/-/articles?page=1&sort=score": 94.891,
+      "/-/articles?page=1&sort=id": 173.181,
+      "/-/articles?page=1&sort=id-desc": 78.27,
+      "/-/articles?page=7275&sort=created": 66.838,
+      "/-/articles?page=7275&sort=score": 54.471,
+      "/-/articles?page=7275&sort=id": 65.072,
+      "/-/articles?page=7275&sort=id-desc": 71.767,
+      "/-/articles?page=14550&sort=created": 77.1,
+      "/-/articles?page=14550&sort=score": 70.731,
+      "/-/articles?page=14550&sort=id": 101.972,
+      "/-/articles?page=14550&sort=id-desc": 106.663,
+      "/-/files?page=1&sort=created": 71.749,
+      "/-/files?page=1&sort=size": 46.157,
+      "/-/files?page=1&sort=path": 74.787,
+      "/-/files?page=1&sort=path-desc": 54.077,
+      "/-/files?page=143&sort=created": 39.594,
+      "/-/files?page=143&sort=size": 52.259,
+      "/-/files?page=143&sort=path": 84.477,
+      "/-/files?page=143&sort=path-desc": 90.843,
+      "/-/files?page=285&sort=created": 36.748,
+      "/-/files?page=285&sort=size": 39.01,
+      "/-/files?page=285&sort=path": 71.906,
+      "/-/files?page=285&sort=path-desc": 77.134,
+      "/-/files?listed=0&page=1&sort=created": 38.167,
+      "/-/files?listed=0&page=1&sort=size": 35.9,
+      "/-/files?listed=0&page=1&sort=path": 35.527,
+      "/-/files?listed=0&page=1&sort=path-desc": 35.875,
+      "/-/files?listed=0&page=5&sort=created": 37.107,
+      "/-/files?listed=0&page=5&sort=size": 38.645,
+      "/-/files?listed=0&page=5&sort=path": 43.677,
+      "/-/files?listed=0&page=5&sort=path-desc": 36.845,
+      "/-/files?listed=0&page=9&sort=created": 35.154,
+      "/-/files?listed=0&page=9&sort=size": 51.59,
+      "/-/files?listed=0&page=9&sort=path": 38.058,
+      "/-/files?listed=0&page=9&sort=path-desc": 36.394,
+      "/-/files?listed=2&page=1&sort=created": 38.365,
+      "/-/files?listed=2&page=1&sort=size": 42.545,
+      "/-/files?listed=2&page=1&sort=path": 44.808,
+      "/-/files?listed=2&page=1&sort=path-desc": 54.32,
+      "/-/files?listed=2&page=147&sort=created": 36.372,
+      "/-/files?listed=2&page=147&sort=size": 35.764,
+      "/-/files?listed=2&page=147&sort=path": 75.661,
+      "/-/files?listed=2&page=147&sort=path-desc": 72.745,
+      "/-/files?listed=2&page=294&sort=created": 37.442,
+      "/-/files?listed=2&page=294&sort=size": 33.702,
+      "/-/files?listed=2&page=294&sort=path": 70.96,
+      "/-/files?listed=2&page=294&sort=path-desc": 69.659,
+      "/-/topics?page=1&sort=created": 52.446,
+      "/-/topics?page=1&sort=article-count": 35.409,
+      "/-/topics?page=1&sort=id": 32.952,
+      "/-/topics?page=1&sort=id-desc": 35.017,
+      "/-/topics?page=7057&sort=created": 77.769,
+      "/-/topics?page=7057&sort=article-count": 64.135,
+      "/-/topics?page=7057&sort=id": 38.187,
+      "/-/topics?page=7057&sort=id-desc": 40.099,
+      "/-/topics?page=14114&sort=created": 93.857,
+      "/-/topics?page=14114&sort=article-count": 89.662,
+      "/-/topics?page=14114&sort=id": 45.352,
+      "/-/topics?page=14114&sort=id-desc": 43.848,
+      "/-/topics?empty=2&page=1&sort=id": 44.493,
+      "/-/topics?empty=2&page=7141&sort=id": 99.492,
+      "/-/topics?empty=2&page=14282&sort=id": 177.529,
+      "/?sort=article-count": 48.349,
+      "/?sort=id": 40.746,
+      "/-/users?sort=created": 84.953,
+      "/-/users?sort=score": 67.196,
+      "/-/discussions?sort=created": 87.351,
+      "/-/discussions?sort=score": 85.55,
+      "/-/comments?sort=created": 122.956
+    },
+    "samples": {
+      "/api/": [
+        2.136,
+        1.291,
+        1.223
+      ],
+      "/api/min": [
+        3.193,
+        1.326,
+        1.254
+      ],
+      "/api/articles?limit=20&offset=0&sort=created": [
+        34.323,
+        30.11,
+        30.633
+      ],
+      "/api/articles?limit=20&offset=0&sort=updated": [
+        17.768,
+        17.918,
+        16.526
+      ],
+      "/api/articles?limit=20&offset=0&sort=score": [
+        31.704,
+        30.595,
+        36.038
+      ],
+      "/api/articles?limit=20&offset=0&sort=id": [
+        28.923,
+        23.104,
+        25.624
+      ],
+      "/api/articles?limit=20&offset=0&sort=follower-count": [
+        20.045,
+        16.351,
+        16.83
+      ],
+      "/api/articles?limit=20&offset=0&sort=issues": [
+        15.883,
+        15.971,
+        16.001
+      ],
+      "/api/articles?limit=20&offset=148000&sort=created": [
+        57.32,
+        53.634,
+        56.762
+      ],
+      "/api/articles?limit=20&offset=148000&sort=updated": [
+        18.042,
+        17.221,
+        17.234
+      ],
+      "/api/articles?limit=20&offset=148000&sort=score": [
+        51.88,
+        52.931,
+        63.02
+      ],
+      "/api/articles?limit=20&offset=148000&sort=id": [
+        25.05,
+        22.796,
+        20.41
+      ],
+      "/api/articles?limit=20&offset=148000&sort=follower-count": [
+        16.982,
+        16.573,
+        16.601
+      ],
+      "/api/articles?limit=20&offset=148000&sort=issues": [
+        19.563,
+        21.19,
+        18.695
+      ],
+      "/api/articles?limit=20&offset=296000&sort=created": [
+        69.54,
+        84.544,
+        66.566
+      ],
+      "/api/articles?limit=20&offset=296000&sort=updated": [
+        25.972,
+        24.713,
+        23.834
+      ],
+      "/api/articles?limit=20&offset=296000&sort=score": [
+        77.17,
+        76.486,
+        77.593
+      ],
+      "/api/articles?limit=20&offset=296000&sort=id": [
+        31.797,
+        31.192,
+        34.913
+      ],
+      "/api/articles?limit=20&offset=296000&sort=follower-count": [
+        26.469,
+        26.932,
+        28.177
+      ],
+      "/api/articles?limit=20&offset=296000&sort=issues": [
+        26.417,
+        27.677,
+        24.431
+      ],
+      "/api/topics?limit=20&offset=0&sort=created": [
+        20.347,
+        21.104,
+        21.061
+      ],
+      "/api/topics?limit=20&offset=0&sort=updated": [
+        29.774,
+        29.465,
+        29.975
+      ],
+      "/api/topics?limit=20&offset=0&sort=article-count": [
+        20.825,
+        21.564,
+        21.185
+      ],
+      "/api/topics?limit=20&offset=0&sort=id": [
+        22.16,
+        21.766,
+        21.611
+      ],
+      "/api/topics?limit=20&offset=141120&sort=created": [
+        35.956,
+        34.421,
+        33.789
+      ],
+      "/api/topics?limit=20&offset=141120&sort=updated": [
+        61.433,
+        65.108,
+        75.434
+      ],
+      "/api/topics?limit=20&offset=141120&sort=article-count": [
+        39.795,
+        37.542,
+        37.228
+      ],
+      "/api/topics?limit=20&offset=141120&sort=id": [
+        24.504,
+        24.715,
+        24.978
+      ],
+      "/api/topics?limit=20&offset=282260&sort=created": [
+        68.133,
+        66.403,
+        71.525
+      ],
+      "/api/topics?limit=20&offset=282260&sort=updated": [
+        93.368,
+        91.642,
+        92.921
+      ],
+      "/api/topics?limit=20&offset=282260&sort=article-count": [
+        77.82,
+        70.093,
+        70.896
+      ],
+      "/api/topics?limit=20&offset=282260&sort=id": [
+        25.532,
+        25.797,
+        25.161
+      ],
+      "/api/users?limit=20&offset=0&sort=created": [
+        2.817,
+        2.263,
+        1.804
+      ],
+      "/api/users?limit=20&offset=0&sort=score": [
+        2.799,
+        2.571,
+        2.271
+      ],
+      "/api/users?limit=20&offset=0&sort=discussions": [
+        1.959,
+        1.9,
+        1.989
+      ],
+      "/api/users?limit=20&offset=0&sort=comments": [
+        2.001,
+        2.166,
+        1.78
+      ],
+      "/api/users?limit=20&offset=0&sort=files": [
+        5.101,
+        2.361,
+        1.983
+      ],
+      "/api/users?limit=20&offset=0&sort=file-size": [
+        2.829,
+        2.375,
+        2.396
+      ],
+      "/api/users?limit=20&offset=1060&sort=created": [
+        11.827,
+        9.411,
+        9.581
+      ],
+      "/api/users?limit=20&offset=1060&sort=score": [
+        7.867,
+        6.516,
+        9.404
+      ],
+      "/api/users?limit=20&offset=1060&sort=discussions": [
+        3.438,
+        3.085,
+        2.64
+      ],
+      "/api/users?limit=20&offset=1060&sort=comments": [
+        3.026,
+        2.811,
+        2.692
+      ],
+      "/api/users?limit=20&offset=1060&sort=files": [
+        3.221,
+        2.954,
+        2.504
+      ],
+      "/api/users?limit=20&offset=1060&sort=file-size": [
+        2.586,
+        2.652,
+        2.117
+      ],
+      "/api/users?limit=20&offset=2140&sort=created": [
+        4.071,
+        3.801,
+        3.354
+      ],
+      "/api/users?limit=20&offset=2140&sort=score": [
+        10.918,
+        10.284,
+        10.89
+      ],
+      "/api/users?limit=20&offset=2140&sort=discussions": [
+        3.259,
+        2.7,
+        2.825
+      ],
+      "/api/users?limit=20&offset=2140&sort=comments": [
+        3.511,
+        3.255,
+        2.968
+      ],
+      "/api/users?limit=20&offset=2140&sort=files": [
+        3.066,
+        2.689,
+        2.811
+      ],
+      "/api/users?limit=20&offset=2140&sort=file-size": [
+        6.336,
+        3.255,
+        3.004
+      ],
+      "/api/users?username=codex": [
+        1.382,
+        1.288,
+        1.313
+      ],
+      "/api/users?followedBy=codex&limit=20": [
+        2.835,
+        3.227,
+        1.915
+      ],
+      "/api/users?following=codex&limit=20": [
+        2.508,
+        1.386,
+        1.251
+      ],
+      "/api/articles?author=codex&limit=20&offset=0&sort=created": [
+        16.306,
+        18.567,
+        16.14
+      ],
+      "/api/articles?author=codex&limit=20&offset=0&sort=score": [
+        18.135,
+        17.613,
+        18.907
+      ],
+      "/api/articles?author=codex&limit=20&offset=0&sort=id": [
+        15.494,
+        15.635,
+        17.41
+      ],
+      "/api/articles?author=codex&limit=20&offset=86100&sort=created": [
+        19.904,
+        19.627,
+        17.964
+      ],
+      "/api/articles?author=codex&limit=20&offset=86100&sort=score": [
+        18.087,
+        17.072,
+        20.378
+      ],
+      "/api/articles?author=codex&limit=20&offset=86100&sort=id": [
+        27.607,
+        24.249,
+        21.724
+      ],
+      "/api/articles?author=codex&limit=20&offset=172220&sort=created": [
+        25.715,
+        27.867,
+        25.415
+      ],
+      "/api/articles?author=codex&limit=20&offset=172220&sort=score": [
+        21.258,
+        19.721,
+        18.587
+      ],
+      "/api/articles?author=codex&limit=20&offset=172220&sort=id": [
+        23.089,
+        22.618,
+        23.168
+      ],
+      "/api/articles?followedBy=codex&limit=20": [
+        49.792,
+        52.931,
+        52.878
+      ],
+      "/api/articles?likedBy=codex&limit=20": [
+        2.282,
+        1.988,
+        2.008
+      ],
+      "/api/articles?limit=20&parent=%40codex": [
+        8.492,
+        9.381,
+        7.946
+      ],
+      "/api/articles/hash?author=codex&limit=20": [
+        10.214,
+        9.865,
+        11.233
+      ],
+      "/api/uploads/hash?author=codex&limit=20": [
+        2.952,
+        3.6,
+        2.612
+      ],
+      "/api/articles?id=donald-trump%2Ftest-child": [
+        4.649,
+        3.331,
+        3.011
+      ],
+      "/api/articles?limit=20&topicId=test-child": [
+        3.009,
+        2.886,
+        2.981
+      ],
+      "/api/articles?limit=20&search=test-chi": [
+        38.441,
+        40.47,
+        36.472
+      ],
+      "/api/topics?limit=20&search=test-chi": [
+        27.329,
+        26.305,
+        25.514
+      ],
+      "/api/issues?id=donald-trump%2Ftest-child&sort=created": [
+        7.127,
+        5.045,
+        4.444
+      ],
+      "/api/issues?id=donald-trump%2Ftest-child&sort=updated": [
+        4.428,
+        7.584,
+        6.653
+      ],
+      "/api/issues?id=donald-trump%2Ftest-child&sort=score": [
+        6.245,
+        7.4,
+        6.154
+      ],
+      "/api/issues?id=donald-trump%2Ftest-data&number=1": [
+        5.583,
+        5.057,
+        7.3
+      ],
+      "/api/issues/1/comments?id=donald-trump%2Ftest-data": [
+        3.449,
+        3.17,
+        3.418
+      ],
+      "/cirosantilli": [
+        301.409,
+        267.571,
+        273.694
+      ],
+      "/codex/green-operator-potential-for-ddbar-exactness": [
+        57.228,
+        46.764,
+        41.822
+      ],
+      "/-/articles?page=1&sort=created": [
+        90.725,
+        78.085,
+        78.035
+      ],
+      "/-/articles?page=1&sort=score": [
+        94.891,
+        88.706,
+        177.581
+      ],
+      "/-/articles?page=1&sort=id": [
+        186.486,
+        142.778,
+        173.181
+      ],
+      "/-/articles?page=1&sort=id-desc": [
+        105.329,
+        78.27,
+        75.482
+      ],
+      "/-/articles?page=7275&sort=created": [
+        66.838,
+        72.931,
+        49.918
+      ],
+      "/-/articles?page=7275&sort=score": [
+        64.42,
+        54.471,
+        54.052
+      ],
+      "/-/articles?page=7275&sort=id": [
+        65.072,
+        60.409,
+        71.837
+      ],
+      "/-/articles?page=7275&sort=id-desc": [
+        69.923,
+        71.767,
+        77.205
+      ],
+      "/-/articles?page=14550&sort=created": [
+        77.1,
+        80.059,
+        74.83
+      ],
+      "/-/articles?page=14550&sort=score": [
+        70.731,
+        65.395,
+        75.152
+      ],
+      "/-/articles?page=14550&sort=id": [
+        102.033,
+        101.972,
+        95.494
+      ],
+      "/-/articles?page=14550&sort=id-desc": [
+        106.663,
+        120.058,
+        91.64
+      ],
+      "/-/files?page=1&sort=created": [
+        71.749,
+        74.339,
+        54.574
+      ],
+      "/-/files?page=1&sort=size": [
+        45.973,
+        47.958,
+        46.157
+      ],
+      "/-/files?page=1&sort=path": [
+        74.787,
+        76.944,
+        54.834
+      ],
+      "/-/files?page=1&sort=path-desc": [
+        54.077,
+        51.055,
+        61.346
+      ],
+      "/-/files?page=143&sort=created": [
+        37.307,
+        39.594,
+        52.3
+      ],
+      "/-/files?page=143&sort=size": [
+        52.259,
+        55.762,
+        45.295
+      ],
+      "/-/files?page=143&sort=path": [
+        70.255,
+        84.477,
+        97.251
+      ],
+      "/-/files?page=143&sort=path-desc": [
+        95.621,
+        90.843,
+        83.392
+      ],
+      "/-/files?page=285&sort=created": [
+        35.117,
+        36.748,
+        38.48
+      ],
+      "/-/files?page=285&sort=size": [
+        39.01,
+        42.264,
+        36.865
+      ],
+      "/-/files?page=285&sort=path": [
+        71.906,
+        87.878,
+        70.494
+      ],
+      "/-/files?page=285&sort=path-desc": [
+        77.134,
+        78.196,
+        72.53
+      ],
+      "/-/files?listed=0&page=1&sort=created": [
+        38.167,
+        35.777,
+        41.804
+      ],
+      "/-/files?listed=0&page=1&sort=size": [
+        35.543,
+        35.9,
+        39.638
+      ],
+      "/-/files?listed=0&page=1&sort=path": [
+        35.527,
+        33.69,
+        40.955
+      ],
+      "/-/files?listed=0&page=1&sort=path-desc": [
+        35.692,
+        35.875,
+        49.244
+      ],
+      "/-/files?listed=0&page=5&sort=created": [
+        40.539,
+        37.107,
+        35.659
+      ],
+      "/-/files?listed=0&page=5&sort=size": [
+        36.086,
+        39.123,
+        38.645
+      ],
+      "/-/files?listed=0&page=5&sort=path": [
+        41.653,
+        47.158,
+        43.677
+      ],
+      "/-/files?listed=0&page=5&sort=path-desc": [
+        39.607,
+        36.845,
+        36.473
+      ],
+      "/-/files?listed=0&page=9&sort=created": [
+        35.154,
+        38.753,
+        35.148
+      ],
+      "/-/files?listed=0&page=9&sort=size": [
+        52.808,
+        48.003,
+        51.59
+      ],
+      "/-/files?listed=0&page=9&sort=path": [
+        38.611,
+        38.058,
+        36.308
+      ],
+      "/-/files?listed=0&page=9&sort=path-desc": [
+        42.108,
+        36.394,
+        35.915
+      ],
+      "/-/files?listed=2&page=1&sort=created": [
+        39.64,
+        38.365,
+        36.813
+      ],
+      "/-/files?listed=2&page=1&sort=size": [
+        42.545,
+        38.522,
+        43.588
+      ],
+      "/-/files?listed=2&page=1&sort=path": [
+        43.522,
+        44.808,
+        45.657
+      ],
+      "/-/files?listed=2&page=1&sort=path-desc": [
+        54.32,
+        67.061,
+        47.73
+      ],
+      "/-/files?listed=2&page=147&sort=created": [
+        36.779,
+        36.372,
+        35.39
+      ],
+      "/-/files?listed=2&page=147&sort=size": [
+        35.764,
+        34.734,
+        36.5
+      ],
+      "/-/files?listed=2&page=147&sort=path": [
+        66.253,
+        75.661,
+        80.443
+      ],
+      "/-/files?listed=2&page=147&sort=path-desc": [
+        76.48,
+        72.745,
+        71.705
+      ],
+      "/-/files?listed=2&page=294&sort=created": [
+        41.138,
+        37.442,
+        34.035
+      ],
+      "/-/files?listed=2&page=294&sort=size": [
+        33.702,
+        32.393,
+        37.256
+      ],
+      "/-/files?listed=2&page=294&sort=path": [
+        68.153,
+        77.815,
+        70.96
+      ],
+      "/-/files?listed=2&page=294&sort=path-desc": [
+        64.815,
+        69.784,
+        69.659
+      ],
+      "/-/topics?page=1&sort=created": [
+        58.219,
+        52.446,
+        49.445
+      ],
+      "/-/topics?page=1&sort=article-count": [
+        35.409,
+        36.401,
+        35.276
+      ],
+      "/-/topics?page=1&sort=id": [
+        36.052,
+        31.99,
+        32.952
+      ],
+      "/-/topics?page=1&sort=id-desc": [
+        32.549,
+        35.569,
+        35.017
+      ],
+      "/-/topics?page=7057&sort=created": [
+        77.769,
+        77.972,
+        63.082
+      ],
+      "/-/topics?page=7057&sort=article-count": [
+        66.754,
+        62.315,
+        64.135
+      ],
+      "/-/topics?page=7057&sort=id": [
+        38.187,
+        42.379,
+        35.321
+      ],
+      "/-/topics?page=7057&sort=id-desc": [
+        37.686,
+        40.099,
+        41.672
+      ],
+      "/-/topics?page=14114&sort=created": [
+        89.986,
+        93.857,
+        94.651
+      ],
+      "/-/topics?page=14114&sort=article-count": [
+        89.662,
+        90.368,
+        87.487
+      ],
+      "/-/topics?page=14114&sort=id": [
+        48.127,
+        45.352,
+        44.927
+      ],
+      "/-/topics?page=14114&sort=id-desc": [
+        43.571,
+        47.41,
+        43.848
+      ],
+      "/-/topics?empty=2&page=1&sort=id": [
+        39.721,
+        44.493,
+        54.015
+      ],
+      "/-/topics?empty=2&page=7141&sort=id": [
+        104.507,
+        99.492,
+        93.349
+      ],
+      "/-/topics?empty=2&page=14282&sort=id": [
+        171.996,
+        177.529,
+        250.659
+      ],
+      "/?sort=article-count": [
+        58.284,
+        48.349,
+        38.111
+      ],
+      "/?sort=id": [
+        51.861,
+        40.746,
+        38.267
+      ],
+      "/-/users?sort=created": [
+        167.688,
+        84.953,
+        74.414
+      ],
+      "/-/users?sort=score": [
+        57.392,
+        67.196,
+        70.748
+      ],
+      "/-/discussions?sort=created": [
+        87.351,
+        88.669,
+        85.221
+      ],
+      "/-/discussions?sort=score": [
+        89.928,
+        85.55,
+        83.89
+      ],
+      "/-/comments?sort=created": [
+        132.405,
+        109.992,
+        122.956
+      ]
+    },
+    "errors": {}
+  },
+  {
+    "about": {
+      "git_sha": "6ca737bad02704be76b4782eb67434233a006402",
+      "git_dirty": false,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 296016,
+        "users": 2151,
+        "topics": 285636,
+        "issues": 829,
+        "comments": 643,
+        "uploads": 6117,
+        "files": 296067,
+        "ids": 309009,
+        "refs": 803938,
+        "listed_articles": 290994,
+        "nonempty_topics": 282264,
+        "file_uploads": 5871,
+        "listed_uploads": 5695,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 3068801839,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 44038,
+            "username": "codex",
+            "articles": 172236
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "deepArticle": {
+            "slug": "codex/green-operator-potential-for-ddbar-exactness",
+            "depth": 16,
+            "nestedSetIndex": 21650
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-16T09:32:33.840Z",
+      "run_id": "0484eb5f-9a16-4207-8553-a445332cbe15",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 1,
+      "planned_requests": 4,
+      "completed": true,
+      "finished_at": "2026-10-16T09:32:34.331Z"
+    },
+    "results": {
+      "/-/articles?page=1": 94.376
+    },
+    "samples": {
+      "/-/articles?page=1": [
+        94.376,
+        83.56,
+        118.164
+      ]
+    },
+    "errors": {}
+  },
+  {
+    "about": {
+      "git_sha": "6ca737bad02704be76b4782eb67434233a006402",
+      "git_dirty": false,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 296016,
+        "users": 2151,
+        "topics": 285636,
+        "issues": 829,
+        "comments": 643,
+        "uploads": 6117,
+        "files": 296067,
+        "ids": 309009,
+        "refs": 803938,
+        "listed_articles": 290994,
+        "nonempty_topics": 282264,
+        "file_uploads": 5871,
+        "listed_uploads": 5695,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 3068801839,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 44038,
+            "username": "codex",
+            "articles": 172236
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "deepArticle": {
+            "slug": "codex/green-operator-potential-for-ddbar-exactness",
+            "depth": 16,
+            "nestedSetIndex": 21650
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-16T09:32:42.908Z",
+      "run_id": "ba45ec4e-10ae-4bb8-85f1-914e8343d7e6",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 1,
+      "planned_requests": 4,
+      "completed": true,
+      "finished_at": "2026-10-16T09:32:43.961Z"
+    },
+    "results": {
+      "/-/articles?page=1": 251.052
+    },
+    "samples": {
+      "/-/articles?page=1": [
+        237.775,
+        287.644,
+        251.052
+      ]
+    },
+    "errors": {}
+  },
+  {
+    "about": {
+      "git_sha": "6ca737bad02704be76b4782eb67434233a006402",
+      "git_dirty": false,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 296016,
+        "users": 2151,
+        "topics": 285636,
+        "issues": 829,
+        "comments": 643,
+        "uploads": 6117,
+        "files": 296067,
+        "ids": 309009,
+        "refs": 803938,
+        "listed_articles": 290994,
+        "nonempty_topics": 282264,
+        "file_uploads": 5871,
+        "listed_uploads": 5695,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 3068801839,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 44038,
+            "username": "codex",
+            "articles": 172236
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "deepArticle": {
+            "slug": "codex/green-operator-potential-for-ddbar-exactness",
+            "depth": 16,
+            "nestedSetIndex": 21650
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-16T09:32:52.533Z",
+      "run_id": "028aa03c-58b7-45af-b5d4-7060f66f86b5",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 1,
+      "planned_requests": 4,
+      "completed": true,
+      "finished_at": "2026-10-16T09:32:53.831Z"
+    },
+    "results": {
+      "/-/articles?page=1": 241.388
+    },
+    "samples": {
+      "/-/articles?page=1": [
+        219.413,
+        299.19,
+        241.388
+      ]
+    },
+    "errors": {}
+  },
+  {
+    "about": {
+      "git_sha": "6ca737bad02704be76b4782eb67434233a006402",
+      "git_dirty": false,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 296016,
+        "users": 2151,
+        "topics": 285636,
+        "issues": 829,
+        "comments": 643,
+        "uploads": 6117,
+        "files": 296067,
+        "ids": 309009,
+        "refs": 803938,
+        "listed_articles": 290994,
+        "nonempty_topics": 282264,
+        "file_uploads": 5871,
+        "listed_uploads": 5695,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 3068801839,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 44038,
+            "username": "codex",
+            "articles": 172236
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "deepArticle": {
+            "slug": "codex/green-operator-potential-for-ddbar-exactness",
+            "depth": 16,
+            "nestedSetIndex": 21650
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-16T09:33:04.014Z",
+      "run_id": "cb7e669b-86dd-446a-93d5-05a9427a6522",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 1,
+      "planned_requests": 4,
+      "completed": true,
+      "finished_at": "2026-10-16T09:33:05.813Z"
+    },
+    "results": {
+      "/-/articles?page=1": 298.699
+    },
+    "samples": {
+      "/-/articles?page=1": [
+        284.427,
+        298.699,
+        496.875
+      ]
+    },
+    "errors": {}
+  },
+  {
+    "about": {
+      "git_sha": "6ca737bad02704be76b4782eb67434233a006402",
+      "git_dirty": false,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 296016,
+        "users": 2151,
+        "topics": 285636,
+        "issues": 829,
+        "comments": 643,
+        "uploads": 6117,
+        "files": 296067,
+        "ids": 309009,
+        "refs": 803938,
+        "listed_articles": 290994,
+        "nonempty_topics": 282264,
+        "file_uploads": 5871,
+        "listed_uploads": 5695,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 3068801839,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 44038,
+            "username": "codex",
+            "articles": 172236
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "deepArticle": {
+            "slug": "codex/green-operator-potential-for-ddbar-exactness",
+            "depth": 16,
+            "nestedSetIndex": 21650
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-16T09:33:07.478Z",
+      "run_id": "c2023511-f390-47f9-a5a6-1d894ac79ead",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 1,
+      "planned_requests": 4,
+      "completed": true,
+      "finished_at": "2026-10-16T09:33:08.373Z"
+    },
+    "results": {
+      "/-/articles?page=1": 171.21
+    },
+    "samples": {
+      "/-/articles?page=1": [
+        265.391,
+        171.21,
+        136.523
+      ]
+    },
+    "errors": {}
+  },
+  {
+    "about": {
+      "git_sha": "6ca737bad02704be76b4782eb67434233a006402",
+      "git_dirty": false,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 296016,
+        "users": 2151,
+        "topics": 285636,
+        "issues": 829,
+        "comments": 643,
+        "uploads": 6117,
+        "files": 296067,
+        "ids": 309009,
+        "refs": 803938,
+        "listed_articles": 290994,
+        "nonempty_topics": 282264,
+        "file_uploads": 5871,
+        "listed_uploads": 5695,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 3068801839,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 44038,
+            "username": "codex",
+            "articles": 172236
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "deepArticle": {
+            "slug": "codex/green-operator-potential-for-ddbar-exactness",
+            "depth": 16,
+            "nestedSetIndex": 21650
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-16T09:34:43.470Z",
+      "run_id": "8d5664cc-3bb8-4cc9-9720-363977af2efe",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 1,
+      "planned_requests": 4,
+      "completed": true,
+      "finished_at": "2026-10-16T09:34:43.743Z"
+    },
+    "results": {
+      "/-/articles?page=1&sort=id": 51.25
+    },
+    "samples": {
+      "/-/articles?page=1&sort=id": [
+        53.98,
+        48.154,
+        51.25
+      ]
+    },
+    "errors": {}
+  },
+  {
+    "about": {
+      "git_sha": "6ca737bad02704be76b4782eb67434233a006402",
+      "git_dirty": false,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 296016,
+        "users": 2151,
+        "topics": 285636,
+        "issues": 829,
+        "comments": 643,
+        "uploads": 6117,
+        "files": 296067,
+        "ids": 309009,
+        "refs": 803938,
+        "listed_articles": 290994,
+        "nonempty_topics": 282264,
+        "file_uploads": 5871,
+        "listed_uploads": 5695,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 3068801839,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 44038,
+            "username": "codex",
+            "articles": 172236
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "deepArticle": {
+            "slug": "codex/green-operator-potential-for-ddbar-exactness",
+            "depth": 16,
+            "nestedSetIndex": 21650
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-16T09:34:46.774Z",
+      "run_id": "85a6301e-51e6-418c-a758-7fbd559bf646",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 1,
+      "planned_requests": 4,
+      "completed": true,
+      "finished_at": "2026-10-16T09:34:46.987Z"
+    },
+    "results": {
+      "/-/articles?page=1&sort=id": 51.863
+    },
+    "samples": {
+      "/-/articles?page=1&sort=id": [
+        51.863,
+        54.145,
+        46.657
+      ]
+    },
+    "errors": {}
+  },
+  {
+    "about": {
+      "git_sha": "6ca737bad02704be76b4782eb67434233a006402",
+      "git_dirty": false,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 296016,
+        "users": 2151,
+        "topics": 285636,
+        "issues": 829,
+        "comments": 643,
+        "uploads": 6117,
+        "files": 296067,
+        "ids": 309009,
+        "refs": 803938,
+        "listed_articles": 290994,
+        "nonempty_topics": 282264,
+        "file_uploads": 5871,
+        "listed_uploads": 5695,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 3068801839,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 44038,
+            "username": "codex",
+            "articles": 172236
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "deepArticle": {
+            "slug": "codex/green-operator-potential-for-ddbar-exactness",
+            "depth": 16,
+            "nestedSetIndex": 21650
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-16T09:35:05.009Z",
+      "run_id": "122abd3a-507d-4529-bf75-7abda32fe211",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 1,
+      "planned_requests": 4,
+      "completed": true,
+      "finished_at": "2026-10-16T09:35:05.808Z"
+    },
+    "results": {
+      "/-/topics?empty=2&page=14282&sort=id": 166.543
+    },
+    "samples": {
+      "/-/topics?empty=2&page=14282&sort=id": [
+        166.543,
+        150.291,
+        187.417
+      ]
+    },
+    "errors": {}
+  },
+  {
+    "about": {
+      "git_sha": "6ca737bad02704be76b4782eb67434233a006402",
+      "git_dirty": false,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 296016,
+        "users": 2151,
+        "topics": 285636,
+        "issues": 829,
+        "comments": 643,
+        "uploads": 6117,
+        "files": 296067,
+        "ids": 309009,
+        "refs": 803938,
+        "listed_articles": 290994,
+        "nonempty_topics": 282264,
+        "file_uploads": 5871,
+        "listed_uploads": 5695,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 3068801839,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 44038,
+            "username": "codex",
+            "articles": 172236
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "deepArticle": {
+            "slug": "codex/green-operator-potential-for-ddbar-exactness",
+            "depth": 16,
+            "nestedSetIndex": 21650
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-16T09:35:08.314Z",
+      "run_id": "d2d4e706-9e4d-4bb1-8484-44a6a48a4f8f",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 1,
+      "planned_requests": 4,
+      "completed": true,
+      "finished_at": "2026-10-16T09:35:08.918Z"
+    },
+    "results": {
+      "/-/topics?empty=2&page=14282&sort=id": 143.867
+    },
+    "samples": {
+      "/-/topics?empty=2&page=14282&sort=id": [
+        159.732,
+        141.885,
+        143.867
+      ]
+    },
+    "errors": {}
+  },
+  {
+    "about": {
+      "git_sha": "6ca737bad02704be76b4782eb67434233a006402",
+      "git_dirty": false,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 296016,
+        "users": 2151,
+        "topics": 285636,
+        "issues": 829,
+        "comments": 643,
+        "uploads": 6117,
+        "files": 296067,
+        "ids": 309009,
+        "refs": 803938,
+        "listed_articles": 290994,
+        "nonempty_topics": 282264,
+        "file_uploads": 5871,
+        "listed_uploads": 5695,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 3071406895,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 44038,
+            "username": "codex",
+            "articles": 172236
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "deepArticle": {
+            "slug": "codex/green-operator-potential-for-ddbar-exactness",
+            "depth": 16,
+            "nestedSetIndex": 21650
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-16T09:35:21.518Z",
+      "run_id": "c364f51d-cb01-471c-b538-e8c1abbb3eae",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 1,
+      "planned_requests": 4,
+      "completed": true,
+      "finished_at": "2026-10-16T09:35:21.830Z"
+    },
+    "results": {
+      "/-/topics?empty=2&page=14282&sort=id": 61.059
+    },
+    "samples": {
+      "/-/topics?empty=2&page=14282&sort=id": [
+        59.245,
+        61.059,
+        61.584
+      ]
+    },
+    "errors": {}
+  },
+  {
+    "about": {
+      "git_sha": "6ca737bad02704be76b4782eb67434233a006402",
+      "git_dirty": false,
+      "api_only": false,
+      "limit": 20,
+      "db": {
+        "dialect": "postgres",
+        "articles": 296016,
+        "users": 2151,
+        "topics": 285636,
+        "issues": 829,
+        "comments": 643,
+        "uploads": 6117,
+        "files": 296067,
+        "ids": 309009,
+        "refs": 803938,
+        "listed_articles": 290994,
+        "nonempty_topics": 282264,
+        "file_uploads": 5871,
+        "listed_uploads": 5695,
+        "name": "ourbigbook",
+        "version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "size_bytes": 3071406895,
+        "collation": "en_US.UTF-8",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_parallel_workers_per_gather": "2",
+        "jit": "on",
+        "samples": {
+          "author": {
+            "id": 44038,
+            "username": "codex",
+            "articles": 172236
+          },
+          "article": {
+            "slug": "donald-trump/test-child",
+            "topicId": "test-child"
+          },
+          "deepArticle": {
+            "slug": "codex/green-operator-potential-for-ddbar-exactness",
+            "depth": 16,
+            "nestedSetIndex": 21650
+          },
+          "issue": {
+            "number": 1,
+            "slug": "donald-trump/test-data"
+          }
+        }
+      },
+      "system": {
+        "pg_version": "15.7 (Ubuntu 15.7-0ubuntu0.23.10.1)",
+        "hostname": "ciro-p14s",
+        "platform": "linux",
+        "release": "7.0.0-34-generic",
+        "os_version": "Ubuntu 26.04.1 LTS",
+        "arch": "x64",
+        "node_version": "v26.7.0",
+        "cpu_model": "AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics",
+        "logical_cpus": 16,
+        "memory_bytes": 61473435648
+      },
+      "timestamp": "2026-10-16T09:35:36.991Z",
+      "run_id": "cc04816c-e27f-48d2-b2c0-099d6456ee8d",
+      "base_url": "http://localhost:3000",
+      "timing_unit": "ms",
+      "statistic": "median",
+      "runs": 3,
+      "warmup": 1,
+      "timeout_ms": 60000,
+      "concurrency": 1,
+      "authentication": "anonymous",
+      "planned_paths": 1,
+      "planned_requests": 4,
+      "completed": true,
+      "finished_at": "2026-10-16T09:35:37.394Z"
+    },
+    "results": {
+      "/-/comments?sort=created": 77.571
+    },
+    "samples": {
+      "/-/comments?sort=created": [
+        77.571,
+        103.959,
+        63.996
+      ]
+    },
+    "errors": {}
   }
 ]
