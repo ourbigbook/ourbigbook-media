@@ -4,8 +4,10 @@
 import argparse
 import ipaddress
 import json
+import os
 import re
 import sys
+import tempfile
 
 
 COMMON_TLDS = (
@@ -25,7 +27,9 @@ def _spaced_word(word):
 
 
 OBFUSCATED_TLD_RE = re.compile(
-    r"\s*\.\s*(?:" + "|".join(_spaced_word(tld) for tld in COMMON_TLDS) + r")(?![A-Za-z])",
+    r"\s*\.\s*(?:"
+    + "|".join(_spaced_word(tld) for tld in sorted(COMMON_TLDS, key=len, reverse=True))
+    + r")(?:\s*(?=(?:what(?:s?app)?|mailbox|email|telegram)\b)|(?![A-Za-z]))",
     re.IGNORECASE,
 )
 WORD_DOT_RE = re.compile(
@@ -44,7 +48,7 @@ LINK_RE = re.compile(
     + TLD_PATTERN + r"\b(?:/[^\s<>\"']*)?",
     re.IGNORECASE,
 )
-PHONE_RE = re.compile(r"(?<!\w)(?:\+|00)?\d(?:[\s().-]*\d){6,14}(?!\w)")
+PHONE_RE = re.compile(r"(?<!\w)(?:\+|00)?\d(?:[\s().,-]*\d){6,14}(?!\w)")
 IPV4_RE = re.compile(r"(?<![\w.])(?:\d{1,3}\.){3}\d{1,3}(?!\d)(?!\.\d)")
 TELEGRAM_LINK_RE = re.compile(
     r"\b(?:https?://)?(?:t\.me|telegram\.me|telegram\.dog)/([A-Z][A-Z0-9_]{4,31})\b",
@@ -72,10 +76,14 @@ def normalize_obfuscation(text):
         text,
         flags=re.IGNORECASE,
     )
-    text = OBFUSCATED_TLD_RE.sub(
-        lambda match: "." + re.sub(r"\s+", "", match.group(0)).lstrip(".").lower(),
-        text,
-    )
+    def normalize_tld(match):
+        tld = "." + re.sub(r"\s+", "", match.group(0)).lstrip(".").lower()
+        following = match.string[match.end():]
+        if re.match(r"(?:what(?:s?app)?|mailbox|email|telegram)\b", following, re.IGNORECASE):
+            tld += " "
+        return tld
+
+    text = OBFUSCATED_TLD_RE.sub(normalize_tld, text)
     text = WORD_DOT_RE.sub(".", text)
     text = WORD_AT_RE.sub("@", text)
     text = re.sub(r"(?<=\w)\s*@\s*(?=\w)", "@", text)
@@ -118,7 +126,7 @@ def extract_identifiers(text):
         if raw in ips or re.fullmatch(r"\d{4}[-/.]\d{1,2}[-/.]\d{1,2}", raw):
             continue
         digits = re.sub(r"\D", "", raw)
-        if not 7 <= len(digits) <= 15:
+        if not 10 <= len(digits) <= 15:
             continue
         if raw.startswith("+"):
             phones.append("+" + digits)
@@ -155,14 +163,9 @@ def load_existing(path):
     return existing
 
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--existing")
-    args = parser.parse_args()
-
-    fresh = json.load(sys.stdin)
+def update_users(fresh, existing, *, identifiers_only=False):
     if not isinstance(fresh, list):
-        raise ValueError("expected a JSON array from PostgreSQL")
+        raise ValueError("expected a JSON array of audit records")
 
     enriched_by_username = {}
     fresh_order = []
@@ -170,19 +173,33 @@ def main():
         if not isinstance(user, dict) or not isinstance(user.get("username"), str):
             raise ValueError("each PostgreSQL row must be a user object with a username")
         user = dict(user)
+        source_values = [user.get("displayName")]
+
+        # Accept old flattened audit dumps as well as the provenance-preserving
+        # format written by current versions of dump.sh.
         content = user.pop("content", [])
         if not isinstance(content, list):
             raise ValueError(f"expected content array for {user['username']}")
-        source_text = "\n".join(
-            value for value in [user.get("displayName"), *content] if isinstance(value, str)
-        )
+        source_values.extend(content)
+
+        for collection_name, text_fields in (
+            ("articles", ("title", "body")),
+            ("issues", ("title", "body")),
+            ("comments", ("source",)),
+        ):
+            records = user.pop(collection_name, [])
+            if not isinstance(records, list) or not all(isinstance(record, dict) for record in records):
+                raise ValueError(f"expected {collection_name} array for {user['username']}")
+            for record in records:
+                source_values.extend(record.get(field) for field in text_fields)
+
+        source_text = "\n".join(value for value in source_values if isinstance(value, str))
         identifiers = extract_identifiers(source_text)
         if identifiers:
             user["identifiers"] = identifiers
         enriched_by_username[user["username"]] = user
         fresh_order.append(user["username"])
 
-    existing = load_existing(args.existing)
     result = []
     seen = set()
     for old_user in existing:
@@ -191,7 +208,12 @@ def main():
         username = old_user["username"]
         if username in enriched_by_username:
             fresh_user = enriched_by_username[username]
-            merged_user = {**old_user, **fresh_user}
+            if identifiers_only:
+                merged_user = dict(old_user)
+                if "identifiers" in fresh_user:
+                    merged_user["identifiers"] = fresh_user["identifiers"]
+            else:
+                merged_user = {**old_user, **fresh_user}
             if "identifiers" not in fresh_user:
                 merged_user.pop("identifiers", None)
             result.append(merged_user)
@@ -203,6 +225,73 @@ def main():
         if username not in seen:
             result.append(enriched_by_username[username])
 
+    return result
+
+
+def write_json_atomic(path, value):
+    path = os.path.abspath(path)
+    output_dir = os.path.dirname(path)
+    os.makedirs(output_dir, exist_ok=True)
+    output_mode = os.stat(path).st_mode & 0o777 if os.path.exists(path) else 0o644
+    temporary = tempfile.NamedTemporaryFile(
+        mode="w",
+        encoding="utf-8",
+        dir=output_dir,
+        prefix=os.path.basename(path) + ".tmp.",
+        delete=False,
+    )
+    try:
+        with temporary:
+            json.dump(value, temporary, ensure_ascii=False, indent=2)
+            temporary.write("\n")
+        os.chmod(temporary.name, output_mode)
+        os.replace(temporary.name, path)
+    except BaseException:
+        try:
+            os.unlink(temporary.name)
+        except FileNotFoundError:
+            pass
+        raise
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Extract identifiers from audit records and merge them into data.json."
+    )
+    parser.add_argument("--audit", help="read audit records from this file")
+    parser.add_argument("--existing", help="merge stdin records into this JSON file on stdout")
+    parser.add_argument("--update", help="atomically update this JSON file in place")
+    parser.add_argument(
+        "usernames",
+        nargs="*",
+        help="with --update, rebuild only these usernames (default: all audit users)",
+    )
+    args = parser.parse_args()
+
+    if args.update:
+        if not args.audit:
+            parser.error("--update requires --audit")
+        if args.existing:
+            parser.error("--existing cannot be combined with --update")
+        fresh = load_existing(args.audit)
+        if args.usernames:
+            requested = set(args.usernames)
+            fresh = [user for user in fresh if user.get("username") in requested]
+            found = {user.get("username") for user in fresh}
+            missing = sorted(requested - found)
+            if missing:
+                parser.error("usernames absent from audit data: " + ", ".join(missing))
+        existing = load_existing(args.update)
+        result = update_users(fresh, existing, identifiers_only=True)
+        write_json_atomic(args.update, result)
+        print(f"Updated identifiers for {len(fresh)} users in {args.update}.")
+        return
+
+    if args.audit or args.usernames:
+        parser.error("--audit and usernames require --update")
+    fresh = json.load(sys.stdin)
+    existing = load_existing(args.existing)
+    result = update_users(fresh, existing)
     json.dump(result, sys.stdout, ensure_ascii=False, indent=2)
     sys.stdout.write("\n")
 

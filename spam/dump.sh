@@ -10,11 +10,19 @@ if [[ -f "$existing" ]]; then
 fi
 
 command -v python3 >/dev/null
-tmp="$(mktemp "${output}.tmp.XXXXXX")"
-trap 'rm -f "$tmp"' EXIT
+command -v base64 >/dev/null
+db_dir="$script_dir/db"
+db_output="$db_dir/users.json"
+mkdir -p "$db_dir"
+if [[ -f "$db_output" ]]; then
+  downloaded_usernames_base64="$(jq --compact-output '[.[].username]' "$db_output" | base64 --wrap=0)"
+else
+  downloaded_usernames_base64="W10="
+fi
+db_new_tmp="$(mktemp "$db_dir/users.new.json.tmp.XXXXXX")"
+trap 'rm -f "$db_new_tmp"' EXIT
 
-heroku psql -a ourbigbook DATABASE_URL <<EOF | \
-  python3 "$script_dir/extract_identifiers.py" "${existing_args[@]}" > "$tmp"
+heroku psql -a ourbigbook DATABASE_URL <<EOF > "$db_new_tmp"
 \\set QUIET 1
 \\a
 \\t
@@ -27,32 +35,72 @@ select coalesce(json_agg(r), '[]'::json) from (
     u.ip,
     u."createdAt",
     coalesce((
-      SELECT json_agg(authored.text)
-      FROM (
-        SELECT concat_ws(E'\\n', a."titleSource", f."bodySource") AS text
-        FROM "Article" a
-        LEFT JOIN "File" f ON f.id = a."fileId"
-        WHERE a."authorId" = u.id
-
-        UNION ALL
-
-        SELECT concat_ws(E'\\n', i."titleSource", i."bodySource") AS text
-        FROM "Issue" i
-        WHERE i."authorId" = u.id
-
-        UNION ALL
-
-        SELECT c.source AS text
-        FROM "Comment" c
-        WHERE c."authorId" = u.id
-      ) authored
-      WHERE authored.text IS NOT NULL
-    ), '[]'::json) AS content
+      SELECT json_agg(json_build_object(
+        'id', a.id,
+        'slug', a.slug,
+        'title', a."titleSource",
+        'body', f."bodySource"
+      ) ORDER BY a.id)
+      FROM "Article" a
+      LEFT JOIN "File" f ON f.id = a."fileId"
+      WHERE a."authorId" = u.id
+    ), '[]'::json) AS articles,
+    coalesce((
+      SELECT json_agg(json_build_object(
+        'id', i.id,
+        'title', i."titleSource",
+        'body', i."bodySource"
+      ) ORDER BY i.id)
+      FROM "Issue" i
+      WHERE i."authorId" = u.id
+    ), '[]'::json) AS issues,
+    coalesce((
+      SELECT json_agg(json_build_object(
+        'id', c.id,
+        'source', c.source
+      ) ORDER BY c.id)
+      FROM "Comment" c
+      WHERE c."authorId" = u.id
+    ), '[]'::json) AS comments
   FROM "User" u
-  WHERE u.locked = true
+  WHERE
+    u.locked = true
+    AND NOT EXISTS (
+      SELECT 1
+      FROM json_array_elements_text(
+        convert_from(decode('${downloaded_usernames_base64}', 'base64'), 'UTF8')::json
+      ) AS downloaded(username)
+      WHERE downloaded.username = u.username
+    )
   ORDER BY u."createdAt" DESC
 ) r;
 EOF
+
+jq --exit-status 'if type == "array" then true else error("expected a JSON array") end' \
+  "$db_new_tmp" >/dev/null
+
+db_tmp="$(mktemp "$db_dir/users.json.tmp.XXXXXX")"
+if [[ -f "$db_output" ]]; then
+  jq --slurpfile fresh "$db_new_tmp" '
+    reduce $fresh[0][] as $user (
+      .;
+      if any(.[]; .username == $user.username) then
+        map(if .username == $user.username then $user else . end)
+      else
+        . + [$user]
+      end
+    )
+  ' "$db_output" > "$db_tmp"
+else
+  jq '.' "$db_new_tmp" > "$db_tmp"
+fi
+chmod 0600 "$db_tmp"
+mv "$db_tmp" "$db_output"
+
+tmp="$(mktemp "${output}.tmp.XXXXXX")"
+trap 'rm -f "$tmp"' EXIT
+python3 "$script_dir/extract_identifiers.py" "${existing_args[@]}" \
+  < "$db_new_tmp" > "$tmp"
 
 if [[ -f "$existing" ]]; then
   chmod --reference="$existing" "$tmp"
@@ -60,7 +108,12 @@ else
   chmod 0644 "$tmp"
 fi
 mv "$tmp" "$output"
+rm -f "$db_new_tmp"
 trap - EXIT
+
+if [[ "${SKIP_ISP_LOOKUPS:-0}" == 1 ]]; then
+  exit 0
+fi
 
 command -v curl >/dev/null
 ripestat_url="${RIPESTAT_URL:-https://stat.ripe.net/data/prefix-overview/data.json}"
