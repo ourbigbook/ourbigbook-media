@@ -121,7 +121,6 @@ ripestat_delay="${RIPESTAT_DELAY_SECONDS:-0.25}"
 ripestat_retries="${RIPESTAT_RETRIES:-3}"
 ripestat_max_attempts="${RIPESTAT_MAX_ATTEMPTS:-9}"
 ripestat_retry_delay="${RIPESTAT_RETRY_DELAY_SECONDS:-5}"
-ripestat_rate_delay="${RIPESTAT_RATE_DELAY_SECONDS:-30}"
 if [[ ! "$ripestat_max_attempts" =~ ^[1-9][0-9]*$ ]]; then
   printf 'RIPESTAT_MAX_ATTEMPTS must be a positive integer: %s\n' "$ripestat_max_attempts" >&2
   exit 1
@@ -143,7 +142,39 @@ while IFS= read -r ip; do
     ]
     | max // 0
   ' "$output")"
+  isp_failure="$(jq --raw-output --arg ip "$ip" '
+    first(.[] | select(.ip == $ip and (.ispFailure? | type == "string")) | .ispFailure) // empty
+  ' "$output")"
+  has_isp_failure=false
+  if jq --exit-status --arg ip "$ip" '
+    any(.[]; .ip == $ip and (.ispFailure? | type == "string"))
+  ' "$output" >/dev/null; then
+    has_isp_failure=true
+  fi
   queried=false
+
+  if [[ -z "$isp" ]] && "$has_isp_failure"; then
+    tmp="$(mktemp "${output}.tmp.XXXXXX")"
+    trap 'rm -f "$tmp"' EXIT
+    jq \
+      --arg ip "$ip" \
+      --arg isp_failure "$isp_failure" \
+      --argjson isp_attempts "$isp_attempts" '
+      map(
+        if .ip == $ip and ((.isp? // "") == "") then
+          . + {
+            "ispFailure": $isp_failure,
+            "isp-attempts": $isp_attempts
+          }
+        else
+          .
+        end
+      )
+    ' "$output" > "$tmp"
+    mv "$tmp" "$output"
+    trap - EXIT
+    continue
+  fi
 
   if [[ -z "$isp" ]]; then
     if ((isp_attempts >= ripestat_max_attempts)); then
@@ -171,10 +202,6 @@ while IFS= read -r ip; do
         --silent \
         --data-urlencode "resource=$ip" \
         "$ripestat_url" > "$ripestat_tmp" 2>&1 || ripestat_status=$?
-      rate_limited=false
-      if LC_ALL=C grep -Eiq '(^|[^0-9])429([^0-9]|$)|rate.?limit|too many (queries|requests)' "$ripestat_tmp"; then
-        rate_limited=true
-      fi
 
       isp=""
       if ((ripestat_status == 0)); then
@@ -189,6 +216,12 @@ while IFS= read -r ip; do
         ' "$ripestat_tmp" 2>/dev/null || true)"
       fi
 
+      # curl reports both connect and overall operation timeouts with exit 28.
+      if ((ripestat_status != 28)) && [[ -z "$isp" ]]; then
+        isp_failure="$(<"$ripestat_tmp")"
+        has_isp_failure=true
+      fi
+
       rm -f "$ripestat_tmp"
       trap - EXIT
 
@@ -198,25 +231,31 @@ while IFS= read -r ip; do
         break
       fi
 
+      if "$has_isp_failure"; then
+        printf 'RIPEstat lookup failed for %s without a timeout (curl exit %s); recording ispFailure and not retrying.\n' \
+          "$ip" "$ripestat_status" >&2
+        break
+      fi
+
       if ((attempt < ripestat_retries && isp_attempts < ripestat_max_attempts)); then
-        if "$rate_limited"; then
-          printf 'RIPEstat rate limit detected for %s; retrying in %s seconds.\n' "$ip" "$ripestat_rate_delay" >&2
-          sleep "$ripestat_rate_delay"
-        else
-          printf 'RIPEstat attempt %s/%s failed for %s (curl exit %s); retrying in %s seconds.\n' \
-            "$attempt" "$ripestat_retries" "$ip" "$ripestat_status" "$ripestat_retry_delay" >&2
-          sleep "$ripestat_retry_delay"
-        fi
+        printf 'RIPEstat attempt %s/%s timed out for %s; retrying in %s seconds.\n' \
+          "$attempt" "$ripestat_retries" "$ip" "$ripestat_retry_delay" >&2
+        sleep "$ripestat_retry_delay"
       fi
     done
 
     if [[ -z "$isp" ]]; then
       tmp="$(mktemp "${output}.tmp.XXXXXX")"
       trap 'rm -f "$tmp"' EXIT
-      jq --arg ip "$ip" --argjson isp_attempts "$isp_attempts" '
+      jq \
+        --arg ip "$ip" \
+        --argjson isp_attempts "$isp_attempts" \
+        --arg isp_failure "$isp_failure" \
+        --argjson has_isp_failure "$has_isp_failure" '
         map(
           if .ip == $ip and ((.isp? // "") == "") then
             . + {"isp-attempts": $isp_attempts}
+            | if $has_isp_failure then . + {"ispFailure": $isp_failure} else . end
           else
             .
           end
@@ -225,7 +264,9 @@ while IFS= read -r ip; do
       mv "$tmp" "$output"
       trap - EXIT
 
-      if ((isp_attempts >= ripestat_max_attempts)); then
+      if "$has_isp_failure"; then
+        printf 'No ISP found for %s; saved the non-timeout failure output.\n' "$ip" >&2
+      elif ((isp_attempts >= ripestat_max_attempts)); then
         printf 'No ISP found for %s; lifetime limit reached after %s attempts.\n' \
           "$ip" "$isp_attempts" >&2
       else
@@ -267,6 +308,7 @@ done < <(jq --raw-output '
   [.[]
     | select(
         ((.isp? // "") == "")
+        and (.ispFailure? | type != "string")
         and (.ip? | type == "string")
         and (.ip | length > 0)
       )
