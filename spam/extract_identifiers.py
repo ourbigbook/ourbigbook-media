@@ -2,6 +2,7 @@
 """Merge a user dump and extract identifiers from user-authored text."""
 
 import argparse
+from datetime import datetime
 import ipaddress
 import json
 import os
@@ -225,7 +226,8 @@ def update_users(fresh, existing, *, identifiers_only=False):
         if username not in seen:
             result.append(enriched_by_username[username])
 
-    return result
+    # Keep dumps and identifier backfills newest first, including newly added users.
+    return sorted(result, key=lambda user: datetime.fromisoformat(user["createdAt"]), reverse=True)
 
 
 def write_json_atomic(path, value):
